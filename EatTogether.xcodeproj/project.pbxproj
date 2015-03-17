@@ -46,6 +46,7 @@
 		E64D4AE41AB86A9100ABC477 /* AppUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUtilities.h; sourceTree = "<group>"; };
 		E64D4AE51AB86AFB00ABC477 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E64D4AE61AB86AFB00ABC477 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		E64D4AE91AB86BFA00ABC477 /* EatTogether-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EatTogether-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +158,7 @@
 				E64D4AE41AB86A9100ABC477 /* AppUtilities.h */,
 				E64D4AE51AB86AFB00ABC477 /* Constants.h */,
 				E64D4AE61AB86AFB00ABC477 /* Constants.m */,
+				E64D4AE91AB86BFA00ABC477 /* EatTogether-Prefix.pch */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
