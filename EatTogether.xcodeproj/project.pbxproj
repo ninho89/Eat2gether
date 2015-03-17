@@ -17,6 +17,8 @@
 		E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */; };
 		E64D4AD71AB8672C00ABC477 /* EatTogetherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AD61AB8672C00ABC477 /* EatTogetherTests.m */; };
 		E64D4AE71AB86AFB00ABC477 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AE61AB86AFB00ABC477 /* Constants.m */; };
+		E64D4AF01AB8764600ABC477 /* NetworkDataRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AEF1AB8764600ABC477 /* NetworkDataRepository.m */; };
+		E64D4AF31AB87A4700ABC477 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AF21AB87A4700ABC477 /* City.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		E64D4AE61AB86AFB00ABC477 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		E64D4AEA1AB86DFD00ABC477 /* EatTogether-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EatTogether-Prefix.pch"; sourceTree = "<group>"; };
 		E64D4AEC1AB874F400ABC477 /* DataRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRepository.h; sourceTree = "<group>"; };
+		E64D4AEE1AB8764600ABC477 /* NetworkDataRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDataRepository.h; sourceTree = "<group>"; };
+		E64D4AEF1AB8764600ABC477 /* NetworkDataRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkDataRepository.m; sourceTree = "<group>"; };
+		E64D4AF11AB87A4700ABC477 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		E64D4AF21AB87A4700ABC477 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				E64D4AE31AB86A6A00ABC477 /* Utilities */,
+				E64D4AED1AB8762500ABC477 /* Model */,
 				E64D4AEB1AB8735D00ABC477 /* Repository */,
 				E64D4AE01AB86A1C00ABC477 /* AppDelegate */,
 				E64D4AE11AB86A2200ABC477 /* Controllers */,
@@ -195,6 +202,17 @@
 				E64D4AEC1AB874F400ABC477 /* DataRepository.h */,
 			);
 			name = Repository;
+			sourceTree = "<group>";
+		};
+		E64D4AED1AB8762500ABC477 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E64D4AEE1AB8764600ABC477 /* NetworkDataRepository.h */,
+				E64D4AEF1AB8764600ABC477 /* NetworkDataRepository.m */,
+				E64D4AF11AB87A4700ABC477 /* City.h */,
+				E64D4AF21AB87A4700ABC477 /* City.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,8 +352,10 @@
 			files = (
 				E64D4AE71AB86AFB00ABC477 /* Constants.m in Sources */,
 				E64D4AC01AB8672C00ABC477 /* EatTogether.xcdatamodeld in Sources */,
+				E64D4AF01AB8764600ABC477 /* NetworkDataRepository.m in Sources */,
 				E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */,
 				E64D4AC31AB8672C00ABC477 /* MainViewController.m in Sources */,
+				E64D4AF31AB87A4700ABC477 /* City.m in Sources */,
 				E64D4ABA1AB8672C00ABC477 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

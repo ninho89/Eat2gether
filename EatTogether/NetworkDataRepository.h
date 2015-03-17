@@ -1,5 +1,5 @@
 //
-//  DataRepository.h
+//  NetworkDataRepository.h
 //  EatTogether
 //
 //  Created by Filippo Aresu on 17/3/15.
@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DataRepository.h"
 
-@protocol DataRepository <NSObject>
+@interface NetworkDataRepository : NSObject <DataRepository>
 
--(void) getCitiesWithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
 
 @end
