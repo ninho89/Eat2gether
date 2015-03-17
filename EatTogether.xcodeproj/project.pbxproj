@@ -83,13 +83,10 @@
 		E64D4AB61AB8672C00ABC477 /* EatTogether */ = {
 			isa = PBXGroup;
 			children = (
-				E64D4ABB1AB8672C00ABC477 /* AppDelegate.h */,
-				E64D4ABC1AB8672C00ABC477 /* AppDelegate.m */,
-				E64D4AC11AB8672C00ABC477 /* ViewController.h */,
-				E64D4AC21AB8672C00ABC477 /* ViewController.m */,
-				E64D4AC41AB8672C00ABC477 /* Main.storyboard */,
+				E64D4AE01AB86A1C00ABC477 /* AppDelegate */,
+				E64D4AE11AB86A2200ABC477 /* Controllers */,
+				E64D4AE21AB86A2B00ABC477 /* Views */,
 				E64D4AC71AB8672C00ABC477 /* Images.xcassets */,
-				E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */,
 				E64D4ABE1AB8672C00ABC477 /* EatTogether.xcdatamodeld */,
 				E64D4AB71AB8672C00ABC477 /* Supporting Files */,
 			);
@@ -120,6 +117,33 @@
 				E64D4AD51AB8672C00ABC477 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E64D4AE01AB86A1C00ABC477 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E64D4ABB1AB8672C00ABC477 /* AppDelegate.h */,
+				E64D4ABC1AB8672C00ABC477 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E64D4AE11AB86A2200ABC477 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E64D4AC11AB8672C00ABC477 /* ViewController.h */,
+				E64D4AC21AB8672C00ABC477 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E64D4AE21AB86A2B00ABC477 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E64D4AC41AB8672C00ABC477 /* Main.storyboard */,
+				E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +440,7 @@
 				E64D4ADC1AB8672C00ABC477 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E64D4ADD1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "EatTogetherTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +449,7 @@
 				E64D4ADF1AB8672C00ABC477 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
