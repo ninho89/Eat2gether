@@ -15,6 +15,7 @@
 		E64D4AC81AB8672C00ABC477 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64D4AC71AB8672C00ABC477 /* Images.xcassets */; };
 		E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */; };
 		E64D4AD71AB8672C00ABC477 /* EatTogetherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AD61AB8672C00ABC477 /* EatTogetherTests.m */; };
+		E64D4AE71AB86AFB00ABC477 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AE61AB86AFB00ABC477 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		E64D4AD51AB8672C00ABC477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64D4AD61AB8672C00ABC477 /* EatTogetherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EatTogetherTests.m; sourceTree = "<group>"; };
 		E64D4AE41AB86A9100ABC477 /* AppUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUtilities.h; sourceTree = "<group>"; };
+		E64D4AE51AB86AFB00ABC477 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E64D4AE61AB86AFB00ABC477 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				E64D4AE41AB86A9100ABC477 /* AppUtilities.h */,
+				E64D4AE51AB86AFB00ABC477 /* Constants.h */,
+				E64D4AE61AB86AFB00ABC477 /* Constants.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E64D4AE71AB86AFB00ABC477 /* Constants.m in Sources */,
 				E64D4AC01AB8672C00ABC477 /* EatTogether.xcdatamodeld in Sources */,
 				E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */,
 				E64D4AC31AB8672C00ABC477 /* ViewController.m in Sources */,
