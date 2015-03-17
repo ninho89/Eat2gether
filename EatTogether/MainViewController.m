@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "NetworkDataRepository.h"
+#import "City.h"
 
 @interface MainViewController ()
 
@@ -26,8 +27,6 @@
     self.citiesArray = [[NSArray alloc]init];
     
     [self getAllCities];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
