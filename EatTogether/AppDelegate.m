@@ -17,6 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    //Register app with my app in parse
+    [Parse setApplicationId:APPLICATION_ID clientKey:CLIENT_KEY];
+    //Tracks this application being launched. If this happened as the result of the user opening a push notification, this method sends along information to correlate this open with that push
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
     return YES;
 }
 
