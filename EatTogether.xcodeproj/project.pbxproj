@@ -20,6 +20,9 @@
 		E64D4AF01AB8764600ABC477 /* NetworkDataRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AEF1AB8764600ABC477 /* NetworkDataRepository.m */; };
 		E64D4AF31AB87A4700ABC477 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AF21AB87A4700ABC477 /* City.m */; };
 		E64D4AF71AB8813F00ABC477 /* CityMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AF61AB8813F00ABC477 /* CityMapper.m */; };
+		E64D4AFE1AB8937700ABC477 /* valencia.png in Resources */ = {isa = PBXBuildFile; fileRef = E64D4AFD1AB8937700ABC477 /* valencia.png */; };
+		E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4B001AB893E000ABC477 /* CustomCityTableViewCell.m */; };
+		E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64D4B011AB893E000ABC477 /* CustomCityTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,10 @@
 		E64D4AF21AB87A4700ABC477 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		E64D4AF51AB8813F00ABC477 /* CityMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityMapper.h; sourceTree = "<group>"; };
 		E64D4AF61AB8813F00ABC477 /* CityMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityMapper.m; sourceTree = "<group>"; };
+		E64D4AFD1AB8937700ABC477 /* valencia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valencia.png; sourceTree = "<group>"; };
+		E64D4AFF1AB893E000ABC477 /* CustomCityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCityTableViewCell.h; sourceTree = "<group>"; };
+		E64D4B001AB893E000ABC477 /* CustomCityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCityTableViewCell.m; sourceTree = "<group>"; };
+		E64D4B011AB893E000ABC477 /* CustomCityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCityTableViewCell.xib; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +137,7 @@
 				E64D4AE11AB86A2200ABC477 /* Controllers */,
 				E64D4AE21AB86A2B00ABC477 /* Views */,
 				E64D4AC71AB8672C00ABC477 /* Images.xcassets */,
+				E64D4AFD1AB8937700ABC477 /* valencia.png */,
 				E64D4ABE1AB8672C00ABC477 /* EatTogether.xcdatamodeld */,
 				E64D4AB71AB8672C00ABC477 /* Supporting Files */,
 			);
@@ -185,6 +193,9 @@
 			children = (
 				E64D4AC41AB8672C00ABC477 /* Main.storyboard */,
 				E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */,
+				E64D4AFF1AB893E000ABC477 /* CustomCityTableViewCell.h */,
+				E64D4B001AB893E000ABC477 /* CustomCityTableViewCell.m */,
+				E64D4B011AB893E000ABC477 /* CustomCityTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -311,6 +322,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E64D4AC61AB8672C00ABC477 /* Main.storyboard in Resources */,
+				E64D4AFE1AB8937700ABC477 /* valencia.png in Resources */,
+				E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */,
 				E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */,
 				E64D4AC81AB8672C00ABC477 /* Images.xcassets in Resources */,
 			);
@@ -370,6 +383,7 @@
 				E64D4AC31AB8672C00ABC477 /* MainViewController.m in Sources */,
 				E64D4AF71AB8813F00ABC477 /* CityMapper.m in Sources */,
 				E64D4AF31AB87A4700ABC477 /* City.m in Sources */,
+				E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */,
 				E64D4ABA1AB8672C00ABC477 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

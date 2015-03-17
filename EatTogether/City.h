@@ -14,5 +14,4 @@
 @property (nonatomic, strong) NSString *cityName;
 @property (nonatomic, strong) NSString *cityCountry;
 
-
 @end

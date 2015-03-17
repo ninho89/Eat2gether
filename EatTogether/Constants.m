@@ -24,4 +24,6 @@ NSString * const kLocationCityIdParse = @"cityId";
 NSString * const kLocationLatitude = @"locationLatitude";
 NSString * const kLocationLongitude = @"locationLongitude";
 
+NSString *const kCellCity = @"CellID";
+
 @end

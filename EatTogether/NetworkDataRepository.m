@@ -22,17 +22,16 @@
 -(void) getCitiesWithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock {
     //Consulta todas las ciudades con sus cordenadas
     PFQuery *query = [PFQuery queryWithClassName:kCityTableParse];
-    //[query includeKey:kCityLocationIdParse]; //coge la relacion para saber sus coordenadas
+    //[query includeKey:kCityLocationIdParse]; //se usa para coger la relacion para saber sus coordenadas
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
-            NSMutableArray *cities = nil;
+            NSMutableArray *cities = [NSMutableArray array];
             for (PFObject *pfCity in objects)
             {
                 self.cityMapper = [[CityMapper alloc]init];
                 City *city = [self.cityMapper mapParseCity:pfCity];
                 [cities addObject:city];
-                //guardar en coreData
             }
             
             /*
@@ -43,10 +42,9 @@
                 NSLog(@"Latitude: %@", [[arr valueForKey:kLocationIdParse] valueForKey:kLocationLatitude]);
             }*/
             
-            completionBlock(objects, nil);
+            completionBlock(cities, nil);
         }
     }];
 }
-
 
 @end

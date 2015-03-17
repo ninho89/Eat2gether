@@ -23,5 +23,7 @@ extern NSString * const kLocationCityIdParse;
 extern NSString * const kLocationLatitude;
 extern NSString * const kLocationLongitude;
 
+extern NSString *const kCellCity;
+
 
 @end
