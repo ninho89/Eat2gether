@@ -13,20 +13,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0RO-b2-lBa">
+                        <rect key="frame" x="0.0" y="0.5" width="320" height="151.5"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXn-aP-Fpp">
-                        <rect key="frame" x="139" y="65" width="42" height="21"/>
+                        <rect key="frame" x="139" y="65" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="0RO-b2-lBa" secondAttribute="bottom" id="92h-mU-ZhG"/>
+                    <constraint firstItem="0RO-b2-lBa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="EjX-GI-96L"/>
+                    <constraint firstAttribute="trailing" secondItem="0RO-b2-lBa" secondAttribute="trailing" id="Rzr-nP-Exe"/>
+                    <constraint firstItem="0RO-b2-lBa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="T63-hx-xA9"/>
                     <constraint firstAttribute="centerY" secondItem="ZXn-aP-Fpp" secondAttribute="centerY" id="ehY-j8-oJ3"/>
                     <constraint firstAttribute="centerX" secondItem="ZXn-aP-Fpp" secondAttribute="centerX" id="zGe-Gk-s9w"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cityNameLabel" destination="ZXn-aP-Fpp" id="4a1-4g-qoh"/>
+                <outlet property="cityPictureImage" destination="0RO-b2-lBa" id="arG-kG-fM8"/>
             </connections>
         </tableViewCell>
     </objects>

@@ -75,7 +75,7 @@
     
     CustomCityTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellCity forIndexPath:indexPath];
     
-    //cell.textLabel.text = [self.citiesArray[indexPath.row] valueForKey:kCityNameParse];
+    cell.cityPictureImage.image = [self.citiesArray[indexPath.row]valueForKey:kCityPictureParse];
     cell.cityNameLabel.text = [self.citiesArray[indexPath.row] valueForKey:kCityNameParse];
     
     return cell;
