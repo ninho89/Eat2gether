@@ -16,14 +16,15 @@
     city.cityName = [pfCity valueForKey:kCityNameParse];
     city.cityCountry = [pfCity valueForKey:kCityCountryParse];
     
-    
     PFFile *imageFile = [pfCity objectForKey:kCityPictureParse];
     
-//    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-//        city.cityPicture = [UIImage imageWithData:data];
-//    }];
-    city.cityPicture = [UIImage imageWithData:[imageFile getData]];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        city.cityPicture = [UIImage imageWithData:[imageFile getData]];
+    });
 
+
+
+    
     
     return city;
 }
