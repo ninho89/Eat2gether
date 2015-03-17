@@ -42,6 +42,7 @@
 		E64D4AD01AB8672C00ABC477 /* EatTogetherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatTogetherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D4AD51AB8672C00ABC477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64D4AD61AB8672C00ABC477 /* EatTogetherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EatTogetherTests.m; sourceTree = "<group>"; };
+		E64D4AE41AB86A9100ABC477 /* AppUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUtilities.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		E64D4AB61AB8672C00ABC477 /* EatTogether */ = {
 			isa = PBXGroup;
 			children = (
+				E64D4AE31AB86A6A00ABC477 /* Utilities */,
 				E64D4AE01AB86A1C00ABC477 /* AppDelegate */,
 				E64D4AE11AB86A2200ABC477 /* Controllers */,
 				E64D4AE21AB86A2B00ABC477 /* Views */,
@@ -144,6 +146,14 @@
 				E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		E64D4AE31AB86A6A00ABC477 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E64D4AE41AB86A9100ABC477 /* AppUtilities.h */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
