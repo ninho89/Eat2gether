@@ -13,7 +13,4 @@
 #define APPLICATION_ID 	@"kZNlKv6ctrkEw5zYSm19JUr0cMft2RkHVj8m1aSo"
 #define CLIENT_KEY 		@"UT0TWIxZyprtsHGk6EbaR6ig80BUQltJvXghLhQ8"
 
-
-
-
 #endif
