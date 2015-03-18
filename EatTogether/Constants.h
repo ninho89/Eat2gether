@@ -30,7 +30,31 @@ extern NSString * const kAdvertisementTableParse;
 extern NSString * const kAdvertisementIdParse;
 extern NSString * const kAdvertisementDetailAdvertisementIdParse;
 extern NSString * const kAdvertisementUserIdParse;
-extern NSString * const kAdvertisementLocationIdPArse;
+extern NSString * const kAdvertisementLocationIdParse;
+extern NSString * const kAdvertisementCityIdParse;
+
+//Constants Detail Advertisement Table Parse
+extern NSString * const kDetailAdvertisementTableParse;
+extern NSString * const kDetailAdvertisementIdParse;
+extern NSString * const kDetailAdvertisementDescriptionParse;
+extern NSString * const kDetailAdvertisementStarterParse;
+extern NSString * const kDetailAdvertisementMainDishParse;
+extern NSString * const kDetailAdvertisementDessertParse;
+extern NSString * const kDetailAdvertisementNumGuestsParse;
+extern NSString * const kDetailAdvertisementPriceParse;
+extern NSString * const kDetailAdvertisementDateParse;
+extern NSString * const kDetailAdvertisementTopicsParse;
+extern NSString * const kDetailAdvertisementPictureParse;
+
+//Constants User Table Parse
+extern NSString * const kUserTableParse;
+extern NSString * const kUserIdParse;
+extern NSString * const kUserNameParse;
+extern NSString * const kUserSurnameParse;
+extern NSString * const kUserMailParse;
+extern NSString * const kUserAddressParse;
+extern NSString * const kUserPhoneParse;
+extern NSString * const kUserPictureParse;
 
 // Constants Custom Cell
 extern NSString *const kCellCity;

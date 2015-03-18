@@ -50,8 +50,33 @@
 
 #pragma mark - Get All Citie's Advertisement
 
--(void) getCitiesAdvertisementWithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
-    //PFQuery *query = [PFQuery queryWithClassName:<#(NSString *)#>];
+-(void) getCitiesAdvertisementWithSCity:(NSString *)city WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"cityName = %@", city];
+    PFQuery *queryCityName = [PFQuery queryWithClassName:kCityTableParse predicate:predicate];
+    [queryCityName findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        PFQuery *query = [PFQuery queryWithClassName:kAdvertisementTableParse];
+        [query includeKey:kAdvertisementCityIdParse];
+        [query whereKey:kAdvertisementCityIdParse equalTo:[PFObject objectWithoutDataWithClassName:kCityTableParse objectId:[[objects valueForKey:@"objectId"]firstObject]]];
+        [query includeKey:kAdvertisementDetailAdvertisementIdParse];
+        [query includeKey:kUserIdParse];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if(!error){
+                for (PFObject *pfAdvertisement in objects)
+                {
+                    NSLog(@"Advertisement id: %@", [pfAdvertisement valueForKey:kAdvertisementIdParse]);
+                    NSLog(@"User name: %@", [[pfAdvertisement valueForKey:kAdvertisementUserIdParse]valueForKey:kUserNameParse]);
+                    NSLog(@"Detail advertisement starter: %@", [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementStarterParse]);
+                    NSLog(@"Detail advertisement price: %@", [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementPriceParse]);
+                    NSLog(@"Detail advertisement city: %@", [[pfAdvertisement valueForKey:kAdvertisementCityIdParse]valueForKey:kCityNameParse]);
+                }
+                completionBlock(objects, nil);
+            }
+        }];
+    }];
 }
+
+
 
 @end

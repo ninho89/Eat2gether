@@ -7,8 +7,6 @@
 //
 
 #import "CityMapper.h"
-//#import <UIImageView+WebCache.h>
-//#import <AFNetworking/AFNetworking.h>
 
 @implementation CityMapper
 

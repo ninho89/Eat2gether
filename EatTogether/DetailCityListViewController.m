@@ -7,8 +7,11 @@
 //
 
 #import "DetailCityListViewController.h"
+#import "NetworkDataRepository.h"
 
 @interface DetailCityListViewController ()
+
+@property (nonatomic, strong) id<DataRepository> repository;
 
 @end
 
@@ -16,7 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any dditional setup after loading the view.
+    
+    self.repository = [[NetworkDataRepository alloc]init];
+
+    [self.repository getCitiesAdvertisementWithSCity:self.city.cityName WithCompletionBlock:^(NSArray *advertisement, NSError *error) {
+        
+    }];
     
 
 }

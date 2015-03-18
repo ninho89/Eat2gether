@@ -23,6 +23,7 @@
 		E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4B001AB893E000ABC477 /* CustomCityTableViewCell.m */; };
 		E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64D4B011AB893E000ABC477 /* CustomCityTableViewCell.xib */; };
 		E64D4B081AB9931C00ABC477 /* DetailCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4B071AB9931C00ABC477 /* DetailCityListViewController.m */; };
+		E6873D671AB9D418006336D4 /* Advertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D661AB9D418006336D4 /* Advertisement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		E64D4B011AB893E000ABC477 /* CustomCityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCityTableViewCell.xib; sourceTree = "<group>"; };
 		E64D4B061AB9931C00ABC477 /* DetailCityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCityListViewController.h; sourceTree = "<group>"; };
 		E64D4B071AB9931C00ABC477 /* DetailCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCityListViewController.m; sourceTree = "<group>"; };
+		E6873D651AB9D418006336D4 /* Advertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Advertisement.h; sourceTree = "<group>"; };
+		E6873D661AB9D418006336D4 /* Advertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Advertisement.m; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +231,8 @@
 			children = (
 				E64D4AF11AB87A4700ABC477 /* City.h */,
 				E64D4AF21AB87A4700ABC477 /* City.m */,
+				E6873D651AB9D418006336D4 /* Advertisement.h */,
+				E6873D661AB9D418006336D4 /* Advertisement.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 				E64D4AF31AB87A4700ABC477 /* City.m in Sources */,
 				E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */,
 				E64D4ABA1AB8672C00ABC477 /* main.m in Sources */,
+				E6873D671AB9D418006336D4 /* Advertisement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

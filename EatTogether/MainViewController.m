@@ -45,7 +45,8 @@
     self.navigationItem.title=@"EatTogether";
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{
-                              NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1]
+                              NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1],
+                              NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size:24.0]
                               }];
 }
 
@@ -53,12 +54,6 @@
     [super viewWillAppear:animated];
     self.navigationItem.title = @"EatTogether";
 }
-
-//-(void)viewWillDisappear:(BOOL)animated {
-//    [super viewWillDisappear:animated];
-//    // Set title
-//    self.navigationItem.title=@"Back";
-//}
 
 #pragma mark - Memory Warning
 
