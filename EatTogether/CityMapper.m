@@ -22,7 +22,7 @@
 //        city.cityPicture = [UIImage imageWithData:[imageFile getData]];
 //    });
     
-    city.cityPicture = imageFile.url;
+    city.cityPictureUrl = imageFile.url;
     
     return city;
 }

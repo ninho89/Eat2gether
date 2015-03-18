@@ -101,7 +101,7 @@
 //        
 //    }];
     
-    [cell.cityPictureImage sd_setImageWithURL:[NSURL URLWithString:city.cityPicture]
+    [cell.cityPictureImage sd_setImageWithURL:[NSURL URLWithString:city.cityPictureUrl]
                              placeholderImage:nil];
 
     cell.cityNameLabel.text = city.cityName;
