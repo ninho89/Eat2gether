@@ -109,8 +109,6 @@
     [cell.cityPictureImage sd_setImageWithURL:[NSURL URLWithString:city.cityPicture]
                              placeholderImage:nil];
 
-    
-    //[cell.cityPictureImage sd_setImageWithURL:[NSURL URLWithString:city.cityPicture] placeholderImage:nil];
     cell.cityNameLabel.text = city.cityName;
     
  
@@ -124,6 +122,7 @@
     // Navigation logic may go here. Create and push another view controller.
     
     DetailCityListViewController *detailCityListViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"detailCityListViewController"];
+    detailCityListViewController.city = self.citiesArray[indexPath.row];
     
     [self.navigationController pushViewController:detailCityListViewController animated:YES];
     
