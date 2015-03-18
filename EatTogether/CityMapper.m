@@ -7,6 +7,8 @@
 //
 
 #import "CityMapper.h"
+//#import <UIImageView+WebCache.h>
+//#import <AFNetworking/AFNetworking.h>
 
 @implementation CityMapper
 
@@ -18,9 +20,11 @@
     
     PFFile *imageFile = [pfCity objectForKey:kCityPictureParse];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        city.cityPicture = [UIImage imageWithData:[imageFile getData]];
-    });
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//        city.cityPicture = [UIImage imageWithData:[imageFile getData]];
+//    });
+    
+    city.cityPicture = imageFile.url;
     
     return city;
 }

@@ -13,6 +13,6 @@
 @property (nonatomic, strong) NSNumber *cityId;
 @property (nonatomic, strong) NSString *cityName;
 @property (nonatomic, strong) NSString *cityCountry;
-@property (nonatomic, strong) UIImage *cityPicture;
+@property (nonatomic, strong) NSString *cityPicture;
 
 @end

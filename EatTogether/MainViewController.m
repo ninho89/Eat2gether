@@ -11,7 +11,7 @@
 #import "City.h"
 #import "CustomCityTableViewCell.h"
 #import "DetailCityListViewController.h"
-
+#import <UIImageView+WebCache.h>
 
 @interface MainViewController ()
 
@@ -102,10 +102,13 @@
     
     
     CustomCityTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellCity forIndexPath:indexPath];
+  
+    City *city = self.citiesArray[indexPath.row];
+
+    [cell.cityPictureImage sd_setImageWithURL:[NSURL URLWithString:city.cityPicture] placeholderImage:nil];
+    cell.cityNameLabel.text = city.cityName;
     
-    cell.cityPictureImage.image = [self.citiesArray[indexPath.row]valueForKey:kCityPictureParse];
-    cell.cityNameLabel.text = [self.citiesArray[indexPath.row] valueForKey:kCityNameParse];
-    
+ 
     return cell;
 }
 
