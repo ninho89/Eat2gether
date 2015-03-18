@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) id<DataRepository> repository;
 @property (nonatomic, strong) NSArray *citiesArray;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -30,11 +32,20 @@
     
     self.repository = [[NetworkDataRepository alloc]init];
     self.citiesArray = [[NSArray alloc]init];
-    
+    [self.activityIndicator startAnimating];
     [self getAllCities];
     [self registerCustomCell];
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.navigationItem.title=@"EatTogether";
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{
+                              NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1]
+                              }];
 }
 
 #pragma mark - Memory Warning
@@ -56,6 +67,7 @@
     [self.repository getCitiesWithCompletionBlock:^(NSArray *cities, NSError *error) {
         self.citiesArray = cities;
         [self.tableView reloadData];
+        [self.activityIndicator stopAnimating];
     }];
 }
 
@@ -75,7 +87,6 @@
     
     
     CustomCityTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellCity forIndexPath:indexPath];
-
     
     cell.cityPictureImage.image = [self.citiesArray[indexPath.row]valueForKey:kCityPictureParse];
     cell.cityNameLabel.text = [self.citiesArray[indexPath.row] valueForKey:kCityNameParse];
