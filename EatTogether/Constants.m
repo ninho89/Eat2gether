@@ -58,5 +58,6 @@ NSString * const kUserPictureParse = @"userPicture";
 
 //Constants Custom Cell
 NSString *const kCellCity = @"CellID";
+NSString *const kCellAdvertisement = @"CellID2";
 
 @end

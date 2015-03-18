@@ -25,6 +25,8 @@
 		E64D4B081AB9931C00ABC477 /* DetailCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4B071AB9931C00ABC477 /* DetailCityListViewController.m */; };
 		E6873D671AB9D418006336D4 /* Advertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D661AB9D418006336D4 /* Advertisement.m */; };
 		E6873D6A1ABA0079006336D4 /* AdvertisementMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D691ABA0079006336D4 /* AdvertisementMapper.m */; };
+		E6873D6E1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */; };
+		E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,9 @@
 		E6873D661AB9D418006336D4 /* Advertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Advertisement.m; sourceTree = "<group>"; };
 		E6873D681ABA0079006336D4 /* AdvertisementMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisementMapper.h; sourceTree = "<group>"; };
 		E6873D691ABA0079006336D4 /* AdvertisementMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertisementMapper.m; sourceTree = "<group>"; };
+		E6873D6B1ABA085C006336D4 /* CustomAdvertisementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAdvertisementTableViewCell.h; sourceTree = "<group>"; };
+		E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAdvertisementTableViewCell.m; sourceTree = "<group>"; };
+		E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAdvertisementTableViewCell.xib; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +209,9 @@
 				E64D4AFF1AB893E000ABC477 /* CustomCityTableViewCell.h */,
 				E64D4B001AB893E000ABC477 /* CustomCityTableViewCell.m */,
 				E64D4B011AB893E000ABC477 /* CustomCityTableViewCell.xib */,
+				E6873D6B1ABA085C006336D4 /* CustomAdvertisementTableViewCell.h */,
+				E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */,
+				E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -352,6 +360,7 @@
 				E64D4AC61AB8672C00ABC477 /* Main.storyboard in Resources */,
 				E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */,
 				E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */,
+				E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */,
 				E64D4AC81AB8672C00ABC477 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6873D6E1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m in Sources */,
 				E64D4AE71AB86AFB00ABC477 /* Constants.m in Sources */,
 				E64D4AC01AB8672C00ABC477 /* EatTogether.xcdatamodeld in Sources */,
 				E64D4AF01AB8764600ABC477 /* NetworkDataRepository.m in Sources */,

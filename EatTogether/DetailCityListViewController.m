@@ -8,24 +8,32 @@
 
 #import "DetailCityListViewController.h"
 #import "NetworkDataRepository.h"
+#import "CustomAdvertisementTableViewCell.h"
+#import "Advertisement.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DetailCityListViewController ()
 
 @property (nonatomic, strong) id<DataRepository> repository;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *advertisementsArray;
+
 
 @end
 
 @implementation DetailCityListViewController
+
+#pragma mark - View Life Cycles
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any dditional setup after loading the view.
     
     self.repository = [[NetworkDataRepository alloc]init];
-
-    [self.repository getCitiesAdvertisementWithSCity:self.city.cityName WithCompletionBlock:^(NSArray *advertisement, NSError *error) {
-        
-    }];
+    self.advertisementsArray = [[NSArray alloc]init];
+    [self getAllAdvertisements];
+    
+    [self registerCustomCell];
     
 
 }
@@ -45,19 +53,80 @@
                               }];
 }
 
+#pragma mark - Memory Warning
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Register Cell
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) registerCustomCell{
+    [self.tableView registerNib:[UINib nibWithNibName:@"CustomAdvertisementTableViewCell" bundle:nil]forCellReuseIdentifier:kCellAdvertisement];
 }
-*/
+
+#pragma mark - Methods
+
+-(void) getAllAdvertisements{
+    [self.repository getCitiesAdvertisementWithSCity:self.city.cityName WithCompletionBlock:^(NSArray *advertisement, NSError *error) {
+        self.advertisementsArray = advertisement;
+        [self.tableView reloadData];
+    }];
+}
+
+#pragma mark - TableView DataSource Methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return self.advertisementsArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    CustomAdvertisementTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellAdvertisement forIndexPath:indexPath];
+//    
+    Advertisement *advertisement = self.advertisementsArray[indexPath.row];
+//    
+
+//    
+//    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl]
+//                             placeholderImage:nil];
+    
+    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+    }];
+
+    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementUserPictureUrl] placeholderImage:nil];
+    
+    cell.customLabelPrice.text = [NSString stringWithFormat:@"%@€", advertisement.advertisementPrice];
+
+    cell.customLabelStarter.text = advertisement.advertisementStarter;
+    
+    return cell;
+}
+//
+//
+//#pragma mark - TableView Delegate
+//
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    // Navigation logic may go here. Create and push another view controller.
+//    
+//    
+//    
+//}
+//
+//
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 170;
+}
+
 
 @end

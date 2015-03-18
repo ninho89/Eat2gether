@@ -58,6 +58,7 @@ extern NSString * const kUserPictureParse;
 
 // Constants Custom Cell
 extern NSString *const kCellCity;
+extern NSString *const kCellAdvertisement;
 
 
 @end

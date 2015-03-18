@@ -118,15 +118,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail city" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE7-ZH-Tgw">
-                                <rect key="frame" x="110" y="179" width="76" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7aS-ka-OTn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wsU-pg-DGZ" id="XtE-tt-0RX"/>
+                                    <outlet property="delegate" destination="wsU-pg-DGZ" id="UGe-TM-Vbg"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7aS-ka-OTn" firstAttribute="top" secondItem="3KE-6g-XpR" secondAttribute="top" id="EiO-aM-08l"/>
+                            <constraint firstAttribute="trailing" secondItem="7aS-ka-OTn" secondAttribute="trailing" id="bbt-hU-GjT"/>
+                            <constraint firstItem="NgV-6J-Zx5" firstAttribute="top" secondItem="7aS-ka-OTn" secondAttribute="bottom" id="h0V-Ze-ztv"/>
+                            <constraint firstItem="7aS-ka-OTn" firstAttribute="leading" secondItem="3KE-6g-XpR" secondAttribute="leading" id="rxC-km-2mr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="7aS-ka-OTn" id="YGf-FE-7zD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1u7-K5-40A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
