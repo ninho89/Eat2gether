@@ -11,5 +11,6 @@
 @protocol DataRepository <NSObject>
 
 -(void) getCitiesWithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
+-(void) getCitiesAdvertisementWithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
 
 @end

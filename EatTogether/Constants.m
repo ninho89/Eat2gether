@@ -22,8 +22,15 @@ NSString * const kCityPictureParse = @"cityPicture";
 NSString * const kLocationTableParse = @"Location";
 NSString * const kLocationIdParse = @"locationId";
 NSString * const kLocationCityIdParse = @"cityId";
-NSString * const kLocationLatitude = @"locationLatitude";
-NSString * const kLocationLongitude = @"locationLongitude";
+NSString * const kLocationLatitudeParse = @"locationLatitude";
+NSString * const kLocationLongitudeParse = @"locationLongitude";
+
+//Constants Advertisement Table Parse
+NSString * const kAdvertisementTableParse = @"Advertisement";
+NSString * const kAdvertisementIdParse = @"advertisementId";
+NSString * const kAdvertisementDetailAdvertisementIdParse = @"detailAdvertisement";
+NSString * const kAdvertisementUserIdParse = @"userId";
+NSString * const kAdvertisementLocationIdPArse = @"locationId";
 
 //Constants Custom Cell
 NSString *const kCellCity = @"CellID";

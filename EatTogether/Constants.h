@@ -18,12 +18,19 @@ extern NSString * const kCityCountryParse;
 extern NSString * const kCityLocationIdParse;
 extern NSString * const kCityPictureParse;
 
-// Constants Location Table Parse
+//Constants Location Table Parse
 extern NSString * const kLocationTableParse;
 extern NSString * const kLocationIdParse;
 extern NSString * const kLocationCityIdParse;
-extern NSString * const kLocationLatitude;
-extern NSString * const kLocationLongitude;
+extern NSString * const kLocationLatitudeParse;
+extern NSString * const kLocationLongitudeParse;
+
+//Constants Advertisement Table Parse
+extern NSString * const kAdvertisementTableParse;
+extern NSString * const kAdvertisementIdParse;
+extern NSString * const kAdvertisementDetailAdvertisementIdParse;
+extern NSString * const kAdvertisementUserIdParse;
+extern NSString * const kAdvertisementLocationIdPArse;
 
 // Constants Custom Cell
 extern NSString *const kCellCity;

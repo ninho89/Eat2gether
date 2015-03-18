@@ -18,6 +18,7 @@
 
 @implementation NetworkDataRepository
 
+#pragma mark - Get All Cities
 
 -(void) getCitiesWithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock {
     //Consulta todas las ciudades con sus cordenadas
@@ -45,6 +46,12 @@
             completionBlock(cities, nil);
         }
     }];
+}
+
+#pragma mark - Get All Citie's Advertisement
+
+-(void) getCitiesAdvertisementWithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
+    //PFQuery *query = [PFQuery queryWithClassName:<#(NSString *)#>];
 }
 
 @end
