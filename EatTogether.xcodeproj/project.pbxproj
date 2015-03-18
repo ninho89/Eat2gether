@@ -24,6 +24,7 @@
 		E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64D4B011AB893E000ABC477 /* CustomCityTableViewCell.xib */; };
 		E64D4B081AB9931C00ABC477 /* DetailCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4B071AB9931C00ABC477 /* DetailCityListViewController.m */; };
 		E6873D671AB9D418006336D4 /* Advertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D661AB9D418006336D4 /* Advertisement.m */; };
+		E6873D6A1ABA0079006336D4 /* AdvertisementMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D691ABA0079006336D4 /* AdvertisementMapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		E64D4B071AB9931C00ABC477 /* DetailCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCityListViewController.m; sourceTree = "<group>"; };
 		E6873D651AB9D418006336D4 /* Advertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Advertisement.h; sourceTree = "<group>"; };
 		E6873D661AB9D418006336D4 /* Advertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Advertisement.m; sourceTree = "<group>"; };
+		E6873D681ABA0079006336D4 /* AdvertisementMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisementMapper.h; sourceTree = "<group>"; };
+		E6873D691ABA0079006336D4 /* AdvertisementMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertisementMapper.m; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,6 +245,8 @@
 			children = (
 				E64D4AF51AB8813F00ABC477 /* CityMapper.h */,
 				E64D4AF61AB8813F00ABC477 /* CityMapper.m */,
+				E6873D681ABA0079006336D4 /* AdvertisementMapper.h */,
+				E6873D691ABA0079006336D4 /* AdvertisementMapper.m */,
 			);
 			name = Mapper;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				E64D4AC31AB8672C00ABC477 /* MainViewController.m in Sources */,
 				E64D4AF71AB8813F00ABC477 /* CityMapper.m in Sources */,
 				E64D4AF31AB87A4700ABC477 /* City.m in Sources */,
+				E6873D6A1ABA0079006336D4 /* AdvertisementMapper.m in Sources */,
 				E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */,
 				E64D4ABA1AB8672C00ABC477 /* main.m in Sources */,
 				E6873D671AB9D418006336D4 /* Advertisement.m in Sources */,

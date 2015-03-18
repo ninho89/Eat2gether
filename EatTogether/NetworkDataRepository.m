@@ -9,10 +9,13 @@
 #import "NetworkDataRepository.h"
 #import "CityMapper.h"
 #import "City.h"
+#import "Advertisement.h"
+#import "AdvertisementMapper.h"
 
 @interface NetworkDataRepository ()
 
 @property (nonatomic, strong) CityMapper *cityMapper;
+@property (nonatomic, strong) AdvertisementMapper *advertisementMapper;
 
 @end
 
@@ -63,10 +66,12 @@
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if(!error){
                 
-                NSMutableArray *advertisement = [NSMutableArray array];
+                NSMutableArray *advertisements = [NSMutableArray array];
                 for (PFObject *pfAdvertisement in objects)
                 {
-                    //TODO mapear
+                    self.advertisementMapper = [[AdvertisementMapper alloc]init];
+                    Advertisement *advertisement = [self.advertisementMapper mapParseAdvertisement:pfAdvertisement];
+                    [advertisements addObject:advertisement];
                 }
                 /*
                 for (PFObject *pfAdvertisement in objects)
@@ -79,7 +84,7 @@
                     
                 }*/
                 
-                completionBlock(objects, nil);
+                completionBlock(advertisements, nil);
             }
         }];
     }];
