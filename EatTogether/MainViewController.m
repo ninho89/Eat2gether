@@ -11,7 +11,7 @@
 #import "City.h"
 #import "CustomCityTableViewCell.h"
 #import "DetailCityListViewController.h"
-#import <UIImageView+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MainViewController ()
 
@@ -38,18 +38,15 @@
     [self registerCustomCell];
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    
-   
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    //self.navigationController.navigationItem.title = @"EatTogether";
-//    self.navigationItem.title=@"EatTogether";
-//    [self.navigationController.navigationBar
-//     setTitleTextAttributes:@{
-//                              NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1]
-//                              }];
+    self.navigationItem.title=@"EatTogether";
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{
+                              NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1]
+                              }];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -105,7 +102,15 @@
   
     City *city = self.citiesArray[indexPath.row];
 
-    [cell.cityPictureImage sd_setImageWithURL:[NSURL URLWithString:city.cityPicture] placeholderImage:nil];
+//    [cell.cityPictureImage sd_setImageWithURL:[NSURL URLWithString:city.cityPicture] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        
+//    }];
+    
+    [cell.cityPictureImage sd_setImageWithURL:[NSURL URLWithString:city.cityPicture]
+                             placeholderImage:nil];
+
+    
+    //[cell.cityPictureImage sd_setImageWithURL:[NSURL URLWithString:city.cityPicture] placeholderImage:nil];
     cell.cityNameLabel.text = city.cityName;
     
  

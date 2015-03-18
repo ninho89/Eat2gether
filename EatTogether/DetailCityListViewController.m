@@ -25,16 +25,11 @@
     [super viewWillAppear:animated];
 
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
-    barButton.title = @"back";
+    barButton.title = @"Back";
     self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
     
     self.navigationItem.title = @"NombreCiudad";
 }
-
-//-(void)viewDidDisappear:(BOOL)animated{
-//    [super viewDidDisappear:animated];
-//    self.navigationItem.title = @"EatTogether";
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
