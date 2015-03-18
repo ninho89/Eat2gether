@@ -36,7 +36,7 @@
                 <outlet property="cityNameLabel" destination="ZXn-aP-Fpp" id="4a1-4g-qoh"/>
                 <outlet property="cityPictureImage" destination="0RO-b2-lBa" id="arG-kG-fM8"/>
             </connections>
-            <point key="canvasLocation" x="280.5" y="343"/>
+            <point key="canvasLocation" x="245.5" y="146"/>
         </tableViewCell>
     </objects>
 </document>
