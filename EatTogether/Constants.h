@@ -10,6 +10,7 @@
 
 @interface Constants : NSObject
 
+//Constants City Table Parse
 extern NSString * const kCityTableParse;
 extern NSString * const kCityIdParse;
 extern NSString * const kCityNameParse;
@@ -17,12 +18,14 @@ extern NSString * const kCityCountryParse;
 extern NSString * const kCityLocationIdParse;
 extern NSString * const kCityPictureParse;
 
+// Constants Location Table Parse
 extern NSString * const kLocationTableParse;
 extern NSString * const kLocationIdParse;
 extern NSString * const kLocationCityIdParse;
 extern NSString * const kLocationLatitude;
 extern NSString * const kLocationLongitude;
 
+// Constants Custom Cell
 extern NSString *const kCellCity;
 
 

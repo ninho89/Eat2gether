@@ -131,9 +131,11 @@
 				E64D4AE31AB86A6A00ABC477 /* Utilities */,
 				E64D4AED1AB8762500ABC477 /* Model */,
 				E64D4AF41AB8811F00ABC477 /* Mapper */,
-				E64D4AEB1AB8735D00ABC477 /* Repository */,
+				E64D4AEB1AB8735D00ABC477 /* DataRepository */,
 				E64D4AE11AB86A2200ABC477 /* Controllers */,
 				E64D4AE21AB86A2B00ABC477 /* Views */,
+				E64D4AC41AB8672C00ABC477 /* Main.storyboard */,
+				E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */,
 				E64D4AC71AB8672C00ABC477 /* Images.xcassets */,
 				E64D4ABE1AB8672C00ABC477 /* EatTogether.xcdatamodeld */,
 				E64D4AB71AB8672C00ABC477 /* Supporting Files */,
@@ -188,8 +190,6 @@
 		E64D4AE21AB86A2B00ABC477 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E64D4AC41AB8672C00ABC477 /* Main.storyboard */,
-				E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */,
 				E64D4AFF1AB893E000ABC477 /* CustomCityTableViewCell.h */,
 				E64D4B001AB893E000ABC477 /* CustomCityTableViewCell.m */,
 				E64D4B011AB893E000ABC477 /* CustomCityTableViewCell.xib */,
@@ -208,14 +208,14 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
-		E64D4AEB1AB8735D00ABC477 /* Repository */ = {
+		E64D4AEB1AB8735D00ABC477 /* DataRepository */ = {
 			isa = PBXGroup;
 			children = (
 				E64D4AEC1AB874F400ABC477 /* DataRepository.h */,
-				E64D4AEE1AB8764600ABC477 /* NetworkDataRepository.h */,
-				E64D4AEF1AB8764600ABC477 /* NetworkDataRepository.m */,
+				E64D4B051AB9698A00ABC477 /* CoreDataRepository */,
+				E64D4B041AB9694500ABC477 /* NetworkDataRepository */,
 			);
-			name = Repository;
+			name = DataRepository;
 			sourceTree = "<group>";
 		};
 		E64D4AED1AB8762500ABC477 /* Model */ = {
@@ -234,6 +234,22 @@
 				E64D4AF61AB8813F00ABC477 /* CityMapper.m */,
 			);
 			name = Mapper;
+			sourceTree = "<group>";
+		};
+		E64D4B041AB9694500ABC477 /* NetworkDataRepository */ = {
+			isa = PBXGroup;
+			children = (
+				E64D4AEE1AB8764600ABC477 /* NetworkDataRepository.h */,
+				E64D4AEF1AB8764600ABC477 /* NetworkDataRepository.m */,
+			);
+			name = NetworkDataRepository;
+			sourceTree = "<group>";
+		};
+		E64D4B051AB9698A00ABC477 /* CoreDataRepository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreDataRepository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

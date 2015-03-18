@@ -33,6 +33,8 @@
     
     [self getAllCities];
     [self registerCustomCell];
+    
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 #pragma mark - Memory Warning
@@ -42,7 +44,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - RegisterC Cell
+#pragma mark - Register Cell
 
 -(void) registerCustomCell{
     [self.tableView registerNib:[UINib nibWithNibName:@"CustomCityTableViewCell" bundle:nil]forCellReuseIdentifier:kCellCity];
@@ -52,7 +54,6 @@
 
 -(void) getAllCities{
     [self.repository getCitiesWithCompletionBlock:^(NSArray *cities, NSError *error) {
-        //NSLog(@"ok");
         self.citiesArray = cities;
         [self.tableView reloadData];
     }];
@@ -81,7 +82,6 @@
     
     return cell;
 }
-
 
 /*
  // Override to support conditional editing of the table view.
@@ -141,7 +141,7 @@
 
  - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
  
-     return 152;
+     return 160;
  }
  
 
