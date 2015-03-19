@@ -32,7 +32,7 @@
     self.repository = [[NetworkDataRepository alloc]init];
     self.advertisementsArray = [[NSArray alloc]init];
     [self getAllAdvertisements];
-    
+    [self drawPinMapImage];
     [self registerCustomCell];
     
 
@@ -73,6 +73,19 @@
         self.advertisementsArray = advertisement;
         [self.tableView reloadData];
     }];
+}
+
+-(void) drawPinMapImage{
+    UIButton *imagePin = [UIButton buttonWithType:UIButtonTypeCustom];
+    [imagePin setFrame:CGRectMake(0.0f, 0.0f, 20.0f, 30.0f)];
+    [imagePin addTarget:self action:@selector(showAdvertisementsMap) forControlEvents:UIControlEventTouchUpInside];
+    [imagePin setImage:[UIImage imageNamed:@"pinMap"] forState:UIControlStateNormal];
+    UIBarButtonItem *barButtonPinMap = [[UIBarButtonItem alloc] initWithCustomView:imagePin];
+    self.navigationItem.rightBarButtonItem = barButtonPinMap;
+}
+
+-(void) showAdvertisementsMap{
+    NSLog(@"Pinch");
 }
 
 #pragma mark - TableView DataSource Methods

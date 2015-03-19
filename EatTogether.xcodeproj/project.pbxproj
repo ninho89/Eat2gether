@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F834CA668C9B9A3896752E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A24F04FF967045BC072B7 /* libPods.a */; };
+		E626A7931ABAD47C0038D4BA /* pinMap.png in Resources */ = {isa = PBXBuildFile; fileRef = E626A7921ABAD47C0038D4BA /* pinMap.png */; };
 		E64D4ABA1AB8672C00ABC477 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AB91AB8672C00ABC477 /* main.m */; };
 		E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4ABC1AB8672C00ABC477 /* AppDelegate.m */; };
 		E64D4AC01AB8672C00ABC477 /* EatTogether.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E64D4ABE1AB8672C00ABC477 /* EatTogether.xcdatamodeld */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		965B1BBF40BB4295FAC2FED9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		966A24F04FF967045BC072B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E626A7921ABAD47C0038D4BA /* pinMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinMap.png; sourceTree = "<group>"; };
 		E64D4AB41AB8672C00ABC477 /* EatTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D4AB81AB8672C00ABC477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64D4AB91AB8672C00ABC477 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */,
 				E64D4AC71AB8672C00ABC477 /* Images.xcassets */,
 				E64D4ABE1AB8672C00ABC477 /* EatTogether.xcdatamodeld */,
+				E626A7921ABAD47C0038D4BA /* pinMap.png */,
 				E64D4AB71AB8672C00ABC477 /* Supporting Files */,
 			);
 			path = EatTogether;
@@ -357,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E626A7931ABAD47C0038D4BA /* pinMap.png in Resources */,
 				E64D4AC61AB8672C00ABC477 /* Main.storyboard in Resources */,
 				E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */,
 				E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */,
