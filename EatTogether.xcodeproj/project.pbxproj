@@ -25,7 +25,7 @@
 		E64D4AF71AB8813F00ABC477 /* CityMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AF61AB8813F00ABC477 /* CityMapper.m */; };
 		E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4B001AB893E000ABC477 /* CustomCityTableViewCell.m */; };
 		E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64D4B011AB893E000ABC477 /* CustomCityTableViewCell.xib */; };
-		E64D4B081AB9931C00ABC477 /* DetailCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4B071AB9931C00ABC477 /* DetailCityListViewController.m */; };
+		E64D4B081AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4B071AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m */; };
 		E6873D671AB9D418006336D4 /* Advertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D661AB9D418006336D4 /* Advertisement.m */; };
 		E6873D6A1ABA0079006336D4 /* AdvertisementMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D691ABA0079006336D4 /* AdvertisementMapper.m */; };
 		E6873D6E1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */; };
@@ -76,8 +76,8 @@
 		E64D4AFF1AB893E000ABC477 /* CustomCityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCityTableViewCell.h; sourceTree = "<group>"; };
 		E64D4B001AB893E000ABC477 /* CustomCityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCityTableViewCell.m; sourceTree = "<group>"; };
 		E64D4B011AB893E000ABC477 /* CustomCityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCityTableViewCell.xib; sourceTree = "<group>"; };
-		E64D4B061AB9931C00ABC477 /* DetailCityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCityListViewController.h; sourceTree = "<group>"; };
-		E64D4B071AB9931C00ABC477 /* DetailCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCityListViewController.m; sourceTree = "<group>"; };
+		E64D4B061AB9931C00ABC477 /* DetailCityListAdvertisementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCityListAdvertisementViewController.h; sourceTree = "<group>"; };
+		E64D4B071AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCityListAdvertisementViewController.m; sourceTree = "<group>"; };
 		E6873D651AB9D418006336D4 /* Advertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Advertisement.h; sourceTree = "<group>"; };
 		E6873D661AB9D418006336D4 /* Advertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Advertisement.m; sourceTree = "<group>"; };
 		E6873D681ABA0079006336D4 /* AdvertisementMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisementMapper.h; sourceTree = "<group>"; };
@@ -206,8 +206,8 @@
 			children = (
 				E64D4AC11AB8672C00ABC477 /* MainViewController.h */,
 				E64D4AC21AB8672C00ABC477 /* MainViewController.m */,
-				E64D4B061AB9931C00ABC477 /* DetailCityListViewController.h */,
-				E64D4B071AB9931C00ABC477 /* DetailCityListViewController.m */,
+				E64D4B061AB9931C00ABC477 /* DetailCityListAdvertisementViewController.h */,
+				E64D4B071AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -429,7 +429,7 @@
 				E64D4AC01AB8672C00ABC477 /* EatTogether.xcdatamodeld in Sources */,
 				E64D4AF01AB8764600ABC477 /* NetworkDataRepository.m in Sources */,
 				E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */,
-				E64D4B081AB9931C00ABC477 /* DetailCityListViewController.m in Sources */,
+				E64D4B081AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m in Sources */,
 				E64D4AC31AB8672C00ABC477 /* MainViewController.m in Sources */,
 				E64D4AF71AB8813F00ABC477 /* CityMapper.m in Sources */,
 				E64D4AF31AB87A4700ABC477 /* City.m in Sources */,

@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Filippo Aresu. All rights reserved.
 //
 
-#import "DetailCityListViewController.h"
+#import "DetailCityListAdvertisementViewController.h"
 #import "NetworkDataRepository.h"
 #import "CustomAdvertisementTableViewCell.h"
 #import "Advertisement.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface DetailCityListViewController ()
+@interface DetailCityListAdvertisementViewController ()
 
 @property (nonatomic, strong) id<DataRepository> repository;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation DetailCityListViewController
+@implementation DetailCityListAdvertisementViewController
 
 #pragma mark - View Life Cycles
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "City.h"
 
-@interface DetailCityListViewController : UIViewController
+@interface DetailCityListAdvertisementViewController : UIViewController
 @property (nonatomic, strong) City *city;
 
 @end

@@ -10,7 +10,7 @@
 #import "NetworkDataRepository.h"
 #import "City.h"
 #import "CustomCityTableViewCell.h"
-#import "DetailCityListViewController.h"
+#import "DetailCityListAdvertisementViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MainViewController ()
@@ -116,14 +116,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
     
-    DetailCityListViewController *detailCityListViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"detailCityListViewController"];
+    DetailCityListAdvertisementViewController *detailCityListViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"detailCityListAdvertisementViewController"];
     detailCityListViewController.city = self.citiesArray[indexPath.row];
-    
     
     [self.navigationController pushViewController:detailCityListViewController animated:YES];
     
 }
-
 
  - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
  
