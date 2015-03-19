@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) MKPointAnnotation *myAnnotation;
 @property (nonatomic, strong) Advertisement *adv;
+@property (nonatomic, strong) NSMutableArray *locArr;
+
 
 @end
 
@@ -29,7 +31,18 @@
     // Do any additional setup after loading the view.
 
     
-    self.adv = self.advArray[0] ;
+    self.adv = self.advArray[0];
+    
+//    self.locArr = [[NSMutableArray alloc]init];
+//    for (Advertisement *advert in self.advArray) {
+//        CLLocationCoordinate2D coord;
+//        coord.latitude = [advert.advertisementLocationLatitude doubleValue];
+//        coord.longitude = [advert.advertisementLocationLongitude doubleValue];
+//
+//        //[self.locArr addObject:];
+//    }
+    
+    //[self.mapView addAnnotation:self.locArr];
 
     
     self.mapView.showsUserLocation = YES;
@@ -80,12 +93,15 @@
     
     CLLocationCoordinate2D coordinateAdvertisement;
     //Barrio de gracia(Barcelona)
-    coordinateAdvertisement.latitude = [self.adv.advertisementLocationLatitude doubleValue];
-    coordinateAdvertisement.longitude = [self.adv.advertisementLocationLongitude doubleValue];
+    coordinateAdvertisement.latitude = [self.adv.advertisementLocationLatitude floatValue];
+    coordinateAdvertisement.longitude = [self.adv.advertisementLocationLongitude floatValue];
     self.myAnnotation.coordinate = coordinateAdvertisement;
     
-    //[self.mapView removeAnnotations:[self.mapView annotations]];
+    [self.mapView removeAnnotations:[self.mapView annotations]];
     [self.mapView addAnnotation:self.myAnnotation];
+    
+
+
 }
 
 

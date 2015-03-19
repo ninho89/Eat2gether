@@ -89,8 +89,6 @@
 
 -(void) showAdvertisementsMap{
     MapCityListAdvertisementViewController *mapCityListAdvertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardMapCityListAdvertisementViewController];
-//    mapCityListAdvertisement.cityName = self.city.cityName;
-//    mapCityListAdvertisement.objectCityId = self.city.cityObjectId;
     mapCityListAdvertisement.advArray = self.advertisementsArray;
     mapCityListAdvertisement.cities = self.city;
     [self.navigationController pushViewController:mapCityListAdvertisement animated:YES];

@@ -11,9 +11,6 @@
 
 @interface MapCityListAdvertisementViewController : UIViewController
 
-
-//@property (nonatomic, strong) NSString *cityName;
-//@property (nonatomic, strong) NSString *objectCityId;
 @property (nonatomic, strong) NSArray * advArray;
 @property (nonatomic, strong) City * cities;
 
