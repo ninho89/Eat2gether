@@ -16,7 +16,9 @@
     city.cityObjectId = [pfCity valueForKey:kCityObjectIdParse];
     city.cityName = [pfCity valueForKey:kCityNameParse];
     city.cityCountry = [pfCity valueForKey:kCityCountryParse];
-    
+    city.cityLatitude = [[pfCity valueForKey:kCityLocationIdParse] valueForKey:kLocationLatitudeParse];
+    city.cityLongitude= [[pfCity valueForKey:kCityLocationIdParse] valueForKey:kLocationLongitudeParse];
+
     PFFile *imageFile = [pfCity objectForKey:kCityPictureParse];
     city.cityPictureUrl = imageFile.url;
     

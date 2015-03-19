@@ -35,6 +35,8 @@ extern NSString * const kAdvertisementLocationIdParse;
 extern NSString * const kAdvertisementLocationLatitude;
 extern NSString * const kAdvertisementLocationLongitude;
 extern NSString * const kAdvertisementCityIdParse;
+extern NSString * const kAdvertisementCityLatitude;
+extern NSString * const kAdvertisementCityLongitude;
 
 //Constants Detail Advertisement Table Parse
 extern NSString * const kDetailAdvertisementTableParse;

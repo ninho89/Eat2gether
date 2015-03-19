@@ -15,5 +15,7 @@
 @property (nonatomic, strong) NSString *cityName;
 @property (nonatomic, strong) NSString *cityCountry;
 @property (nonatomic, strong) NSString *cityPictureUrl;
+@property (nonatomic, strong) NSString *cityLatitude;
+@property (nonatomic, strong) NSString *cityLongitude;
 
 @end

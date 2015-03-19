@@ -35,8 +35,8 @@
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
     self.myAnnotation = [[MKPointAnnotation alloc]init];
-//    [self getCityLocation];
-//    [self getCityAdvertisemts];
+    [self getCityLocation];
+    [self getCityAdvertisemts];
     
     
 }
@@ -48,7 +48,7 @@
     barButton.title = @"Back";
     self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
     
-    self.navigationItem.title = self.cityName;
+    self.navigationItem.title = self.cities.cityName;
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{
                               NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1],
@@ -70,8 +70,8 @@
 -(void) getCityLocation{
     CLLocationCoordinate2D cityCoord;
     //Barcelona
-    cityCoord.latitude = 41.39172;
-    cityCoord.longitude = 2.16349;
+    cityCoord.latitude = [self.cities.cityLatitude doubleValue];
+    cityCoord.longitude = [self.cities.cityLongitude doubleValue];
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(cityCoord, 10000, 10000);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
 }
@@ -80,8 +80,8 @@
     
     CLLocationCoordinate2D coordinateAdvertisement;
     //Barrio de gracia(Barcelona)
-    coordinateAdvertisement.latitude = 41.4025392;
-    coordinateAdvertisement.longitude = 2.15247039999997;
+    coordinateAdvertisement.latitude = [self.adv.advertisementLocationLatitude doubleValue];
+    coordinateAdvertisement.longitude = [self.adv.advertisementLocationLongitude doubleValue];
     self.myAnnotation.coordinate = coordinateAdvertisement;
     
     //[self.mapView removeAnnotations:[self.mapView annotations]];

@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "City.h"
 
 @interface MapCityListAdvertisementViewController : UIViewController
 
 
-@property (nonatomic, strong) NSString *cityName;
-@property (nonatomic, strong) NSString *objectCityId;
+//@property (nonatomic, strong) NSString *cityName;
+//@property (nonatomic, strong) NSString *objectCityId;
 @property (nonatomic, strong) NSArray * advArray;
+@property (nonatomic, strong) City * cities;
 
 
 @end

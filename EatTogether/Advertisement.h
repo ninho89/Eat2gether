@@ -23,6 +23,8 @@
 @property (nonatomic, strong) NSString *advertisementUserName;
 @property (nonatomic, strong) NSString *advertisementLocationLatitude;
 @property (nonatomic, strong) NSString *advertisementLocationLongitude;
+@property (nonatomic, strong) NSString *advertisementCityLatitude;
+@property (nonatomic, strong) NSString *advertisementCityLongitude;
 @property (nonatomic, strong) NSString *advertisementUserPictureUrl;
 
 @property (nonatomic, strong) NSArray *advertisementIdioms;

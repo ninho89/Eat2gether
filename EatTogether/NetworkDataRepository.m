@@ -27,7 +27,7 @@
     //Consulta todas las ciudades con sus cordenadas
     PFQuery *query = [PFQuery queryWithClassName:kCityTableParse];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    //[query includeKey:kCityLocationIdParse]; //se usa para coger la relacion para saber sus coordenadas
+    [query includeKey:kCityLocationIdParse]; //se usa para coger la relacion para saber sus coordenadas
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
