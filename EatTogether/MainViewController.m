@@ -48,6 +48,7 @@
                               NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1],
                               NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size:24.0]
                               }];
+    self.tabBarController.tabBar.tintColor = [UIColor redColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

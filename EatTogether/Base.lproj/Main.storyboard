@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="1979" y="361"/>
         </scene>
-        <!--View Controller-->
+        <!--Map City List Advertisement View Controller-->
         <scene sceneID="a5T-3Z-jnm">
             <objects>
-                <viewController storyboardIdentifier="mapCityListAdvertisementViewController" id="LJu-UX-SoF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapCityListAdvertisementViewController" id="LJu-UX-SoF" customClass="MapCityListAdvertisementViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oyI-xS-3D0"/>
                         <viewControllerLayoutGuide type="bottom" id="JgG-2f-VIr"/>
@@ -154,8 +154,22 @@
                     <view key="view" contentMode="scaleToFill" id="1sp-O3-f2n">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9zr-up-2gt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9zr-up-2gt" firstAttribute="top" secondItem="1sp-O3-f2n" secondAttribute="top" id="Ov5-EZ-ba2"/>
+                            <constraint firstAttribute="trailing" secondItem="9zr-up-2gt" secondAttribute="trailing" id="nCc-w7-TL0"/>
+                            <constraint firstItem="9zr-up-2gt" firstAttribute="leading" secondItem="1sp-O3-f2n" secondAttribute="leading" id="q0w-1b-gOr"/>
+                            <constraint firstItem="JgG-2f-VIr" firstAttribute="top" secondItem="9zr-up-2gt" secondAttribute="bottom" id="wkb-9v-Se4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="9zr-up-2gt" id="U1o-PZ-G6y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2t-13-f8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

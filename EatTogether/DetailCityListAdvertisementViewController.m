@@ -86,8 +86,6 @@
 }
 
 -(void) showAdvertisementsMap{
-    NSLog(@"Go to Map");
-    
     MapCityListAdvertisementViewController *mapCityListAdvertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardMapCityListAdvertisementViewController];
     [self.navigationController pushViewController:mapCityListAdvertisement animated:YES];
 }
