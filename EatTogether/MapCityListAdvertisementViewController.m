@@ -8,11 +8,13 @@
 
 #import "MapCityListAdvertisementViewController.h"
 #import <MapKit/MapKit.h>
+#import "Advertisement.h"
 
 @interface MapCityListAdvertisementViewController () <MKMapViewDelegate, MKAnnotation>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) MKPointAnnotation *myAnnotation;
+@property (nonatomic, strong) Advertisement *adv;
 
 @end
 
@@ -25,6 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    
+    self.adv = self.advArray[0] ;
 
     
     self.mapView.showsUserLocation = YES;
@@ -62,26 +67,26 @@
 
 
 
-//-(void) getCityLocation{
-//    CLLocationCoordinate2D cityCoord;
-//    //Barcelona
-//    cityCoord.latitude = 41.39172;
-//    cityCoord.longitude = 2.16349;
-//    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(cityCoord, 10000, 10000);
-//    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
-//}
+-(void) getCityLocation{
+    CLLocationCoordinate2D cityCoord;
+    //Barcelona
+    cityCoord.latitude = 41.39172;
+    cityCoord.longitude = 2.16349;
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(cityCoord, 10000, 10000);
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+}
 //
-//-(void) getCityAdvertisemts{
-//    
-//    CLLocationCoordinate2D coordinateAdvertisement;
-//    //Barrio de gracia(Barcelona)
-//    coordinateAdvertisement.latitude = 41.4025392;
-//    coordinateAdvertisement.longitude = 2.15247039999997;
-//    self.myAnnotation.coordinate = coordinateAdvertisement;
-//    
-//    //[self.mapView removeAnnotations:[self.mapView annotations]];
-//    [self.mapView addAnnotation:self.myAnnotation];
-//}
+-(void) getCityAdvertisemts{
+    
+    CLLocationCoordinate2D coordinateAdvertisement;
+    //Barrio de gracia(Barcelona)
+    coordinateAdvertisement.latitude = 41.4025392;
+    coordinateAdvertisement.longitude = 2.15247039999997;
+    self.myAnnotation.coordinate = coordinateAdvertisement;
+    
+    //[self.mapView removeAnnotations:[self.mapView annotations]];
+    [self.mapView addAnnotation:self.myAnnotation];
+}
 
 
 
