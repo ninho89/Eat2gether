@@ -29,8 +29,6 @@
     // Do any additional setup after loading the view.
 
     
-    self.adv = self.advArray[0] ;
-
     
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
