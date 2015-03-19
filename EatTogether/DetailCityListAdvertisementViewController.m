@@ -11,6 +11,7 @@
 #import "CustomAdvertisementTableViewCell.h"
 #import "Advertisement.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "MapCityListAdvertisementViewController.h"
 
 @interface DetailCityListAdvertisementViewController ()
 
@@ -85,7 +86,10 @@
 }
 
 -(void) showAdvertisementsMap{
-    NSLog(@"Pinch");
+    NSLog(@"Go to Map");
+    
+    MapCityListAdvertisementViewController *mapCityListAdvertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardMapCityListAdvertisementViewController];
+    [self.navigationController pushViewController:mapCityListAdvertisement animated:YES];
 }
 
 

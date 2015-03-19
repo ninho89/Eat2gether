@@ -58,7 +58,11 @@ NSString * const kUserPhoneParse = @"userPhone";
 NSString * const kUserPictureParse = @"userPicture";
 
 //Constants Custom Cell
-NSString *const kCellCity = @"CellID";
-NSString *const kCellAdvertisement = @"CellID2";
+NSString *const kCellCity = @"CellIdCity";
+NSString *const kCellAdvertisement = @"CellIdAdvertisement";
+
+//Costants Storyboard ViewController
+NSString *const kStoryboardDetailCityListAdvertisementViewController = @"detailCityListAdvertisementViewController";
+NSString *const kStoryboardMapCityListAdvertisementViewController = @"mapCityListAdvertisementViewController";
 
 @end

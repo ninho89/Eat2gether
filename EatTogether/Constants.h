@@ -61,5 +61,9 @@ extern NSString * const kUserPictureParse;
 extern NSString *const kCellCity;
 extern NSString *const kCellAdvertisement;
 
+//Costants Storyboard ViewController
+extern NSString *const kStoryboardDetailCityListAdvertisementViewController;
+extern NSString *const kStoryboardMapCityListAdvertisementViewController;
+
 
 @end

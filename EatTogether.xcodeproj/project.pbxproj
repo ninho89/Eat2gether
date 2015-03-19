@@ -10,6 +10,7 @@
 		1F834CA668C9B9A3896752E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A24F04FF967045BC072B7 /* libPods.a */; };
 		E622A9081ABADF18009CC0B9 /* favoriteOff.png in Resources */ = {isa = PBXBuildFile; fileRef = E622A9061ABADF18009CC0B9 /* favoriteOff.png */; };
 		E622A9091ABADF18009CC0B9 /* favoriteOn.png in Resources */ = {isa = PBXBuildFile; fileRef = E622A9071ABADF18009CC0B9 /* favoriteOn.png */; };
+		E622A90C1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E622A90B1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m */; };
 		E626A7931ABAD47C0038D4BA /* pinMap.png in Resources */ = {isa = PBXBuildFile; fileRef = E626A7921ABAD47C0038D4BA /* pinMap.png */; };
 		E64D4ABA1AB8672C00ABC477 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AB91AB8672C00ABC477 /* main.m */; };
 		E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4ABC1AB8672C00ABC477 /* AppDelegate.m */; };
@@ -47,6 +48,8 @@
 		966A24F04FF967045BC072B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E622A9061ABADF18009CC0B9 /* favoriteOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favoriteOff.png; sourceTree = "<group>"; };
 		E622A9071ABADF18009CC0B9 /* favoriteOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favoriteOn.png; sourceTree = "<group>"; };
+		E622A90A1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCityListAdvertisementViewController.h; sourceTree = "<group>"; };
+		E622A90B1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCityListAdvertisementViewController.m; sourceTree = "<group>"; };
 		E626A7921ABAD47C0038D4BA /* pinMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinMap.png; sourceTree = "<group>"; };
 		E64D4AB41AB8672C00ABC477 /* EatTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D4AB81AB8672C00ABC477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				E64D4AC21AB8672C00ABC477 /* MainViewController.m */,
 				E64D4B061AB9931C00ABC477 /* DetailCityListAdvertisementViewController.h */,
 				E64D4B071AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m */,
+				E622A90A1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.h */,
+				E622A90B1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 				E64D4AF71AB8813F00ABC477 /* CityMapper.m in Sources */,
 				E64D4AF31AB87A4700ABC477 /* City.m in Sources */,
 				E6873D6A1ABA0079006336D4 /* AdvertisementMapper.m in Sources */,
+				E622A90C1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m in Sources */,
 				E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */,
 				E64D4ABA1AB8672C00ABC477 /* main.m in Sources */,
 				E6873D671AB9D418006336D4 /* Advertisement.m in Sources */,
