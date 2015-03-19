@@ -131,6 +131,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E622A90F1ABB1EB5009CC0B9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E622A9061ABADF18009CC0B9 /* favoriteOff.png */,
+				E622A9071ABADF18009CC0B9 /* favoriteOn.png */,
+				E626A7921ABAD47C0038D4BA /* pinMap.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		E64D4AAB1AB8672C00ABC477 = {
 			isa = PBXGroup;
 			children = (
@@ -165,9 +175,7 @@
 				E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */,
 				E64D4AC71AB8672C00ABC477 /* Images.xcassets */,
 				E64D4ABE1AB8672C00ABC477 /* EatTogether.xcdatamodeld */,
-				E622A9061ABADF18009CC0B9 /* favoriteOff.png */,
-				E622A9071ABADF18009CC0B9 /* favoriteOn.png */,
-				E626A7921ABAD47C0038D4BA /* pinMap.png */,
+				E622A90F1ABB1EB5009CC0B9 /* Assets */,
 				E64D4AB71AB8672C00ABC477 /* Supporting Files */,
 			);
 			path = EatTogether;

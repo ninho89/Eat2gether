@@ -32,6 +32,8 @@ NSString * const kAdvertisementIdParse = @"advertisementId";
 NSString * const kAdvertisementDetailAdvertisementIdParse = @"detailAdvertisementId";
 NSString * const kAdvertisementUserIdParse = @"userId";
 NSString * const kAdvertisementLocationIdParse = @"locationId";
+NSString * const kAdvertisementLocationLatitude = @"locationLatitude";
+NSString * const kAdvertisementLocationLongitude = @"locationLongitude";
 NSString * const kAdvertisementCityIdParse = @"cityId";
 
 //Constants Detail Advertisement Table Parse

@@ -20,8 +20,10 @@
     advertisement.advertisementPictureUrl = imageFilePicturUrl.url;
     
     advertisement.advertisementPrice = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse] valueForKey:kDetailAdvertisementPriceParse];
-    advertisement.advertisementCity = [[pfAdvertisement valueForKey:kAdvertisementCityIdParse] valueForKey:kCityNameParse];
+    advertisement.advertisementCityName = [[pfAdvertisement valueForKey:kAdvertisementCityIdParse] valueForKey:kCityNameParse];
     advertisement.advertisementUserName = [[pfAdvertisement valueForKey:kAdvertisementUserIdParse]valueForKey:kUserNameParse];
+    advertisement.advertisementLocationLongitude = [[pfAdvertisement valueForKey:kAdvertisementLocationIdParse] valueForKey:kLocationLongitudeParse];
+    advertisement.advertisementLocationLatitude = [[pfAdvertisement valueForKey:kAdvertisementLocationIdParse] valueForKey:kLocationLatitudeParse];
     
     PFFile *imageFileUserPicturUrl = [[pfAdvertisement valueForKey:kAdvertisementUserIdParse]valueForKey:kUserPictureParse];
     advertisement.advertisementUserPictureUrl = imageFileUserPicturUrl.url;

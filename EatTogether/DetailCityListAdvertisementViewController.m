@@ -36,6 +36,7 @@
     [self drawPinMapImage];
     [self registerCustomCell];
     
+    
 
 }
 
@@ -87,9 +88,11 @@
 
 -(void) showAdvertisementsMap{
     MapCityListAdvertisementViewController *mapCityListAdvertisement = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardMapCityListAdvertisementViewController];
+    mapCityListAdvertisement.cityName = self.city.cityName;
+    mapCityListAdvertisement.objectCityId = self.city.cityObjectId;
+    mapCityListAdvertisement.advArray = self.advertisementsArray;
     [self.navigationController pushViewController:mapCityListAdvertisement animated:YES];
 }
-
 
 #pragma mark - TableView DataSource Methods
 
@@ -109,9 +112,7 @@
     CustomAdvertisementTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellAdvertisement forIndexPath:indexPath];
 //    
     Advertisement *advertisement = self.advertisementsArray[indexPath.row];
-//    
 
-//    
 //    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl]
 //                             placeholderImage:nil];
     
@@ -127,18 +128,7 @@
     
     return cell;
 }
-//
-//
-//#pragma mark - TableView Delegate
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    // Navigation logic may go here. Create and push another view controller.
-//    
-//    
-//    
-//}
-//
-//
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return 170;

@@ -32,6 +32,8 @@ extern NSString * const kAdvertisementIdParse;
 extern NSString * const kAdvertisementDetailAdvertisementIdParse;
 extern NSString * const kAdvertisementUserIdParse;
 extern NSString * const kAdvertisementLocationIdParse;
+extern NSString * const kAdvertisementLocationLatitude;
+extern NSString * const kAdvertisementLocationLongitude;
 extern NSString * const kAdvertisementCityIdParse;
 
 //Constants Detail Advertisement Table Parse

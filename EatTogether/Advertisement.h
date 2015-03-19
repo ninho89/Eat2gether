@@ -14,8 +14,10 @@
 @property (nonatomic, strong) NSString *advertisementStarter;
 @property (nonatomic, strong) NSString *advertisementPictureUrl;
 @property (nonatomic, strong) NSString *advertisementPrice;
-@property (nonatomic, strong) NSString *advertisementCity;
+@property (nonatomic, strong) NSString *advertisementCityName;
 @property (nonatomic, strong) NSString *advertisementUserName;
+@property (nonatomic, strong) NSString *advertisementLocationLatitude;
+@property (nonatomic, strong) NSString *advertisementLocationLongitude;
 @property (nonatomic, strong) NSString *advertisementUserPictureUrl;
 
 
