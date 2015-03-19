@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F834CA668C9B9A3896752E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A24F04FF967045BC072B7 /* libPods.a */; };
+		E622A9081ABADF18009CC0B9 /* favoriteOff.png in Resources */ = {isa = PBXBuildFile; fileRef = E622A9061ABADF18009CC0B9 /* favoriteOff.png */; };
+		E622A9091ABADF18009CC0B9 /* favoriteOn.png in Resources */ = {isa = PBXBuildFile; fileRef = E622A9071ABADF18009CC0B9 /* favoriteOn.png */; };
 		E626A7931ABAD47C0038D4BA /* pinMap.png in Resources */ = {isa = PBXBuildFile; fileRef = E626A7921ABAD47C0038D4BA /* pinMap.png */; };
 		E64D4ABA1AB8672C00ABC477 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AB91AB8672C00ABC477 /* main.m */; };
 		E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4ABC1AB8672C00ABC477 /* AppDelegate.m */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		965B1BBF40BB4295FAC2FED9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		966A24F04FF967045BC072B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E622A9061ABADF18009CC0B9 /* favoriteOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favoriteOff.png; sourceTree = "<group>"; };
+		E622A9071ABADF18009CC0B9 /* favoriteOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favoriteOn.png; sourceTree = "<group>"; };
 		E626A7921ABAD47C0038D4BA /* pinMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinMap.png; sourceTree = "<group>"; };
 		E64D4AB41AB8672C00ABC477 /* EatTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D4AB81AB8672C00ABC477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */,
 				E64D4AC71AB8672C00ABC477 /* Images.xcassets */,
 				E64D4ABE1AB8672C00ABC477 /* EatTogether.xcdatamodeld */,
+				E622A9061ABADF18009CC0B9 /* favoriteOff.png */,
+				E622A9071ABADF18009CC0B9 /* favoriteOn.png */,
 				E626A7921ABAD47C0038D4BA /* pinMap.png */,
 				E64D4AB71AB8672C00ABC477 /* Supporting Files */,
 			);
@@ -361,9 +367,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E626A7931ABAD47C0038D4BA /* pinMap.png in Resources */,
+				E622A9091ABADF18009CC0B9 /* favoriteOn.png in Resources */,
 				E64D4AC61AB8672C00ABC477 /* Main.storyboard in Resources */,
 				E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */,
 				E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */,
+				E622A9081ABADF18009CC0B9 /* favoriteOff.png in Resources */,
 				E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */,
 				E64D4AC81AB8672C00ABC477 /* Images.xcassets in Resources */,
 			);

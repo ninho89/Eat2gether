@@ -10,7 +10,7 @@
 
 @interface CustomAdvertisementTableViewCell()
 
-
+@property (nonatomic) BOOL check;
 
 @end
 
@@ -18,6 +18,7 @@
 
 - (void)awakeFromNib {
 //    // Initialization code
+    self.check = NO;
     self.customUserImage.clipsToBounds = YES;
     self.customUserImage.layer.cornerRadius = self.customUserImage.bounds.size.height / 2.0f;
 }
@@ -26,6 +27,18 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+-(IBAction)addToFavorites:(id)sender{
+    
+    
+    if(!self.check){
+        [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"favoriteOn"] forState:UIControlStateNormal];
+        self.check = YES;
+    }else{
+        [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"favoriteOFF"] forState:UIControlStateNormal];
+        self.check = NO;
+    }
 }
 
 @end

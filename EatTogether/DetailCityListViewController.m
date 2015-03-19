@@ -88,6 +88,7 @@
     NSLog(@"Pinch");
 }
 
+
 #pragma mark - TableView DataSource Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
