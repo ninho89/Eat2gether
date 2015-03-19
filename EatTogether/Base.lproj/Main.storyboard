@@ -143,6 +143,24 @@
             </objects>
             <point key="canvasLocation" x="1979" y="361"/>
         </scene>
+        <!--Detail Advertisement View Controller-->
+        <scene sceneID="ffS-MM-r0f">
+            <objects>
+                <viewController storyboardIdentifier="detailAdvertisement" id="cpj-OT-xwv" customClass="DetailAdvertisementViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qF8-R0-BEh"/>
+                        <viewControllerLayoutGuide type="bottom" id="KeO-FI-jie"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FJE-WR-hd1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryj-HP-git" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2653" y="365"/>
+        </scene>
         <!--Map City List Advertisement View Controller-->
         <scene sceneID="a5T-3Z-jnm">
             <objects>
@@ -173,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2t-13-f8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2637" y="361"/>
+            <point key="canvasLocation" x="2631" y="-319"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wzo-gK-CSX">

@@ -46,8 +46,9 @@ NSString * const kDetailAdvertisementDessertParse = @"detailAdvertisemenDessert"
 NSString * const kDetailAdvertisementNumGuestsParse = @"detailAdvertisementNumGuests";
 NSString * const kDetailAdvertisementPriceParse = @"detailAdvertisementPrice";
 NSString * const kDetailAdvertisementDateParse = @"detailAdvertisementDate";
-NSString * const kDetailAdvertisementTopicsParse = @"detailAdvertisementTopics";
 NSString * const kDetailAdvertisementPictureParse = @"detailAdvertisementPicture";
+NSString * const kDetailAdvertisementIdiomsParse = @"detailAdvertisementIdioms";
+NSString * const kDetailAdvertisementTopicsParse = @"detailAdvertisementTopics";
 
 //Constants User Table Parse
 NSString * const kUserTableParse = @"User";
@@ -66,5 +67,6 @@ NSString *const kCellAdvertisement = @"CellIdAdvertisement";
 //Costants Storyboard ViewController
 NSString *const kStoryboardDetailCityListAdvertisementViewController = @"detailCityListAdvertisementViewController";
 NSString *const kStoryboardMapCityListAdvertisementViewController = @"mapCityListAdvertisementViewController";
+NSString *const kStoryboardDetailAdvertisementViewController = @"detailAdvertisement";
 
 @end

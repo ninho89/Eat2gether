@@ -12,6 +12,7 @@
 		E622A9091ABADF18009CC0B9 /* favoriteOn.png in Resources */ = {isa = PBXBuildFile; fileRef = E622A9071ABADF18009CC0B9 /* favoriteOn.png */; };
 		E622A90C1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E622A90B1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m */; };
 		E622A90E1ABAE801009CC0B9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E622A90D1ABAE801009CC0B9 /* MapKit.framework */; };
+		E622A9121ABB2D8F009CC0B9 /* DetailAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E622A9111ABB2D8F009CC0B9 /* DetailAdvertisementViewController.m */; };
 		E626A7931ABAD47C0038D4BA /* pinMap.png in Resources */ = {isa = PBXBuildFile; fileRef = E626A7921ABAD47C0038D4BA /* pinMap.png */; };
 		E64D4ABA1AB8672C00ABC477 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AB91AB8672C00ABC477 /* main.m */; };
 		E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4ABC1AB8672C00ABC477 /* AppDelegate.m */; };
@@ -52,6 +53,8 @@
 		E622A90A1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCityListAdvertisementViewController.h; sourceTree = "<group>"; };
 		E622A90B1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCityListAdvertisementViewController.m; sourceTree = "<group>"; };
 		E622A90D1ABAE801009CC0B9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E622A9101ABB2D8F009CC0B9 /* DetailAdvertisementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailAdvertisementViewController.h; sourceTree = "<group>"; };
+		E622A9111ABB2D8F009CC0B9 /* DetailAdvertisementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailAdvertisementViewController.m; sourceTree = "<group>"; };
 		E626A7921ABAD47C0038D4BA /* pinMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinMap.png; sourceTree = "<group>"; };
 		E64D4AB41AB8672C00ABC477 /* EatTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D4AB81AB8672C00ABC477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -223,6 +226,8 @@
 				E64D4AC21AB8672C00ABC477 /* MainViewController.m */,
 				E64D4B061AB9931C00ABC477 /* DetailCityListAdvertisementViewController.h */,
 				E64D4B071AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m */,
+				E622A9101ABB2D8F009CC0B9 /* DetailAdvertisementViewController.h */,
+				E622A9111ABB2D8F009CC0B9 /* DetailAdvertisementViewController.m */,
 				E622A90A1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.h */,
 				E622A90B1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m */,
 			);
@@ -444,6 +449,7 @@
 				E6873D6E1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m in Sources */,
 				E64D4AE71AB86AFB00ABC477 /* Constants.m in Sources */,
 				E64D4AC01AB8672C00ABC477 /* EatTogether.xcdatamodeld in Sources */,
+				E622A9121ABB2D8F009CC0B9 /* DetailAdvertisementViewController.m in Sources */,
 				E64D4AF01AB8764600ABC477 /* NetworkDataRepository.m in Sources */,
 				E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */,
 				E64D4B081AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m in Sources */,

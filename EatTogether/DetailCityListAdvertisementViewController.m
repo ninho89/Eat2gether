@@ -12,6 +12,7 @@
 #import "Advertisement.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MapCityListAdvertisementViewController.h"
+#import "DetailAdvertisementViewController.h"
 
 @interface DetailCityListAdvertisementViewController ()
 
@@ -132,6 +133,16 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return 170;
+}
+
+#pragma mark - TableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Navigation logic may go here. Create and push another view controller.
+
+    DetailAdvertisementViewController *detailAdvertisementController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardDetailAdvertisementViewController];
+    detailAdvertisementController.advertisement = self.advertisementsArray[indexPath.row];
+    [self.navigationController pushViewController:detailAdvertisementController animated:YES];
 }
 
 

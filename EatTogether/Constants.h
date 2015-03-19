@@ -46,8 +46,9 @@ extern NSString * const kDetailAdvertisementDessertParse;
 extern NSString * const kDetailAdvertisementNumGuestsParse;
 extern NSString * const kDetailAdvertisementPriceParse;
 extern NSString * const kDetailAdvertisementDateParse;
-extern NSString * const kDetailAdvertisementTopicsParse;
 extern NSString * const kDetailAdvertisementPictureParse;
+extern NSString * const kDetailAdvertisementIdiomsParse;
+extern NSString * const kDetailAdvertisementTopicsParse;
 
 //Constants User Table Parse
 extern NSString * const kUserTableParse;
@@ -66,6 +67,7 @@ extern NSString *const kCellAdvertisement;
 //Costants Storyboard ViewController
 extern NSString *const kStoryboardDetailCityListAdvertisementViewController;
 extern NSString *const kStoryboardMapCityListAdvertisementViewController;
+extern NSString *const kStoryboardDetailAdvertisementViewController;
 
 
 @end
