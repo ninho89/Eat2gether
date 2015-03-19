@@ -12,6 +12,7 @@
 
 //Constants City Table Parse
 NSString * const kCityTableParse = @"City";
+NSString * const kCityObjectIdParse = @"objectId";
 NSString * const kCityIdParse = @"cityId";
 NSString * const kCityNameParse = @"cityName";
 NSString * const kCityCountryParse = @"cityCountry";

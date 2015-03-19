@@ -10,6 +10,7 @@
 
 @interface City : NSObject
 
+@property (nonatomic, strong) NSString *cityObjectId;
 @property (nonatomic, strong) NSNumber *cityId;
 @property (nonatomic, strong) NSString *cityName;
 @property (nonatomic, strong) NSString *cityCountry;

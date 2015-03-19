@@ -12,6 +12,7 @@
 
 //Constants City Table Parse
 extern NSString * const kCityTableParse;
+extern NSString * const kCityObjectIdParse;
 extern NSString * const kCityIdParse;
 extern NSString * const kCityNameParse;
 extern NSString * const kCityCountryParse;

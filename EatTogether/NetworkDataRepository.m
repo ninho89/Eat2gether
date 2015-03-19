@@ -26,6 +26,7 @@
 -(void) getCitiesWithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock {
     //Consulta todas las ciudades con sus cordenadas
     PFQuery *query = [PFQuery queryWithClassName:kCityTableParse];
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     //[query includeKey:kCityLocationIdParse]; //se usa para coger la relacion para saber sus coordenadas
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -53,40 +54,37 @@
 
 #pragma mark - Get All Citie's Advertisement
 
--(void) getCitiesAdvertisementWithSCity:(NSString *)city WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
+-(void) getCitiesAdvertisementWithSCity:(NSString *)cityObjectId WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"cityName = %@", city];
-    PFQuery *queryCityName = [PFQuery queryWithClassName:kCityTableParse predicate:predicate];
-    [queryCityName findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        PFQuery *query = [PFQuery queryWithClassName:kAdvertisementTableParse];
-        [query includeKey:kAdvertisementCityIdParse];
-        [query whereKey:kAdvertisementCityIdParse equalTo:[PFObject objectWithoutDataWithClassName:kCityTableParse objectId:[[objects valueForKey:@"objectId"]firstObject]]];
-        [query includeKey:kAdvertisementDetailAdvertisementIdParse];
-        [query includeKey:kUserIdParse];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if(!error){
-                
-                NSMutableArray *advertisements = [NSMutableArray array];
-                for (PFObject *pfAdvertisement in objects)
-                {
-                    self.advertisementMapper = [[AdvertisementMapper alloc]init];
-                    Advertisement *advertisement = [self.advertisementMapper mapParseAdvertisement:pfAdvertisement];
-                    [advertisements addObject:advertisement];
-                }
-                /*
-                for (PFObject *pfAdvertisement in objects)
-                {
-                    NSLog(@"Advertisement id: %@", [pfAdvertisement valueForKey:kAdvertisementIdParse]);
-                    NSLog(@"User name: %@", [[pfAdvertisement valueForKey:kAdvertisementUserIdParse]valueForKey:kUserNameParse]);
-                    NSLog(@"Detail advertisement starter: %@", [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementStarterParse]);
-                    NSLog(@"Detail advertisement price: %@", [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementPriceParse]);
-                    NSLog(@"Detail advertisement city: %@", [[pfAdvertisement valueForKey:kAdvertisementCityIdParse]valueForKey:kCityNameParse]);
-                    
-                }*/
-                
-                completionBlock(advertisements, nil);
+    PFQuery *query = [PFQuery queryWithClassName:kAdvertisementTableParse];
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    [query includeKey:kAdvertisementCityIdParse];
+    [query whereKey:kAdvertisementCityIdParse equalTo:[PFObject objectWithoutDataWithClassName:kCityTableParse objectId:cityObjectId]];
+    [query includeKey:kAdvertisementDetailAdvertisementIdParse];
+    [query includeKey:kUserIdParse];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error){
+            
+            NSMutableArray *advertisements = [NSMutableArray array];
+            for (PFObject *pfAdvertisement in objects)
+            {
+                self.advertisementMapper = [[AdvertisementMapper alloc]init];
+                Advertisement *advertisement = [self.advertisementMapper mapParseAdvertisement:pfAdvertisement];
+                [advertisements addObject:advertisement];
             }
-        }];
+            /*
+             for (PFObject *pfAdvertisement in objects)
+             {
+             NSLog(@"Advertisement id: %@", [pfAdvertisement valueForKey:kAdvertisementIdParse]);
+             NSLog(@"User name: %@", [[pfAdvertisement valueForKey:kAdvertisementUserIdParse]valueForKey:kUserNameParse]);
+             NSLog(@"Detail advertisement starter: %@", [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementStarterParse]);
+             NSLog(@"Detail advertisement price: %@", [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementPriceParse]);
+             NSLog(@"Detail advertisement city: %@", [[pfAdvertisement valueForKey:kAdvertisementCityIdParse]valueForKey:kCityNameParse]);
+             
+             }*/
+            
+            completionBlock(advertisements, nil);
+        }
     }];
 }
 

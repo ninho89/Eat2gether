@@ -119,6 +119,7 @@
     DetailCityListViewController *detailCityListViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"detailCityListViewController"];
     detailCityListViewController.city = self.citiesArray[indexPath.row];
     
+    
     [self.navigationController pushViewController:detailCityListViewController animated:YES];
     
 }

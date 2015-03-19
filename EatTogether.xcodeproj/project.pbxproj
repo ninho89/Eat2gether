@@ -27,6 +27,7 @@
 		E6873D6A1ABA0079006336D4 /* AdvertisementMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D691ABA0079006336D4 /* AdvertisementMapper.m */; };
 		E6873D6E1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */; };
 		E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */; };
+		E6B5699E1ABABD4B0063A9C6 /* pinMap.png in Resources */ = {isa = PBXBuildFile; fileRef = E6B5699D1ABABD4B0063A9C6 /* pinMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		E6873D6B1ABA085C006336D4 /* CustomAdvertisementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAdvertisementTableViewCell.h; sourceTree = "<group>"; };
 		E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAdvertisementTableViewCell.m; sourceTree = "<group>"; };
 		E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAdvertisementTableViewCell.xib; sourceTree = "<group>"; };
+		E6B5699D1ABABD4B0063A9C6 /* pinMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinMap.png; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 				E64D4AC41AB8672C00ABC477 /* Main.storyboard */,
 				E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */,
 				E64D4AC71AB8672C00ABC477 /* Images.xcassets */,
+				E6B5699D1ABABD4B0063A9C6 /* pinMap.png */,
 				E64D4ABE1AB8672C00ABC477 /* EatTogether.xcdatamodeld */,
 				E64D4AB71AB8672C00ABC477 /* Supporting Files */,
 			);
@@ -357,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B5699E1ABABD4B0063A9C6 /* pinMap.png in Resources */,
 				E64D4AC61AB8672C00ABC477 /* Main.storyboard in Resources */,
 				E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */,
 				E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */,

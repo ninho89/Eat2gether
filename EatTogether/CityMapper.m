@@ -13,6 +13,7 @@
 - (City *)mapParseCity:(PFObject *)pfCity{
     
     City *city = [[City alloc] init];
+    city.cityObjectId = [pfCity valueForKey:kCityObjectIdParse];
     city.cityName = [pfCity valueForKey:kCityNameParse];
     city.cityCountry = [pfCity valueForKey:kCityCountryParse];
     
