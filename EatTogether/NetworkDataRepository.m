@@ -54,7 +54,7 @@
 
 #pragma mark - Get All Citie's Advertisement
 
--(void) getCitiesAdvertisementWithSCity:(NSString *)cityObjectId WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
+-(void) getCitiesAdvertisementWithCity:(NSString *)cityObjectId WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
     
     PFQuery *query = [PFQuery queryWithClassName:kAdvertisementTableParse];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;

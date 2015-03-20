@@ -72,7 +72,7 @@
 #pragma mark - Methods
 
 -(void) getAllAdvertisements{
-    [self.repository getCitiesAdvertisementWithSCity:self.city.cityObjectId WithCompletionBlock:^(NSArray *advertisement, NSError *error) {
+    [self.repository getCitiesAdvertisementWithCity:self.city.cityObjectId WithCompletionBlock:^(NSArray *advertisement, NSError *error) {
         self.advertisementsArray = advertisement;
         [self.tableView reloadData];
     }];

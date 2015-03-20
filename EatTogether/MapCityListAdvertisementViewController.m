@@ -29,21 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
     
-    self.adv = self.advArray[0];
-    
-//    self.locArr = [[NSMutableArray alloc]init];
-//    for (Advertisement *advert in self.advArray) {
-//        CLLocationCoordinate2D coord;
-//        coord.latitude = [advert.advertisementLocationLatitude doubleValue];
-//        coord.longitude = [advert.advertisementLocationLongitude doubleValue];
-//
-//        //[self.locArr addObject:];
-//    }
-    
-    //[self.mapView addAnnotation:self.locArr];
-
     
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
@@ -51,6 +37,8 @@
     [self getCityLocation];
     [self getCityAdvertisemts];
     
+
+
     
 }
 
@@ -82,25 +70,22 @@
 
 -(void) getCityLocation{
     CLLocationCoordinate2D cityCoord;
-    //Barcelona
     cityCoord.latitude = [self.cities.cityLatitude doubleValue];
     cityCoord.longitude = [self.cities.cityLongitude doubleValue];
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(cityCoord, 10000, 10000);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
 }
-//
--(void) getCityAdvertisemts{
-    
-    CLLocationCoordinate2D coordinateAdvertisement;
-    //Barrio de gracia(Barcelona)
-    coordinateAdvertisement.latitude = [self.adv.advertisementLocationLatitude floatValue];
-    coordinateAdvertisement.longitude = [self.adv.advertisementLocationLongitude floatValue];
-    self.myAnnotation.coordinate = coordinateAdvertisement;
-    
-    [self.mapView removeAnnotations:[self.mapView annotations]];
-    [self.mapView addAnnotation:self.myAnnotation];
-    
 
+-(void) getCityAdvertisemts{
+
+    NSMutableArray *arrLocation = [[NSMutableArray alloc]init];
+    for (Advertisement *advLoc in self.advArray) {
+        
+        CLLocation *towerLocation = [[CLLocation alloc] initWithLatitude:[advLoc.advertisementLocationLatitude floatValue] longitude:[advLoc.advertisementLocationLongitude floatValue]];
+        [arrLocation addObject:towerLocation];
+        //CLLocationCoordinate2D coord = [[arrLocation lastObject] coordinate];
+        [self.mapView addAnnotations:arrLocation];
+    }
 
 }
 
