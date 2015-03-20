@@ -30,8 +30,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
     self.myAnnotation = [[MKPointAnnotation alloc]init];
     [self getCityLocation];
@@ -83,7 +81,6 @@
         
         CLLocation *towerLocation = [[CLLocation alloc] initWithLatitude:[advLoc.advertisementLocationLatitude floatValue] longitude:[advLoc.advertisementLocationLongitude floatValue]];
         [arrLocation addObject:towerLocation];
-        //CLLocationCoordinate2D coord = [[arrLocation lastObject] coordinate];
         [self.mapView addAnnotations:arrLocation];
     }
 
