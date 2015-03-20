@@ -43,12 +43,12 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3So-NY-kRg">
-                        <rect key="frame" x="282" y="8" width="25" height="25"/>
+                        <rect key="frame" x="265" y="8" width="42" height="41"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="25" id="3EJ-TD-379"/>
-                            <constraint firstAttribute="width" constant="25" id="EWU-4w-DPY"/>
+                            <constraint firstAttribute="height" constant="41" id="JSs-JC-0nD"/>
+                            <constraint firstAttribute="width" constant="42" id="lrX-7Z-f8e"/>
                         </constraints>
-                        <state key="normal" image="favoriteOff.png">
+                        <state key="normal" image="fav1.png">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
@@ -86,6 +86,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="favoriteOff.png" width="25" height="24"/>
+        <image name="fav1.png" width="40" height="37"/>
     </resources>
 </document>
