@@ -7,6 +7,7 @@
 //
 
 #import "SearchAdvertisementViewController.h"
+#import "DetailCityListAdvertisementViewController.h"
 
 @interface SearchAdvertisementViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
@@ -98,6 +99,8 @@
     return YES;
 }
 
+
+
 #pragma mark UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section {
@@ -125,6 +128,11 @@
     self.autocompleteTableView.hidden = YES;
     
     //go to city
+    DetailCityListAdvertisementViewController *detailCityListViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardDetailCityListAdvertisementViewController];
+    //detailCityListViewController.city = self.citiesArray[indexPath.row];
+    
+    [self.navigationController pushViewController:detailCityListViewController animated:YES];
+    
 }
 
 
