@@ -30,13 +30,11 @@
 }
 
 -(IBAction)addToFavorites:(id)sender{
-    
-    
     if(!self.check){
         [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"favoriteOn"] forState:UIControlStateNormal];
         self.check = YES;
     }else{
-        [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"favoriteOFF"] forState:UIControlStateNormal];
+        [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"fav1"] forState:UIControlStateNormal];
         self.check = NO;
     }
 }
