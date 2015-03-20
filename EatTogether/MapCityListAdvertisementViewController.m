@@ -34,10 +34,6 @@
     self.myAnnotation = [[MKPointAnnotation alloc]init];
     [self getCityLocation];
     [self getCityAdvertisemts];
-    
-
-
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{

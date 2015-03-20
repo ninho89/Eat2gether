@@ -8,8 +8,9 @@
 
 #import "DetailAdvertisementViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <MapKit/MapKit.h>
 
-@interface DetailAdvertisementViewController ()
+@interface DetailAdvertisementViewController () <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageAdvertisement;
 @property (weak, nonatomic) IBOutlet UIImageView *imageUsername;
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelAdvertisementNumGuests;
 @property (weak, nonatomic) IBOutlet UILabel *labelAdvertisementDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelAdvertisementPrice;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 
 @end
@@ -33,6 +35,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupLabels];
+    //[self getAdvertisementLocation];
+//    self.scrollView.contentOffset = CGPointMake(120, 10000);
+//    self.scrollView.contentSize = CGSizeMake(120, 10000);
 
 }
 
@@ -77,5 +82,15 @@
     
     [alert show];
 }
+
+-(void) getAdvertisementLocation{
+    CLLocationCoordinate2D cityCoord;
+    cityCoord.latitude = [self.advertisement.advertisementLocationLatitude doubleValue];
+    cityCoord.longitude = [self.advertisement.advertisementCityLongitude doubleValue];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(cityCoord, 10000, 10000);
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+}
+
+
 
 @end
