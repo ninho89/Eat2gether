@@ -33,6 +33,7 @@
 		E6873D6A1ABA0079006336D4 /* AdvertisementMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D691ABA0079006336D4 /* AdvertisementMapper.m */; };
 		E6873D6E1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */; };
 		E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */; };
+		E6AC59B01ABC2CAF00C8C81A /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		E6873D6B1ABA085C006336D4 /* CustomAdvertisementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAdvertisementTableViewCell.h; sourceTree = "<group>"; };
 		E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAdvertisementTableViewCell.m; sourceTree = "<group>"; };
 		E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAdvertisementTableViewCell.xib; sourceTree = "<group>"; };
+		E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza.jpg; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 		E622A90F1ABB1EB5009CC0B9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */,
 				E622A9061ABADF18009CC0B9 /* favoriteOff.png */,
 				E622A9071ABADF18009CC0B9 /* favoriteOn.png */,
 				E626A7921ABAD47C0038D4BA /* pinMap.png */,
@@ -393,6 +396,7 @@
 				E64D4AC61AB8672C00ABC477 /* Main.storyboard in Resources */,
 				E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */,
 				E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */,
+				E6AC59B01ABC2CAF00C8C81A /* pizza.jpg in Resources */,
 				E622A9081ABADF18009CC0B9 /* favoriteOff.png in Resources */,
 				E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */,
 				E64D4AC81AB8672C00ABC477 /* Images.xcassets in Resources */,

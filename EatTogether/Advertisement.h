@@ -17,7 +17,7 @@
 @property (nonatomic, strong) NSNumber *advertisementDessert;
 @property (nonatomic, strong) NSNumber *advertisementNumGuests;
 @property (nonatomic, strong) NSNumber *advertisementPrice;
-@property (nonatomic, strong) NSNumber *advertisementData;
+@property (nonatomic, strong) NSDate *advertisementData;
 @property (nonatomic, strong) NSString *advertisementPictureUrl;
 @property (nonatomic, strong) NSString *advertisementCityName;
 @property (nonatomic, strong) NSString *advertisementUserName;
