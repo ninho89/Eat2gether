@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IzR-ps-les">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -259,15 +260,6 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URa-7V-O3G">
-                                                <rect key="frame" x="272" y="563" width="56" height="30"/>
-                                                <state key="normal" title="Reserva">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="reservaButton:" destination="gb4-eC-0Bz" eventType="touchUpInside" id="IEn-GX-yYp"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -305,8 +297,6 @@
                                             <constraint firstItem="Fny-uR-mAj" firstAttribute="leading" secondItem="ZJd-S9-6G5" secondAttribute="trailing" constant="20" id="tha-6V-4OT"/>
                                             <constraint firstItem="TM8-HS-NhS" firstAttribute="top" secondItem="4Ge-IT-zWL" secondAttribute="bottom" constant="50" id="uSd-cg-ab8"/>
                                             <constraint firstItem="TM8-HS-NhS" firstAttribute="leading" secondItem="st3-Rt-Thb" secondAttribute="leading" constant="10" id="x2V-dP-SK5"/>
-                                            <constraint firstAttribute="centerX" secondItem="URa-7V-O3G" secondAttribute="centerX" id="xwB-yt-5hA"/>
-                                            <constraint firstItem="URa-7V-O3G" firstAttribute="top" secondItem="Neh-ZA-9vc" secondAttribute="bottom" constant="50" id="zOB-QN-Hnp"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -314,18 +304,41 @@
                                     <constraint firstItem="st3-Rt-Thb" firstAttribute="leading" secondItem="BOt-tN-osS" secondAttribute="leading" id="27g-RC-Knc"/>
                                     <constraint firstItem="st3-Rt-Thb" firstAttribute="height" secondItem="BOt-tN-osS" secondAttribute="height" id="fsM-9e-Fcc"/>
                                     <constraint firstAttribute="trailing" secondItem="st3-Rt-Thb" secondAttribute="trailing" id="mNm-Na-9AO"/>
-                                    <constraint firstAttribute="bottom" secondItem="st3-Rt-Thb" secondAttribute="bottom" constant="150" id="rAD-cm-IKh"/>
+                                    <constraint firstAttribute="bottom" secondItem="st3-Rt-Thb" secondAttribute="bottom" constant="50" id="rAD-cm-IKh"/>
                                     <constraint firstItem="st3-Rt-Thb" firstAttribute="width" secondItem="BOt-tN-osS" secondAttribute="width" id="wuJ-3F-qcu"/>
                                     <constraint firstItem="st3-Rt-Thb" firstAttribute="top" secondItem="BOt-tN-osS" secondAttribute="top" id="ziS-yw-rNM"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwM-aq-hgf">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6B-hF-TgO">
+                                        <rect key="frame" x="272" y="10" width="56" height="30"/>
+                                        <state key="normal" title="Reserva">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reservaButton:" destination="gb4-eC-0Bz" eventType="touchUpInside" id="tCH-3h-b4z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="m6B-hF-TgO" secondAttribute="centerX" id="6Kb-So-Uoa"/>
+                                    <constraint firstAttribute="centerY" secondItem="m6B-hF-TgO" secondAttribute="centerY" id="Pob-Bu-Aia"/>
+                                    <constraint firstAttribute="height" constant="50" id="geq-8Y-V4J"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BOt-tN-osS" firstAttribute="top" secondItem="1F0-Yi-Qys" secondAttribute="top" id="KqH-dz-74x"/>
                             <constraint firstItem="6VZ-f2-GLk" firstAttribute="top" secondItem="BOt-tN-osS" secondAttribute="bottom" id="L4w-2h-Y9U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VwM-aq-hgf" secondAttribute="trailing" constant="-16" id="iCs-NH-oh7"/>
                             <constraint firstItem="BOt-tN-osS" firstAttribute="leading" secondItem="1F0-Yi-Qys" secondAttribute="leading" id="kZJ-D5-Xtx"/>
+                            <constraint firstItem="6VZ-f2-GLk" firstAttribute="top" secondItem="VwM-aq-hgf" secondAttribute="bottom" id="obb-KN-MCS"/>
                             <constraint firstAttribute="trailing" secondItem="BOt-tN-osS" secondAttribute="trailing" id="qbK-sM-TO8"/>
+                            <constraint firstItem="VwM-aq-hgf" firstAttribute="leading" secondItem="1F0-Yi-Qys" secondAttribute="leadingMargin" constant="-16" id="xye-bb-ONd"/>
                         </constraints>
                     </view>
                     <connections>
