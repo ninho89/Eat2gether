@@ -35,10 +35,7 @@
     self.advertisementsArray = [[NSArray alloc]init];
     [self getAllAdvertisements];
     [self drawPinMapImage];
-    [self registerCustomCell];
-    
-    
-
+    [self registerCustomCell];    
 }
 
 -(void)viewWillAppear:(BOOL)animated{

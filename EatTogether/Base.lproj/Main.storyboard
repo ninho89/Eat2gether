@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search Advertisement View Controller-->
         <scene sceneID="DWb-rS-zui">
             <objects>
-                <viewController id="cye-2B-hh8" sceneMemberID="viewController">
+                <viewController id="cye-2B-hh8" customClass="SearchAdvertisementViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qN2-xG-Rdb"/>
                         <viewControllerLayoutGuide type="bottom" id="z8Q-X1-dIj"/>
@@ -16,9 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="8aM-LM-vpm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JpR-mB-L1o">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JpR-mB-L1o" secondAttribute="trailing" id="8IK-Ur-t2l"/>
+                            <constraint firstItem="JpR-mB-L1o" firstAttribute="leading" secondItem="8aM-LM-vpm" secondAttribute="leading" id="OBt-fg-ICX"/>
+                            <constraint firstItem="JpR-mB-L1o" firstAttribute="top" secondItem="qN2-xG-Rdb" secondAttribute="bottom" id="efO-kj-zTr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NX9-gc-3I9"/>
+                    <connections>
+                        <outlet property="searchBar" destination="JpR-mB-L1o" id="0aN-VC-oob"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0W-Ey-wof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
