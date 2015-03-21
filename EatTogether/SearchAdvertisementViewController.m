@@ -48,9 +48,10 @@
     
     [self getAllCities];
     
-//    self.tap.enabled = NO;
-//    self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
-//    [self.view addGestureRecognizer:self.tap];
+    self.tap.enabled = NO;
+    self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:self.tap];
+    
     
 }
 
@@ -70,6 +71,7 @@
     self.navigationItem.title = @"Buscar";
     self.searchBar.text = @"";
     self.selectedDate.text = @"";
+    self.tap.enabled = YES;
 }
 
 #pragma mark - Memory Warning
