@@ -10,7 +10,7 @@
 
 @interface CustomAdvertisementTableViewCell()
 
-@property (nonatomic) BOOL check;
+
 
 @end
 

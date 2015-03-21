@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *customLabelPrice;
 @property (weak, nonatomic) IBOutlet UILabel *customLabelStarter;
 @property (weak, nonatomic) IBOutlet UIButton *customFavoriteImage;
+@property (nonatomic) BOOL check;
 
 @end
