@@ -21,6 +21,14 @@
 @property (nonatomic, assign) bool isFiltered;
 @property (strong, nonatomic) NSMutableArray *filteredTableData;
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *myDatePicker;
+@property (weak, nonatomic) IBOutlet UILabel *selectedDate;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tap;
+
+@property (nonatomic) int cont;
+
+
+
 @end
 
 @implementation SearchAdvertisementViewController
@@ -39,7 +47,11 @@
     self.repository = [[NetworkDataRepository alloc]init];
     
     [self getAllCities];
-        
+    
+//    self.tap.enabled = NO;
+//    self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+//    [self.view addGestureRecognizer:self.tap];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -57,6 +69,7 @@
     [super viewWillAppear:animated];
     self.navigationItem.title = @"Buscar";
     self.searchBar.text = @"";
+    self.selectedDate.text = @"";
 }
 
 #pragma mark - Memory Warning
@@ -81,10 +94,45 @@
     }];
 }
 
+#pragma mark - Buttons Methods
+
+-(void)dismissKeyboard {
+    self.myDatePicker.hidden = YES;
+    [self.searchBar resignFirstResponder];
+}
+
+//- (IBAction)chooseDate:(id)sender {
+//    if(self.cont == 0){
+//        self.myDatePicker.hidden = NO;
+//        [self.myDatePicker addTarget:self action:@selector(datePickerChanged:) forControlEvents:UIControlEventValueChanged];
+//        self.cont = 1;
+//    }else{
+//        self.myDatePicker.hidden = YES;
+//        self.cont = 0;
+//    }
+//}
+
+//- (IBAction)chooseDate:(id)sender {
+//    self.tap.enabled = YES;
+//    self.myDatePicker.hidden = NO;
+//    [self.myDatePicker addTarget:self action:@selector(datePickerChanged:) forControlEvents:UIControlEventValueChanged];
+//}
+
+
+
+- (void)datePickerChanged:(UIDatePicker *)datePicker
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    NSString *strDate = [dateFormatter stringFromDate:datePicker.date];
+    self.selectedDate.text = strDate;
+}
+
+
 #pragma mark - Create Table View
 
 -(void) createTableView{
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 150, 350, 120) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 130, 350, 120) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.scrollEnabled = YES;
@@ -125,15 +173,17 @@
         }
     }
     [self.tableView reloadData];
+    
 }
+
 
 -(BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     
     self.tableView.hidden = NO;
-    
     NSString *substring = [NSString stringWithString:searchBar.text];
     substring = [substring stringByReplacingCharactersInRange:range withString:text];
     [self searchAutocompleteEntriesWithSubstring:substring];
+    
     return YES;
 }
 
@@ -161,6 +211,7 @@
         city = [self.citiesArray objectAtIndex:indexPath.row];
     
     cell.textLabel.text = city.cityName;
+    self.tap.enabled = NO;
     
     return cell;
 }

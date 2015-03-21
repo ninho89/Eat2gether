@@ -24,20 +24,37 @@
                                     <outlet property="delegate" destination="cye-2B-hh8" id="P5p-PL-r53"/>
                                 </connections>
                             </searchBar>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="85T-eY-6DJ">
+                                <rect key="frame" x="0.0" y="389" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="448647896.43860799">
+                                    <!--2015-03-21 16:24:56 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JpR-mB-L1o" secondAttribute="trailing" id="8IK-Ur-t2l"/>
+                            <constraint firstItem="z8Q-X1-dIj" firstAttribute="top" secondItem="85T-eY-6DJ" secondAttribute="bottom" id="GgD-XW-fcZ"/>
                             <constraint firstItem="JpR-mB-L1o" firstAttribute="leading" secondItem="8aM-LM-vpm" secondAttribute="leading" id="OBt-fg-ICX"/>
                             <constraint firstItem="JpR-mB-L1o" firstAttribute="top" secondItem="qN2-xG-Rdb" secondAttribute="bottom" id="efO-kj-zTr"/>
+                            <constraint firstItem="z8Q-X1-dIj" firstAttribute="top" secondItem="85T-eY-6DJ" secondAttribute="bottom" id="erE-Ha-7k7"/>
+                            <constraint firstAttribute="trailing" secondItem="85T-eY-6DJ" secondAttribute="trailing" id="i4n-aj-glx"/>
+                            <constraint firstItem="85T-eY-6DJ" firstAttribute="leading" secondItem="8aM-LM-vpm" secondAttribute="leading" id="s35-lu-Ggi"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Cgg-ge-5km" appends="YES" id="PAx-Oy-fo9"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="NX9-gc-3I9"/>
                     <connections>
+                        <outlet property="myDatePicker" destination="85T-eY-6DJ" id="grc-8d-pjQ"/>
                         <outlet property="searchBar" destination="JpR-mB-L1o" id="0aN-VC-oob"/>
+                        <outlet property="tap" destination="Cgg-ge-5km" id="CN4-j7-lFR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0W-Ey-wof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Cgg-ge-5km"/>
             </objects>
             <point key="canvasLocation" x="1275" y="1031"/>
         </scene>
