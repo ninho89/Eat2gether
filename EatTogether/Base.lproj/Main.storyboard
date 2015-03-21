@@ -276,12 +276,6 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AMF-xG-ATk">
-                                                <rect key="frame" x="0.0" y="543.5" width="600" height="320"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="320" id="DBv-GC-ch8"/>
-                                                </constraints>
-                                            </mapView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -296,9 +290,7 @@
                                             <constraint firstItem="jM9-Te-apb" firstAttribute="leading" secondItem="st3-Rt-Thb" secondAttribute="leading" constant="10" id="7xV-xO-cZE"/>
                                             <constraint firstItem="YGR-Qb-qQr" firstAttribute="top" secondItem="TC2-BF-qV1" secondAttribute="bottom" constant="29.5" id="FB5-XZ-bt6"/>
                                             <constraint firstAttribute="trailing" secondItem="TC2-BF-qV1" secondAttribute="trailing" constant="20" id="FXN-CH-tyO"/>
-                                            <constraint firstAttribute="trailing" secondItem="AMF-xG-ATk" secondAttribute="trailing" id="GuD-7e-FEk"/>
                                             <constraint firstItem="ZJd-S9-6G5" firstAttribute="leading" secondItem="st3-Rt-Thb" secondAttribute="leading" constant="10" id="HfB-F6-2Tg"/>
-                                            <constraint firstItem="AMF-xG-ATk" firstAttribute="leading" secondItem="st3-Rt-Thb" secondAttribute="leading" id="Hxa-e7-FXr"/>
                                             <constraint firstItem="c8y-DP-W59" firstAttribute="top" secondItem="ZJd-S9-6G5" secondAttribute="bottom" constant="30" id="I2B-oJ-6Ke"/>
                                             <constraint firstItem="7uM-Oi-tZ6" firstAttribute="top" secondItem="TC2-BF-qV1" secondAttribute="bottom" constant="29.5" id="Ird-8b-p9A"/>
                                             <constraint firstItem="hhM-br-N57" firstAttribute="leading" secondItem="st3-Rt-Thb" secondAttribute="leading" constant="10" id="JhG-Zn-o29"/>
@@ -315,7 +307,6 @@
                                             <constraint firstAttribute="trailing" secondItem="bJO-r0-h2h" secondAttribute="trailing" constant="10" id="eGR-kF-SBC"/>
                                             <constraint firstAttribute="trailing" secondItem="JB2-fd-U0a" secondAttribute="trailing" constant="20" id="gbG-sc-LTU"/>
                                             <constraint firstItem="ePq-W6-etq" firstAttribute="top" secondItem="Fny-uR-mAj" secondAttribute="bottom" constant="30" id="jNh-xZ-gQh"/>
-                                            <constraint firstItem="AMF-xG-ATk" firstAttribute="top" secondItem="Neh-ZA-9vc" secondAttribute="bottom" constant="30" id="kt2-jF-jbG"/>
                                             <constraint firstItem="hhM-br-N57" firstAttribute="top" secondItem="c8y-DP-W59" secondAttribute="bottom" constant="30" id="mea-aw-UFd"/>
                                             <constraint firstItem="v7z-hJ-1ei" firstAttribute="top" secondItem="7uM-Oi-tZ6" secondAttribute="bottom" constant="30" id="mi3-hY-6gA"/>
                                             <constraint firstItem="4Ge-IT-zWL" firstAttribute="leading" secondItem="st3-Rt-Thb" secondAttribute="leading" id="qtu-gs-YAV"/>
@@ -336,6 +327,9 @@
                                     <constraint firstItem="st3-Rt-Thb" firstAttribute="width" secondItem="BOt-tN-osS" secondAttribute="width" id="wuJ-3F-qcu"/>
                                     <constraint firstItem="st3-Rt-Thb" firstAttribute="top" secondItem="BOt-tN-osS" secondAttribute="top" id="ziS-yw-rNM"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="gb4-eC-0Bz" id="tTE-yt-J5R"/>
+                                </connections>
                             </scrollView>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwM-aq-hgf">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
@@ -379,7 +373,6 @@
                         <outlet property="labelAdvertisementNumGuests" destination="Fny-uR-mAj" id="CZz-lA-oZz"/>
                         <outlet property="labelAdvertisementPrice" destination="Neh-ZA-9vc" id="Hva-rA-Z9R"/>
                         <outlet property="labelAdvertisementStarter" destination="YGR-Qb-qQr" id="hb0-2P-ZWo"/>
-                        <outlet property="mapView" destination="AMF-xG-ATk" id="deV-xF-F9m"/>
                         <outlet property="scrollView" destination="BOt-tN-osS" id="RHu-Kl-CKF"/>
                     </connections>
                 </viewController>

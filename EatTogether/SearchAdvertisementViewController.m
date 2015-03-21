@@ -78,7 +78,6 @@
 -(void) getAllCities{
     [self.repository getCitiesWithCompletionBlock:^(NSArray *cities, NSError *error) {
         self.citiesArray = cities;
-        //[self.tableView reloadData];
     }];
 }
 

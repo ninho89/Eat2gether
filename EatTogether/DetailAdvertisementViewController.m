@@ -10,12 +10,10 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <MapKit/MapKit.h>
 
-@interface DetailAdvertisementViewController () <MKMapViewDelegate>
+@interface DetailAdvertisementViewController () <MKMapViewDelegate, MKAnnotation>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageAdvertisement;
 @property (weak, nonatomic) IBOutlet UIImageView *imageUsername;
-
-
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *labelAdvertisementDescription;
 @property (weak, nonatomic) IBOutlet UILabel *labelAdvertisementStarter;
@@ -24,20 +22,24 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelAdvertisementNumGuests;
 @property (weak, nonatomic) IBOutlet UILabel *labelAdvertisementDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelAdvertisementPrice;
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) MKMapView *mapView;
+@property (nonatomic, strong) MKPointAnnotation *myAnnotation;
 
 
 @end
 
 @implementation DetailAdvertisementViewController
 
+@synthesize coordinate;
+
+#pragma mark - View Life Cycles
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupLabels];
-    //[self getAdvertisementLocation];
-//    self.scrollView.contentOffset = CGPointMake(120, 10000);
-//    self.scrollView.contentSize = CGSizeMake(120, 10000);
+    [self setupMapView];
+    [self getAdvertisementLocation];
 
 }
 
@@ -45,6 +47,8 @@
     [super viewWillAppear:animated];
     self.tabBarController.tabBar.hidden = YES;
 }
+
+#pragma mark - Memory Warning
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -75,6 +79,24 @@
     [self.imageUsername sd_setImageWithURL:[NSURL URLWithString:self.advertisement.advertisementUserPictureUrl]];
 }
 
+-(void) setupMapView{
+    self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height+20, self.view.frame.size.width, 335)];
+    
+    [self.scrollView addSubview:self.mapView];
+}
+
+-(void) getAdvertisementLocation{
+    CLLocationCoordinate2D cityCoord;
+    cityCoord.latitude = [self.advertisement.advertisementLocationLatitude doubleValue];
+    cityCoord.longitude = [self.advertisement.advertisementLocationLongitude doubleValue];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(cityCoord, 1500, 1500);
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    
+    self.myAnnotation = [[MKPointAnnotation alloc]init];
+    self.myAnnotation.coordinate = cityCoord;
+    [self.mapView addAnnotation:self.myAnnotation];
+}
+
 #pragma mark - Buttons Methods
 
 - (IBAction)reservaButton:(id)sender {
@@ -83,13 +105,7 @@
     [alert show];
 }
 
--(void) getAdvertisementLocation{
-    CLLocationCoordinate2D cityCoord;
-    cityCoord.latitude = [self.advertisement.advertisementLocationLatitude doubleValue];
-    cityCoord.longitude = [self.advertisement.advertisementCityLongitude doubleValue];
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(cityCoord, 10000, 10000);
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
-}
+
 
 
 
