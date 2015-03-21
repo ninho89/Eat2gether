@@ -8,14 +8,19 @@
 
 #import "SearchAdvertisementViewController.h"
 #import "DetailCityListAdvertisementViewController.h"
+#import "NetworkDataRepository.h"
+#import "City.h"
 
 @interface SearchAdvertisementViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
-@property (nonatomic, retain) NSMutableArray *searchCities;
 @property (nonatomic, retain) NSMutableArray *totalCities;
-@property (nonatomic, retain) UITableView *autocompleteTableView;
-
+@property (nonatomic, retain) UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, strong) id<DataRepository> repository;
+@property (nonatomic, strong) NSArray *citiesArray;
+@property (nonatomic, assign) bool isFiltered;
+@property (strong, nonatomic) NSMutableArray *filteredTableData;
+
 @end
 
 @implementation SearchAdvertisementViewController
@@ -26,12 +31,15 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    
     self.searchBar.delegate = self;
     
     [self initializeArrays];
-    [self createAutocompleteTableView];
-
+    [self createTableView];
+    
+    self.repository = [[NetworkDataRepository alloc]init];
+    
+    [self getAllCities];
+        
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -48,6 +56,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationItem.title = @"Buscar";
+    self.searchBar.text = @"";
 }
 
 #pragma mark - Memory Warning
@@ -60,38 +69,68 @@
 #pragma mark - Initialize Arrays
 
 -(void) initializeArrays{
-    self.searchCities = [[NSMutableArray alloc] initWithObjects:@"Barcelona", @"Malaga", @"Bilbao", @"Madrid", @"Sevilla", @"Valencia", nil];
+    self.citiesArray = [[NSArray alloc]init];
     self.totalCities = [[NSMutableArray alloc] init];
+}
+
+#pragma mark - Get All Cities
+
+-(void) getAllCities{
+    [self.repository getCitiesWithCompletionBlock:^(NSArray *cities, NSError *error) {
+        self.citiesArray = cities;
+        //[self.tableView reloadData];
+    }];
 }
 
 #pragma mark - Create Table View
 
--(void) createAutocompleteTableView{
-    self.autocompleteTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 120, 320, 120) style:UITableViewStylePlain];
-    self.autocompleteTableView.delegate = self;
-    self.autocompleteTableView.dataSource = self;
-    self.autocompleteTableView.scrollEnabled = YES;
-    self.autocompleteTableView.hidden = YES;
-    [self.autocompleteTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [self.view addSubview:self.autocompleteTableView];
+-(void) createTableView{
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 150, 350, 120) style:UITableViewStylePlain];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.scrollEnabled = YES;
+    self.tableView.hidden = YES;
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self.view addSubview:self.tableView];
 }
+
+#pragma mark - UISearchBar Delegate
 
 - (void)searchAutocompleteEntriesWithSubstring:(NSString *)substring {
     
     [self.totalCities removeAllObjects];
-    for(NSString *curString in self.searchCities) {
+    
+    for(NSString *curString in [self.citiesArray valueForKey:kCityNameParse]) {
         NSRange substringRange = [curString rangeOfString:substring];
         if (substringRange.location == 0) {
             [self.totalCities addObject:curString];
         }
     }
-    [self.autocompleteTableView reloadData];
+
+    if(substring.length == 0)
+    {
+        self.isFiltered = FALSE;
+    }
+    else
+    {
+        self.isFiltered = true;
+        self.filteredTableData = [[NSMutableArray alloc] init];
+        
+        for (City* city in self.citiesArray)
+        {
+            NSRange substringRange = [city.cityName rangeOfString:substring options:NSCaseInsensitiveSearch];
+            if (substringRange.location == 0) {
+                [self.filteredTableData addObject:city];
+            }
+
+        }
+    }
+    [self.tableView reloadData];
 }
 
-#pragma mark SearchBar methods
 -(BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     
-    self.autocompleteTableView.hidden = NO;
+    self.tableView.hidden = NO;
     
     NSString *substring = [NSString stringWithString:searchBar.text];
     substring = [substring stringByReplacingCharactersInRange:range withString:text];
@@ -99,22 +138,31 @@
     return YES;
 }
 
-
-
 #pragma mark UITableViewDataSource methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section {
     return self.totalCities.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
-    UITableViewCell *cell = nil;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"CellId"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellId"];
-    }
-    cell.textLabel.text = [self.totalCities objectAtIndex:indexPath.row];
+    City* city;
+    if(self.isFiltered)
+        city = [self.filteredTableData objectAtIndex:indexPath.row];
+    else
+        city = [self.citiesArray objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = city.cityName;
+    
     return cell;
 }
 
@@ -125,15 +173,22 @@
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     self.searchBar.text = selectedCell.textLabel.text;
     [self.searchBar resignFirstResponder];
-    self.autocompleteTableView.hidden = YES;
+    self.tableView.hidden = YES;
     
-    //go to city
     DetailCityListAdvertisementViewController *detailCityListViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardDetailCityListAdvertisementViewController];
-    //detailCityListViewController.city = self.citiesArray[indexPath.row];
-    
-    [self.navigationController pushViewController:detailCityListViewController animated:YES];
-    
-}
 
+    City* city;
+    if(self.isFiltered)
+    {
+        city = [self.filteredTableData objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        city = [self.citiesArray objectAtIndex:indexPath.row];
+    }
+    
+    detailCityListViewController.city = city;
+    [self.navigationController pushViewController:detailCityListViewController animated:true];
+}
 
 @end
