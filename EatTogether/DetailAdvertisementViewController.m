@@ -81,7 +81,7 @@
 
 -(void) setupMapView{
     self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height+20, self.view.frame.size.width, 335)];
-    
+    self.mapView.scrollEnabled = NO;
     [self.scrollView addSubview:self.mapView];
 }
 
