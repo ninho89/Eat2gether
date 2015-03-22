@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CustomAdvertisementTableViewCellDelegate <NSObject>
+
+-(void)addFavorite:(BOOL)favorite;
+
+@end
+
 @interface CustomAdvertisementTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *customUserImage;
 @property (weak, nonatomic) IBOutlet UIImageView *customDetailImage;
@@ -15,5 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *customLabelStarter;
 @property (weak, nonatomic) IBOutlet UIButton *customFavoriteImage;
 @property (nonatomic) BOOL check;
+
+@property (nonatomic, weak) id<CustomAdvertisementTableViewCellDelegate> delegate;
 
 @end

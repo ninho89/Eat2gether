@@ -15,7 +15,7 @@
 #import "DetailAdvertisementViewController.h"
 #import "LoginViewController.h"
 
-@interface DetailCityListAdvertisementViewController ()
+@interface DetailCityListAdvertisementViewController () <CustomAdvertisementTableViewCellDelegate>
 
 @property (nonatomic, strong) id<DataRepository> repository;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -124,17 +124,20 @@
 
     cell.customLabelStarter.text = advertisement.advertisementStarter;
     
+    cell.delegate = self;
     
     return cell;
 }
 
-/*
-  id cell.chek go to login 
- 
- LoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardLoginViewController];
- [self.navigationController pushViewController:loginViewController animated:YES];
+-(void)addFavorite:(BOOL)favorite{
+    NSLog(@"Anuncio en favorito %d", favorite);
+    if (favorite) {
+        LoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardLoginViewController];
+        [self.navigationController pushViewController:loginViewController animated:YES];
+    }
+}
 
- */
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     

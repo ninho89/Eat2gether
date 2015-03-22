@@ -38,6 +38,11 @@
         [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"fav1"] forState:UIControlStateNormal];
         self.check = NO;
     }
+    
+    if ([self.delegate respondsToSelector:@selector(addFavorite:)])
+    {
+        [self.delegate addFavorite:self.check];
+    }
 }
 
 @end
