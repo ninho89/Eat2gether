@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "Advertisement.h"
 
-@interface MapCityListAdvertisementViewController () <MKMapViewDelegate, MKAnnotation>
+@interface MapCityListAdvertisementViewController () <MKMapViewDelegate, MKAnnotation, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) MKPointAnnotation *myAnnotation;
@@ -49,6 +49,12 @@
                               NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1],
                               NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size:24.0]
                               }];
+    
+
+    UIButton* myInfoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [myInfoButton addTarget:self action:@selector(infoButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:myInfoButton];
+    
 }
 
 #pragma mark - Memory Warning
@@ -59,8 +65,6 @@
 }
 
 #pragma mark - Utils Methods
-
-
 
 -(void) getCityLocation{
     CLLocationCoordinate2D cityCoord;
@@ -79,9 +83,35 @@
         [arrLocation addObject:towerLocation];
         [self.mapView addAnnotations:arrLocation];
     }
-
+}
+- (IBAction)tapGesture:(id)sender {
+    
+    NSLog(@"Tap");
+    
 }
 
+-(void) infoButtonClicked{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Map Type" delegate:self cancelButtonTitle:@"Ok" destructiveButtonTitle:nil otherButtonTitles:@"Satellite", @"Standard", @"Hybrid",  nil];
+    
+    [actionSheet showInView:self.view];
+}
+
+#pragma mark - UIActionSheet Delegate
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:
+            [self.mapView setMapType:MKMapTypeSatellite];
+            break;
+        case 1:
+            [self.mapView setMapType:MKMapTypeStandard];
+            break;
+        case 2:
+            [self.mapView setMapType:MKMapTypeHybrid];
+        default:
+            break;
+    }
+}
 
 
 
