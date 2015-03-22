@@ -70,6 +70,7 @@ extern NSString *const kCellAdvertisement;
 extern NSString *const kStoryboardDetailCityListAdvertisementViewController;
 extern NSString *const kStoryboardMapCityListAdvertisementViewController;
 extern NSString *const kStoryboardDetailAdvertisementViewController;
+extern NSString *const kStoryboardLoginViewController;
 
 
 @end

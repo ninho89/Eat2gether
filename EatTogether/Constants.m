@@ -70,5 +70,6 @@ NSString *const kCellAdvertisement = @"CellIdAdvertisement";
 NSString *const kStoryboardDetailCityListAdvertisementViewController = @"detailCityListAdvertisementViewController";
 NSString *const kStoryboardMapCityListAdvertisementViewController = @"mapCityListAdvertisementViewController";
 NSString *const kStoryboardDetailAdvertisementViewController = @"detailAdvertisement";
+NSString *const kStoryboardLoginViewController = @"loginViewController";
 
 @end

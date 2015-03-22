@@ -13,6 +13,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MapCityListAdvertisementViewController.h"
 #import "DetailAdvertisementViewController.h"
+#import "LoginViewController.h"
 
 @interface DetailCityListAdvertisementViewController ()
 
@@ -123,8 +124,17 @@
 
     cell.customLabelStarter.text = advertisement.advertisementStarter;
     
+    
     return cell;
 }
+
+/*
+  id cell.chek go to login 
+ 
+ LoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardLoginViewController];
+ [self.navigationController pushViewController:loginViewController animated:YES];
+
+ */
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     

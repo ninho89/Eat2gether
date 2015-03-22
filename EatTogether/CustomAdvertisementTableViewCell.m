@@ -8,6 +8,7 @@
 
 #import "CustomAdvertisementTableViewCell.h"
 
+
 @interface CustomAdvertisementTableViewCell()
 
 
