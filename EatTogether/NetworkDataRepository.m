@@ -62,7 +62,8 @@
     [query whereKey:kAdvertisementCityIdParse equalTo:[PFObject objectWithoutDataWithClassName:kCityTableParse objectId:cityObjectId]];
     [query includeKey:kAdvertisementDetailAdvertisementIdParse];
     [query includeKey:kAdvertisementLocationIdParse];
-    [query includeKey:kUserIdParse];
+    //[query includeKey:kUserIdParse];
+    [query includeKey:kAdvertisementUserUsername];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
             

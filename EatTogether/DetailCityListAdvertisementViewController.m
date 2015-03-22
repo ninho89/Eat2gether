@@ -13,7 +13,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MapCityListAdvertisementViewController.h"
 #import "DetailAdvertisementViewController.h"
-#import "LoginViewController.h"
+#import "UserProfileViewController.h"
 
 @interface DetailCityListAdvertisementViewController () <CustomAdvertisementTableViewCellDelegate>
 
@@ -131,10 +131,10 @@
 
 -(void)addFavorite:(BOOL)favorite{
     NSLog(@"Anuncio en favorito %d", favorite);
-    if (favorite) {
-        LoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardLoginViewController];
-        [self.navigationController pushViewController:loginViewController animated:YES];
-    }
+//    if (favorite) {
+//        UserProfileViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardUserProfileViewController];
+//        [self.navigationController pushViewController:loginViewController animated:YES];
+//    }
 }
 
 

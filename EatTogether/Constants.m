@@ -31,6 +31,7 @@ NSString * const kAdvertisementTableParse = @"Advertisement";
 NSString * const kAdvertisementIdParse = @"advertisementId";
 NSString * const kAdvertisementDetailAdvertisementIdParse = @"detailAdvertisementId";
 NSString * const kAdvertisementUserIdParse = @"userId";
+NSString * const kAdvertisementUserUsername = @"username";
 NSString * const kAdvertisementLocationIdParse = @"locationId";
 NSString * const kAdvertisementLocationLatitude = @"locationLatitude";
 NSString * const kAdvertisementLocationLongitude = @"locationLongitude";
@@ -55,7 +56,7 @@ NSString * const kDetailAdvertisementTopicsParse = @"detailAdvertisementTopics";
 //Constants User Table Parse
 NSString * const kUserTableParse = @"User";
 NSString * const kUserIdParse = @"userId";
-NSString * const kUserNameParse = @"userName";
+NSString * const kUserNameParse = @"username";
 NSString * const kUserSurnameParse = @"userSurname";
 NSString * const kUserMailParse = @"userMail";
 NSString * const kUserAddressParse = @"userAddress";
@@ -70,6 +71,7 @@ NSString *const kCellAdvertisement = @"CellIdAdvertisement";
 NSString *const kStoryboardDetailCityListAdvertisementViewController = @"detailCityListAdvertisementViewController";
 NSString *const kStoryboardMapCityListAdvertisementViewController = @"mapCityListAdvertisementViewController";
 NSString *const kStoryboardDetailAdvertisementViewController = @"detailAdvertisement";
-NSString *const kStoryboardLoginViewController = @"loginViewController";
+NSString *const kStoryboardUserProfileViewController = @"userProfileViewController";
+NSString *const kStoryboardUserCreateAccountViewController = @"userCreateAccountViewController";
 
 @end

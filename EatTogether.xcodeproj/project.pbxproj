@@ -16,7 +16,7 @@
 		E61B6C631ABF0F500021D93C /* login-button-small-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E61B6C5F1ABF0F500021D93C /* login-button-small-pressed@2x.png */; };
 		E61B6C641ABF0F500021D93C /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = E61B6C601ABF0F500021D93C /* login-button-small.png */; };
 		E61B6C651ABF0F500021D93C /* login-button-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E61B6C611ABF0F500021D93C /* login-button-small@2x.png */; };
-		E61B6C681ABF109B0021D93C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B6C671ABF109B0021D93C /* LoginViewController.m */; };
+		E61B6C681ABF109B0021D93C /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61B6C671ABF109B0021D93C /* UserProfileViewController.m */; };
 		E622A9081ABADF18009CC0B9 /* favoriteOff.png in Resources */ = {isa = PBXBuildFile; fileRef = E622A9061ABADF18009CC0B9 /* favoriteOff.png */; };
 		E622A9091ABADF18009CC0B9 /* favoriteOn.png in Resources */ = {isa = PBXBuildFile; fileRef = E622A9071ABADF18009CC0B9 /* favoriteOn.png */; };
 		E622A90C1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E622A90B1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m */; };
@@ -45,6 +45,7 @@
 		E6873D6E1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */; };
 		E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */; };
 		E6AC59B01ABC2CAF00C8C81A /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */; };
+		E6C28BFB1ABF31BA00CB1D6D /* UserCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +69,8 @@
 		E61B6C5F1ABF0F500021D93C /* login-button-small-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small-pressed@2x.png"; sourceTree = "<group>"; };
 		E61B6C601ABF0F500021D93C /* login-button-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small.png"; sourceTree = "<group>"; };
 		E61B6C611ABF0F500021D93C /* login-button-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button-small@2x.png"; sourceTree = "<group>"; };
-		E61B6C661ABF109B0021D93C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		E61B6C671ABF109B0021D93C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E61B6C661ABF109B0021D93C /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
+		E61B6C671ABF109B0021D93C /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 		E622A9061ABADF18009CC0B9 /* favoriteOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favoriteOff.png; sourceTree = "<group>"; };
 		E622A9071ABADF18009CC0B9 /* favoriteOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favoriteOn.png; sourceTree = "<group>"; };
 		E622A90A1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCityListAdvertisementViewController.h; sourceTree = "<group>"; };
@@ -119,6 +120,8 @@
 		E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAdvertisementTableViewCell.m; sourceTree = "<group>"; };
 		E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAdvertisementTableViewCell.xib; sourceTree = "<group>"; };
 		E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza.jpg; sourceTree = "<group>"; };
+		E6C28BF91ABF31BA00CB1D6D /* UserCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCreateAccountViewController.h; sourceTree = "<group>"; };
+		E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCreateAccountViewController.m; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,8 +271,10 @@
 				E622A90B1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m */,
 				E62BC4D41ABC88CC00B4CF00 /* SearchAdvertisementViewController.h */,
 				E62BC4D51ABC88CC00B4CF00 /* SearchAdvertisementViewController.m */,
-				E61B6C661ABF109B0021D93C /* LoginViewController.h */,
-				E61B6C671ABF109B0021D93C /* LoginViewController.m */,
+				E61B6C661ABF109B0021D93C /* UserProfileViewController.h */,
+				E61B6C671ABF109B0021D93C /* UserProfileViewController.m */,
+				E6C28BF91ABF31BA00CB1D6D /* UserCreateAccountViewController.h */,
+				E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -501,9 +506,10 @@
 				E64D4AC01AB8672C00ABC477 /* EatTogether.xcdatamodeld in Sources */,
 				E622A9121ABB2D8F009CC0B9 /* DetailAdvertisementViewController.m in Sources */,
 				E64D4AF01AB8764600ABC477 /* NetworkDataRepository.m in Sources */,
+				E6C28BFB1ABF31BA00CB1D6D /* UserCreateAccountViewController.m in Sources */,
 				E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */,
 				E64D4B081AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m in Sources */,
-				E61B6C681ABF109B0021D93C /* LoginViewController.m in Sources */,
+				E61B6C681ABF109B0021D93C /* UserProfileViewController.m in Sources */,
 				E64D4AC31AB8672C00ABC477 /* MainViewController.m in Sources */,
 				E64D4AF71AB8813F00ABC477 /* CityMapper.m in Sources */,
 				E64D4AF31AB87A4700ABC477 /* City.m in Sources */,
@@ -635,6 +641,10 @@
 			baseConfigurationReference = F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EatTogether/EatTogether-Prefix.pch";
 				INFOPLIST_FILE = EatTogether/Info.plist;
@@ -648,6 +658,10 @@
 			baseConfigurationReference = 965B1BBF40BB4295FAC2FED9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EatTogether/EatTogether-Prefix.pch";
 				INFOPLIST_FILE = EatTogether/Info.plist;

@@ -31,6 +31,7 @@ extern NSString * const kAdvertisementTableParse;
 extern NSString * const kAdvertisementIdParse;
 extern NSString * const kAdvertisementDetailAdvertisementIdParse;
 extern NSString * const kAdvertisementUserIdParse;
+extern NSString * const kAdvertisementUserUsername;
 extern NSString * const kAdvertisementLocationIdParse;
 extern NSString * const kAdvertisementLocationLatitude;
 extern NSString * const kAdvertisementLocationLongitude;
@@ -70,7 +71,8 @@ extern NSString *const kCellAdvertisement;
 extern NSString *const kStoryboardDetailCityListAdvertisementViewController;
 extern NSString *const kStoryboardMapCityListAdvertisementViewController;
 extern NSString *const kStoryboardDetailAdvertisementViewController;
-extern NSString *const kStoryboardLoginViewController;
+extern NSString *const kStoryboardUserProfileViewController;
+extern NSString *const kStoryboardUserCreateAccountViewController;
 
 
 @end

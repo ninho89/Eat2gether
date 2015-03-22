@@ -13,6 +13,7 @@
 - (Advertisement *)mapParseAdvertisement:(PFObject *)pfAdvertisement{
     
     Advertisement *advertisement = [[Advertisement alloc]init];
+    
     advertisement.advertisementId = [pfAdvertisement valueForKey:kAdvertisementIdParse];
     advertisement.advertisementDescription = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementDescriptionParse];
     advertisement.advertisementStarter = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementStarterParse];
@@ -21,16 +22,18 @@
     advertisement.advertisementNumGuests = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementNumGuestsParse];
     advertisement.advertisementPrice = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse] valueForKey:kDetailAdvertisementPriceParse];
     advertisement.advertisementData = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementDateParse];
-    advertisement.advertisementUserName = [[pfAdvertisement valueForKey:kAdvertisementUserIdParse]valueForKey:kUserNameParse];
+    
+    advertisement.advertisementUserName = [[pfAdvertisement valueForKey:kAdvertisementUserUsername]valueForKey:kUserNameParse];
+    
     advertisement.advertisementCityName = [[pfAdvertisement valueForKey:kAdvertisementCityIdParse] valueForKey:kCityNameParse];
     advertisement.advertisementLocationLongitude = [[pfAdvertisement valueForKey:kAdvertisementLocationIdParse] valueForKey:kLocationLongitudeParse];
     advertisement.advertisementLocationLatitude = [[pfAdvertisement valueForKey:kAdvertisementLocationIdParse] valueForKey:kLocationLatitudeParse];
-        
+    
     
     PFFile *imageFilePicturUrl = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse] valueForKey:kDetailAdvertisementPictureParse];
     advertisement.advertisementPictureUrl = imageFilePicturUrl.url;
     
-    PFFile *imageFileUserPicturUrl = [[pfAdvertisement valueForKey:kAdvertisementUserIdParse]valueForKey:kUserPictureParse];
+    PFFile *imageFileUserPicturUrl = [[pfAdvertisement valueForKey:kAdvertisementUserUsername]valueForKey:kUserPictureParse];
     advertisement.advertisementUserPictureUrl = imageFileUserPicturUrl.url;
     
     advertisement.advertisementIdioms = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementIdiomsParse];
