@@ -11,10 +11,10 @@
 @interface Advertisement : NSObject
 
 @property (nonatomic, strong) NSNumber *advertisementId;
-@property (nonatomic, strong) NSNumber *advertisementDescription;
+@property (nonatomic, strong) NSString *advertisementDescription;
 @property (nonatomic, strong) NSString *advertisementStarter;
-@property (nonatomic, strong) NSNumber *advertisementMainDish;
-@property (nonatomic, strong) NSNumber *advertisementDessert;
+@property (nonatomic, strong) NSString *advertisementMainDish;
+@property (nonatomic, strong) NSString *advertisementDessert;
 @property (nonatomic, strong) NSNumber *advertisementNumGuests;
 @property (nonatomic, strong) NSNumber *advertisementPrice;
 @property (nonatomic, strong) NSDate *advertisementData;
