@@ -80,6 +80,7 @@
         <!--View Controller-->
         <scene sceneID="NZ2-65-u28">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AKN-qd-wVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="WYr-93-KPy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yF6-K1-96G"/>
@@ -88,11 +89,23 @@
                     <view key="view" contentMode="scaleToFill" id="zgk-Wi-eqm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88f-5T-n5D">
+                                <rect key="frame" x="224.5" y="278" width="151" height="43"/>
+                                <inset key="contentEdgeInsets" minX="44" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Log in" backgroundImage="login-button-small.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="88f-5T-n5D" secondAttribute="centerY" id="6A7-rF-qT3"/>
+                            <constraint firstAttribute="centerX" secondItem="88f-5T-n5D" secondAttribute="centerX" id="kpi-vo-JbW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ejk-rJ-pOa"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AKN-qd-wVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1268" y="2464"/>
         </scene>
@@ -125,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0q-0D-EBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="-458"/>
+            <point key="canvasLocation" x="1148" y="3374"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="dyX-zM-jOV">
