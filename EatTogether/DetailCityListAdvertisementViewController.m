@@ -120,9 +120,6 @@
     CustomAdvertisementTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellAdvertisement forIndexPath:indexPath];
 //    
     Advertisement *advertisement = self.advertisementsArray[indexPath.row];
-
-//    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl]
-//                             placeholderImage:nil];
     
     [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
@@ -139,23 +136,32 @@
     return cell;
 }
 
+
 - (void)advertisementCell:(UITableViewCell *)cell didSetFavorite:(BOOL)favorite
 {
     
-    NSLog(@"Anuncio en favorito %d", favorite);
-//    
-//    if([self.currentSessionManager isLoggedIn]){
-//        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//        Advertisement *advertisement = self.advertisementsArray[indexPath.row];
-//        User *user = self.currentSessionManager.currentUser;
-//        [self.addFavoriteDebouncer callBlock:^{
-//
-//            //request save favorite
-//           [self.repository setFavorite:favorite withAdvertisement:advertisement user:user completionBlock:^(Advertisement *advertisement, NSError *error) {
-//               
-//           }];
-//        }];
+//  if([self.currentSessionManager isLoggedIn]){
+//            NSLog(@"Usuario logueado");
+//            
+//            if(favorite){
+//                NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//                Advertisement *advertisement = self.advertisementsArray[indexPath.row];
+//                
+//                User *user = self.currentSessionManager.currentUser;
+//                [self.addFavoriteDebouncer callBlock:^{
+//                    
+//                    //request save favorite
+//                    [self.repository setFavorite:favorite withAdvertisement:advertisement user:user completionBlock:^(NSArray *advertisement, NSError *error) {
+//                        
+//                    }];
+//                }];
+//            }
+//    }else{
+//        NSLog(@"El usuario tiene que loguearse");
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Tienes que loguearte para guardar en favoritos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        [alert show];
 //    }
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

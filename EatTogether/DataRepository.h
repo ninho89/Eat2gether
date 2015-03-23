@@ -17,5 +17,9 @@
 -(void) getCitiesAdvertisementWithCity:(NSString *)city WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
 
 //peticion save favorite
--(void) setFavorite:(BOOL)favorit withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(Advertisement *, NSError *))completionBlock;
+-(void) setFavorite:(BOOL)favorite withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(NSArray *, NSError *))completionBlock;
+
+-(void) getFavoritesAdvertisementWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
+
 @end
+

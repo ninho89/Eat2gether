@@ -46,6 +46,9 @@
 		E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */; };
 		E6AB81991AC02223006FAE07 /* ParseLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB81981AC02223006FAE07 /* ParseLoginController.m */; };
 		E6AB819C1AC0516D006FAE07 /* UserMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB819B1AC0516D006FAE07 /* UserMapper.m */; };
+		E6AB819F1AC08979006FAE07 /* Favorite.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB819E1AC08979006FAE07 /* Favorite.m */; };
+		E6AB81A21AC08A09006FAE07 /* FavoriteMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB81A11AC08A09006FAE07 /* FavoriteMapper.m */; };
+		E6AB81A51AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB81A41AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m */; };
 		E6AC59B01ABC2CAF00C8C81A /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */; };
 		E6C28BFB1ABF31BA00CB1D6D /* UserCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */; };
 		E6C28BFE1ABF830000CB1D6D /* UserLogInController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28BFD1ABF830000CB1D6D /* UserLogInController.m */; };
@@ -129,6 +132,12 @@
 		E6AB81981AC02223006FAE07 /* ParseLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLoginController.m; sourceTree = "<group>"; };
 		E6AB819A1AC0516D006FAE07 /* UserMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMapper.h; sourceTree = "<group>"; };
 		E6AB819B1AC0516D006FAE07 /* UserMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMapper.m; sourceTree = "<group>"; };
+		E6AB819D1AC08979006FAE07 /* Favorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
+		E6AB819E1AC08979006FAE07 /* Favorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorite.m; sourceTree = "<group>"; };
+		E6AB81A01AC08A09006FAE07 /* FavoriteMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteMapper.h; sourceTree = "<group>"; };
+		E6AB81A11AC08A09006FAE07 /* FavoriteMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteMapper.m; sourceTree = "<group>"; };
+		E6AB81A31AC08D9B006FAE07 /* FavoriteAdvertisementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteAdvertisementViewController.h; sourceTree = "<group>"; };
+		E6AB81A41AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteAdvertisementViewController.m; sourceTree = "<group>"; };
 		E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza.jpg; sourceTree = "<group>"; };
 		E6C28BF91ABF31BA00CB1D6D /* UserCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCreateAccountViewController.h; sourceTree = "<group>"; };
 		E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCreateAccountViewController.m; sourceTree = "<group>"; };
@@ -297,6 +306,8 @@
 				E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */,
 				E6C28BFC1ABF830000CB1D6D /* UserLogInController.h */,
 				E6C28BFD1ABF830000CB1D6D /* UserLogInController.m */,
+				E6AB81A31AC08D9B006FAE07 /* FavoriteAdvertisementViewController.h */,
+				E6AB81A41AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -344,6 +355,8 @@
 				E6C28C0C1AC01AE800CB1D6D /* User.m */,
 				E6873D651AB9D418006336D4 /* Advertisement.h */,
 				E6873D661AB9D418006336D4 /* Advertisement.m */,
+				E6AB819D1AC08979006FAE07 /* Favorite.h */,
+				E6AB819E1AC08979006FAE07 /* Favorite.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -357,6 +370,8 @@
 				E6AB819B1AC0516D006FAE07 /* UserMapper.m */,
 				E6873D681ABA0079006336D4 /* AdvertisementMapper.h */,
 				E6873D691ABA0079006336D4 /* AdvertisementMapper.m */,
+				E6AB81A01AC08A09006FAE07 /* FavoriteMapper.h */,
+				E6AB81A11AC08A09006FAE07 /* FavoriteMapper.m */,
 			);
 			name = Mapper;
 			sourceTree = "<group>";
@@ -549,12 +564,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6AB81A21AC08A09006FAE07 /* FavoriteMapper.m in Sources */,
 				E6873D6E1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m in Sources */,
 				E64D4AE71AB86AFB00ABC477 /* Constants.m in Sources */,
 				E64D4AC01AB8672C00ABC477 /* EatTogether.xcdatamodeld in Sources */,
 				E622A9121ABB2D8F009CC0B9 /* DetailAdvertisementViewController.m in Sources */,
 				E6C28C011AC00C9100CB1D6D /* PMKBlockDebouncer.m in Sources */,
 				E64D4AF01AB8764600ABC477 /* NetworkDataRepository.m in Sources */,
+				E6AB81A51AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m in Sources */,
 				E6C28C0D1AC01AE800CB1D6D /* User.m in Sources */,
 				E6C28BFB1ABF31BA00CB1D6D /* UserCreateAccountViewController.m in Sources */,
 				E6C28BFE1ABF830000CB1D6D /* UserLogInController.m in Sources */,
@@ -570,6 +587,7 @@
 				E622A90C1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m in Sources */,
 				E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */,
 				E64D4ABA1AB8672C00ABC477 /* main.m in Sources */,
+				E6AB819F1AC08979006FAE07 /* Favorite.m in Sources */,
 				E62BC4D61ABC88CC00B4CF00 /* SearchAdvertisementViewController.m in Sources */,
 				E6C28C0A1AC01A7600CB1D6D /* CurrentSessionManager.m in Sources */,
 				E6873D671AB9D418006336D4 /* Advertisement.m in Sources */,

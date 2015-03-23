@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.currentSessionManager = [[CurrentSessionManager alloc]init];
+    self.currentSessionManager = [CurrentSessionManager sharedInstance];
     
     self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:self.tapGesture];

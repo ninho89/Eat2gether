@@ -11,11 +11,15 @@
 #import "City.h"
 #import "Advertisement.h"
 #import "AdvertisementMapper.h"
+#import "Favorite.h"
+#import "FavoriteMapper.h"
+
 
 @interface NetworkDataRepository ()
 
 @property (nonatomic, strong) CityMapper *cityMapper;
 @property (nonatomic, strong) AdvertisementMapper *advertisementMapper;
+@property (nonatomic, strong) FavoriteMapper *favoriteMapper;
 
 @end
 
@@ -62,7 +66,6 @@
     [query whereKey:kAdvertisementCityIdParse equalTo:[PFObject objectWithoutDataWithClassName:kCityTableParse objectId:cityObjectId]];
     [query includeKey:kAdvertisementDetailAdvertisementIdParse];
     [query includeKey:kAdvertisementLocationIdParse];
-    //[query includeKey:kUserIdParse];
     [query includeKey:kAdvertisementUserUsername];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
@@ -92,9 +95,51 @@
 
 #pragma mark - Save User's Favorite
 
--(void) setFavorite:(BOOL)favorit withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(Advertisement *, NSError *))completionBlock{
+-(void) setFavorite:(BOOL)favorite withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(NSArray *, NSError *))completionBlock{
  
     //Query to save favorite
+//    PFQuery *query = [PFQuery queryWithClassName:@"Favorite"];
+//    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+////    [query includeKey:kAdvertisementIdParse];
+////    [query includeKey:@"objectIdU"];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if(!error){
+//            NSMutableArray *favorites = [NSMutableArray array];
+//            for (PFObject *pfFavorites in objects)
+//            {
+//                self.favoriteMapper = [[FavoriteMapper alloc]init];
+//                Favorite *favorite = [self.favoriteMapper mapParseFavorite:pfFavorites];
+//                [favorites addObject:favorite];
+//            }
+//            completionBlock(favorites, nil);
+//        }
+//    }];
+}
+
+
+-(void) getFavoritesAdvertisementWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Favorite"];
+    
+//    [query includeKey:kAdvertisementCityIdParse];
+//    [query whereKey:kAdvertisementCityIdParse equalTo:[PFObject objectWithoutDataWithClassName:kCityTableParse objectId:cityObjectId]];
+
+    
+    [query includeKey:@"objectIdU"];
+    //filtra por username
+    [query whereKey:@"objectIdU" equalTo:[PFUser objectWithoutDataWithObjectId:username]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error){
+            NSMutableArray *favorites = [NSMutableArray array];
+            for (PFObject *pfFavorites in objects)
+            {
+                self.favoriteMapper = [[FavoriteMapper alloc]init];
+                Favorite *favorite = [self.favoriteMapper mapParseFavorite:pfFavorites];
+                [favorites addObject:favorite];
+            }
+            completionBlock(favorites, nil);
+        }
+    }];
     
 }
 

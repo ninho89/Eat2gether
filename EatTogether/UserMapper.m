@@ -13,16 +13,13 @@
 - (User *)mapParseUser:(PFUser *)pfUser{
     
     User *user = [[User alloc] init];
+    user.userObjectId = [pfUser valueForKey:@"objectId"];
     user.username = [pfUser valueForKey:@"username"];
     user.email = [pfUser valueForKey:@"email"];
-//    PFFile *imageFile = [pfCity objectForKey:kCityPictureParse];
-//    city.cityPictureUrl = imageFile.url;
-//    
-    return user;
-
+    PFFile *imageFile = [pfUser objectForKey:@"userPicture"];
+    user.userPicture = imageFile.url;
     
+    return user;
 }
-
-
 
 @end

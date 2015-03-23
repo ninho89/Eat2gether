@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="1275" y="1031"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite Advertisement View Controller-->
         <scene sceneID="slK-1s-sAH">
             <objects>
-                <viewController id="cpO-9J-fdU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="favoriteAdvertisementViewController" id="cpO-9J-fdU" customClass="FavoriteAdvertisementViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Ko-i5-7h1"/>
                         <viewControllerLayoutGuide type="bottom" id="GOO-re-pua"/>
@@ -69,9 +69,28 @@
                     <view key="view" contentMode="scaleToFill" id="93F-xR-hWv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="afD-gV-k20">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cpO-9J-fdU" id="IqL-12-2zg"/>
+                                    <outlet property="delegate" destination="cpO-9J-fdU" id="Ug7-jj-G07"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="afD-gV-k20" secondAttribute="bottom" id="63h-yj-Y4E"/>
+                            <constraint firstAttribute="trailing" secondItem="afD-gV-k20" secondAttribute="trailing" id="cZW-Fw-tEl"/>
+                            <constraint firstItem="afD-gV-k20" firstAttribute="top" secondItem="93F-xR-hWv" secondAttribute="top" id="m8f-xd-gGY"/>
+                            <constraint firstItem="afD-gV-k20" firstAttribute="leading" secondItem="93F-xR-hWv" secondAttribute="leading" id="zNl-LI-pEh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lv9-5M-zaS"/>
+                    <connections>
+                        <outlet property="tableView" destination="afD-gV-k20" id="zXK-BG-Lla"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ri5-bG-G7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,7 +242,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5k6-XU-iog" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="tyb-Te-DQX"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="2208"/>
+            <point key="canvasLocation" x="1932" y="2580"/>
         </scene>
         <!--User Log In Controller-->
         <scene sceneID="nY1-fk-dao">
@@ -280,7 +299,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWX-QP-cfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="0vC-Jc-wWB"/>
             </objects>
-            <point key="canvasLocation" x="1891" y="2893"/>
+            <point key="canvasLocation" x="1895" y="3269"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="dyX-zM-jOV">
