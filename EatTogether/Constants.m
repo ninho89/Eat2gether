@@ -73,5 +73,6 @@ NSString *const kStoryboardMapCityListAdvertisementViewController = @"mapCityLis
 NSString *const kStoryboardDetailAdvertisementViewController = @"detailAdvertisement";
 NSString *const kStoryboardUserProfileViewController = @"userProfileViewController";
 NSString *const kStoryboardUserCreateAccountViewController = @"userCreateAccountViewController";
+NSString *const kStoryboardUserLoginViewController = @"userLoginViewController";
 
 @end
