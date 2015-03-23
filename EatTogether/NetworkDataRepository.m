@@ -90,6 +90,12 @@
     }];
 }
 
+#pragma mark - Save User's Favorite
 
+-(void) setFavorite:(BOOL)favorit withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(Advertisement *, NSError *))completionBlock{
+ 
+    //Query to save favorite
+    
+}
 
 @end

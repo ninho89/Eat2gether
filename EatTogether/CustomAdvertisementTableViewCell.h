@@ -10,7 +10,7 @@
 
 @protocol CustomAdvertisementTableViewCellDelegate <NSObject>
 
--(void)addFavorite:(BOOL)favorite;
+- (void)advertisementCell:(UITableViewCell *)cell didSetFavorite:(BOOL)favorite;
 
 @end
 

@@ -236,12 +236,51 @@
                     <view key="view" contentMode="scaleToFill" id="D2g-V9-uVC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-Pw-7wd">
+                                <rect key="frame" x="257" y="70" width="85" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-qZ-ca5">
+                                <rect key="frame" x="257" y="122" width="84" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNa-aR-gCo">
+                                <rect key="frame" x="281" y="206" width="38" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="pPL-da-7GW" eventType="touchUpInside" id="eml-Sl-OAB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6cp-Pw-7wd" firstAttribute="top" secondItem="suV-bW-Rgj" secondAttribute="bottom" constant="50" id="3fk-Cd-43t"/>
+                            <constraint firstItem="jyH-qZ-ca5" firstAttribute="top" secondItem="6cp-Pw-7wd" secondAttribute="bottom" constant="22" id="TTw-XU-ffI"/>
+                            <constraint firstItem="jyH-qZ-ca5" firstAttribute="leading" secondItem="6cp-Pw-7wd" secondAttribute="leading" id="XYE-t6-Quy"/>
+                            <constraint firstItem="jNa-aR-gCo" firstAttribute="top" secondItem="jyH-qZ-ca5" secondAttribute="bottom" constant="54" id="Zhh-AX-oDY"/>
+                            <constraint firstAttribute="centerX" secondItem="jNa-aR-gCo" secondAttribute="centerX" id="sPH-7v-s15"/>
+                            <constraint firstAttribute="centerX" secondItem="6cp-Pw-7wd" secondAttribute="centerX" id="sdZ-En-Woi"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0vC-Jc-wWB" appends="YES" id="M0x-Sb-wpl"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="jyH-qZ-ca5" id="Ipi-tf-itG"/>
+                        <outlet property="tapGesture" destination="0vC-Jc-wWB" id="LF9-6A-f2M"/>
+                        <outlet property="usernameField" destination="6cp-Pw-7wd" id="2gN-Nv-Fca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWX-QP-cfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0vC-Jc-wWB"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="2887"/>
+            <point key="canvasLocation" x="1891" y="2893"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="dyX-zM-jOV">

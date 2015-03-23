@@ -14,12 +14,18 @@
 #import "MapCityListAdvertisementViewController.h"
 #import "DetailAdvertisementViewController.h"
 #import "UserProfileViewController.h"
+#import "PMKBlockDebouncer.h"
+#import "CurrentSessionManager.h"
 
 @interface DetailCityListAdvertisementViewController () <CustomAdvertisementTableViewCellDelegate>
 
 @property (nonatomic, strong) id<DataRepository> repository;
+
+@property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *advertisementsArray;
+@property (nonatomic, strong) PMKBlockDebouncer *addFavoriteDebouncer;
 
 
 @end
@@ -31,6 +37,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any dditional setup after loading the view.
+    
+    self.addFavoriteDebouncer = [[PMKBlockDebouncer alloc]init];
+    
+    self.currentSessionManager = [CurrentSessionManager sharedInstance];
     
     self.repository = [[NetworkDataRepository alloc]init];
     self.advertisementsArray = [[NSArray alloc]init];
@@ -129,15 +139,24 @@
     return cell;
 }
 
--(void)addFavorite:(BOOL)favorite{
+- (void)advertisementCell:(UITableViewCell *)cell didSetFavorite:(BOOL)favorite
+{
+    
     NSLog(@"Anuncio en favorito %d", favorite);
-//    if (favorite) {
-//        UserProfileViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardUserProfileViewController];
-//        [self.navigationController pushViewController:loginViewController animated:YES];
+//    
+//    if([self.currentSessionManager isLoggedIn]){
+//        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//        Advertisement *advertisement = self.advertisementsArray[indexPath.row];
+//        User *user = self.currentSessionManager.currentUser;
+//        [self.addFavoriteDebouncer callBlock:^{
+//
+//            //request save favorite
+//           [self.repository setFavorite:favorite withAdvertisement:advertisement user:user completionBlock:^(Advertisement *advertisement, NSError *error) {
+//               
+//           }];
+//        }];
 //    }
 }
-
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     

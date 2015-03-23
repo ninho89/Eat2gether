@@ -39,9 +39,9 @@
         self.check = NO;
     }
     
-    if ([self.delegate respondsToSelector:@selector(addFavorite:)])
+    if ([self.delegate respondsToSelector:@selector(advertisementCell:didSetFavorite:)])
     {
-        [self.delegate addFavorite:self.check];
+        [self.delegate advertisementCell:self didSetFavorite:self.check];
     }
 }
 

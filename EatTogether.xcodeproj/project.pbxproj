@@ -44,9 +44,14 @@
 		E6873D6A1ABA0079006336D4 /* AdvertisementMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D691ABA0079006336D4 /* AdvertisementMapper.m */; };
 		E6873D6E1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */; };
 		E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */; };
+		E6AB81991AC02223006FAE07 /* ParseLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB81981AC02223006FAE07 /* ParseLoginController.m */; };
+		E6AB819C1AC0516D006FAE07 /* UserMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB819B1AC0516D006FAE07 /* UserMapper.m */; };
 		E6AC59B01ABC2CAF00C8C81A /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */; };
 		E6C28BFB1ABF31BA00CB1D6D /* UserCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */; };
 		E6C28BFE1ABF830000CB1D6D /* UserLogInController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28BFD1ABF830000CB1D6D /* UserLogInController.m */; };
+		E6C28C011AC00C9100CB1D6D /* PMKBlockDebouncer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28C001AC00C9100CB1D6D /* PMKBlockDebouncer.m */; };
+		E6C28C0A1AC01A7600CB1D6D /* CurrentSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28C091AC01A7600CB1D6D /* CurrentSessionManager.m */; };
+		E6C28C0D1AC01AE800CB1D6D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28C0C1AC01AE800CB1D6D /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,11 +125,22 @@
 		E6873D6B1ABA085C006336D4 /* CustomAdvertisementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAdvertisementTableViewCell.h; sourceTree = "<group>"; };
 		E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAdvertisementTableViewCell.m; sourceTree = "<group>"; };
 		E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAdvertisementTableViewCell.xib; sourceTree = "<group>"; };
+		E6AB81971AC02223006FAE07 /* ParseLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLoginController.h; sourceTree = "<group>"; };
+		E6AB81981AC02223006FAE07 /* ParseLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLoginController.m; sourceTree = "<group>"; };
+		E6AB819A1AC0516D006FAE07 /* UserMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMapper.h; sourceTree = "<group>"; };
+		E6AB819B1AC0516D006FAE07 /* UserMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMapper.m; sourceTree = "<group>"; };
 		E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza.jpg; sourceTree = "<group>"; };
 		E6C28BF91ABF31BA00CB1D6D /* UserCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCreateAccountViewController.h; sourceTree = "<group>"; };
 		E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCreateAccountViewController.m; sourceTree = "<group>"; };
 		E6C28BFC1ABF830000CB1D6D /* UserLogInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLogInController.h; sourceTree = "<group>"; };
 		E6C28BFD1ABF830000CB1D6D /* UserLogInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLogInController.m; sourceTree = "<group>"; };
+		E6C28BFF1AC00C9100CB1D6D /* PMKBlockDebouncer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMKBlockDebouncer.h; sourceTree = "<group>"; };
+		E6C28C001AC00C9100CB1D6D /* PMKBlockDebouncer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMKBlockDebouncer.m; sourceTree = "<group>"; };
+		E6C28C081AC01A7600CB1D6D /* CurrentSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSessionManager.h; sourceTree = "<group>"; };
+		E6C28C091AC01A7600CB1D6D /* CurrentSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentSessionManager.m; sourceTree = "<group>"; };
+		E6C28C0B1AC01AE800CB1D6D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E6C28C0C1AC01AE800CB1D6D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E6C28C0E1AC01C7C00CB1D6D /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,6 +229,7 @@
 				E64D4AE31AB86A6A00ABC477 /* Utilities */,
 				E64D4AED1AB8762500ABC477 /* Model */,
 				E64D4AF41AB8811F00ABC477 /* Mapper */,
+				E6C28C041AC01A0000CB1D6D /* Session */,
 				E64D4AEB1AB8735D00ABC477 /* DataRepository */,
 				E64D4AE11AB86A2200ABC477 /* Controllers */,
 				E64D4AE21AB86A2B00ABC477 /* Views */,
@@ -323,6 +340,8 @@
 			children = (
 				E64D4AF11AB87A4700ABC477 /* City.h */,
 				E64D4AF21AB87A4700ABC477 /* City.m */,
+				E6C28C0B1AC01AE800CB1D6D /* User.h */,
+				E6C28C0C1AC01AE800CB1D6D /* User.m */,
 				E6873D651AB9D418006336D4 /* Advertisement.h */,
 				E6873D661AB9D418006336D4 /* Advertisement.m */,
 			);
@@ -334,6 +353,8 @@
 			children = (
 				E64D4AF51AB8813F00ABC477 /* CityMapper.h */,
 				E64D4AF61AB8813F00ABC477 /* CityMapper.m */,
+				E6AB819A1AC0516D006FAE07 /* UserMapper.h */,
+				E6AB819B1AC0516D006FAE07 /* UserMapper.m */,
 				E6873D681ABA0079006336D4 /* AdvertisementMapper.h */,
 				E6873D691ABA0079006336D4 /* AdvertisementMapper.m */,
 			);
@@ -354,6 +375,28 @@
 			children = (
 			);
 			name = CoreDataRepository;
+			sourceTree = "<group>";
+		};
+		E6C28C041AC01A0000CB1D6D /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				E6C28C061AC01A1800CB1D6D /* LoginControllers */,
+				E6C28C081AC01A7600CB1D6D /* CurrentSessionManager.h */,
+				E6C28C091AC01A7600CB1D6D /* CurrentSessionManager.m */,
+				E6C28BFF1AC00C9100CB1D6D /* PMKBlockDebouncer.h */,
+				E6C28C001AC00C9100CB1D6D /* PMKBlockDebouncer.m */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
+		E6C28C061AC01A1800CB1D6D /* LoginControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E6C28C0E1AC01C7C00CB1D6D /* LoginController.h */,
+				E6AB81971AC02223006FAE07 /* ParseLoginController.h */,
+				E6AB81981AC02223006FAE07 /* ParseLoginController.m */,
+			);
+			name = LoginControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,10 +553,14 @@
 				E64D4AE71AB86AFB00ABC477 /* Constants.m in Sources */,
 				E64D4AC01AB8672C00ABC477 /* EatTogether.xcdatamodeld in Sources */,
 				E622A9121ABB2D8F009CC0B9 /* DetailAdvertisementViewController.m in Sources */,
+				E6C28C011AC00C9100CB1D6D /* PMKBlockDebouncer.m in Sources */,
 				E64D4AF01AB8764600ABC477 /* NetworkDataRepository.m in Sources */,
+				E6C28C0D1AC01AE800CB1D6D /* User.m in Sources */,
 				E6C28BFB1ABF31BA00CB1D6D /* UserCreateAccountViewController.m in Sources */,
 				E6C28BFE1ABF830000CB1D6D /* UserLogInController.m in Sources */,
 				E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */,
+				E6AB81991AC02223006FAE07 /* ParseLoginController.m in Sources */,
+				E6AB819C1AC0516D006FAE07 /* UserMapper.m in Sources */,
 				E64D4B081AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m in Sources */,
 				E61B6C681ABF109B0021D93C /* UserProfileViewController.m in Sources */,
 				E64D4AC31AB8672C00ABC477 /* MainViewController.m in Sources */,
@@ -524,6 +571,7 @@
 				E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */,
 				E64D4ABA1AB8672C00ABC477 /* main.m in Sources */,
 				E62BC4D61ABC88CC00B4CF00 /* SearchAdvertisementViewController.m in Sources */,
+				E6C28C0A1AC01A7600CB1D6D /* CurrentSessionManager.m in Sources */,
 				E6873D671AB9D418006336D4 /* Advertisement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

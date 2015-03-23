@@ -8,6 +8,7 @@
 
 #import "UserProfileViewController.h"
 #import "UserCreateAccountViewController.h"
+#import "UserLogInController.h"
 
 @interface UserProfileViewController ()
 
@@ -35,8 +36,13 @@
 }
 
 - (IBAction)startSession:(id)sender {
+//    UserCreateAccountViewController *userCreateAccountViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardUserCreateAccountViewController];
+//    
+//    [self.navigationController pushViewController:userCreateAccountViewController animated:YES];
     
+    UserLogInController *userLoginController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserLoginViewController];
     
+    [self.navigationController pushViewController:userLoginController animated:YES];
 }
 
 
