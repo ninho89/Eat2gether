@@ -45,8 +45,10 @@
         if(!self.check){
             [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"favoriteOn"] forState:UIControlStateNormal];
             self.check = YES;
+        }else{
+            [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"fav1"] forState:UIControlStateNormal];
+            self.check = NO;
         }
-    
     }
     
     if ([self.delegate respondsToSelector:@selector(advertisementCell:didSetFavorite:)])

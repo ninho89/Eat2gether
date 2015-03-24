@@ -78,6 +78,7 @@ extern NSString *const kStoryboardFavoriteAdvertisementViewController;
 extern NSString *const kStoryboardUserProfileAccountViewController;
 extern NSString *const kStoryboardUserProfileAccountAdvertisementsViewController;
 extern NSString *const kStoryboardUserProfileAccountAdvertisementRequestViewController;
+extern NSString *const kStoryboardUserProfileAccountAddAdvertisementsViewController;
 
 
 @end

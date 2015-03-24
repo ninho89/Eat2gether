@@ -45,9 +45,9 @@
     
     
     UIButton *logout = [UIButton buttonWithType:UIButtonTypeCustom];
-    [logout setFrame:CGRectMake(0.0f, 0.0f, 30.0f, 30.0f)];
+    [logout setFrame:CGRectMake(0.0f, 0.0f, 30.0f, 25.0f)];
     [logout addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
-    [logout setImage:[UIImage imageNamed:@"logout"] forState:UIControlStateNormal];
+    [logout setImage:[UIImage imageNamed:@"logout1"] forState:UIControlStateNormal];
     UIBarButtonItem *barButtonLogout = [[UIBarButtonItem alloc] initWithCustomView:logout];
     self.navigationItem.rightBarButtonItem = barButtonLogout;
 
@@ -96,7 +96,7 @@
 }
 
 - (IBAction)myAdvertisements:(id)sender {
-    UserProfileAccountAdvertisementsViewController *userProfileAccountAdvertisementsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserProfileAccountAdvertisementRequestViewController];
+    UserProfileAccountAdvertisementsViewController *userProfileAccountAdvertisementsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserProfileAccountAdvertisementsViewController];
     [self.navigationController pushViewController:userProfileAccountAdvertisementsViewController animated:YES];
 }
 

@@ -157,7 +157,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.10196078431372549" green="0.73725490196078436" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.12156862745098039" green="0.69411764705882351" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8p7-lS-F6n"/>
                                     <constraint firstAttribute="centerX" secondItem="Kep-VM-aOI" secondAttribute="centerX" id="Xb2-gv-gKa"/>
@@ -184,7 +184,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="4Hl-vo-WqV" firstAttribute="leading" secondItem="zgk-Wi-eqm" secondAttribute="leadingMargin" constant="25" id="4dD-TU-4Yg"/>
@@ -310,6 +310,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACD-I3-w3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2637" y="2023"/>
+        </scene>
+        <!--User Profile Account Add Advertisements View Controller-->
+        <scene sceneID="jIz-J7-grD">
+            <objects>
+                <viewController storyboardIdentifier="userProfileAccountAddAdvertisementsViewController" id="o5T-ch-Bme" customClass="UserProfileAccountAddAdvertisementsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Ho-nY-IfW"/>
+                        <viewControllerLayoutGuide type="bottom" id="WQu-nJ-Zx3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qFn-Qw-uQN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tFN-sr-CFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3291" y="2023"/>
         </scene>
         <!--User Create Account View Controller-->
         <scene sceneID="Wjp-yw-e95">
@@ -794,7 +812,7 @@
         <scene sceneID="Bck-Ib-kjO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XiP-sS-ZtW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favoritos" image="favoritos.png" id="glP-A7-3Zp"/>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="Favourites.png" id="glP-A7-3Zp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LAk-o8-aim">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -830,8 +848,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Favourites.png" width="34" height="32"/>
         <image name="Search.png" width="25" height="25"/>
-        <image name="favoritos.png" width="25" height="26"/>
         <image name="home.png" width="26" height="26"/>
         <image name="perfil.png" width="26" height="26"/>
     </resources>

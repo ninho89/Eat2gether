@@ -142,7 +142,6 @@
 
   if([self.currentSessionManager isLoggedIn]){
             NSLog(@"Usuario logueado");
-            
             if(favorite){
                 NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
                 Advertisement *advertisement = self.advertisementsArray[indexPath.row];
@@ -154,6 +153,8 @@
                         
                     }];
                 }];
+            }else{
+                //delete favorite
             }
     }else{
         NSLog(@"El usuario tiene que loguearse");

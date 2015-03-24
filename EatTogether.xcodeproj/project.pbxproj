@@ -61,6 +61,9 @@
 		E6C581C51AC1B6EE001E15C7 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C581C41AC1B6EE001E15C7 /* settings.png */; };
 		E6C581C81AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581C71AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.m */; };
 		E6C581CB1AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581CA1AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.m */; };
+		E6C581D31AC1FC5C001E15C7 /* Favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C581D21AC1FC5C001E15C7 /* Favourites.png */; };
+		E6C581D51AC2000B001E15C7 /* logout1.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C581D41AC2000B001E15C7 /* logout1.png */; };
+		E6C581D81AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581D71AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +168,10 @@
 		E6C581C71AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileAccountRequestViewController.m; sourceTree = "<group>"; };
 		E6C581C91AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileAccountAdvertisementsViewController.h; sourceTree = "<group>"; };
 		E6C581CA1AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileAccountAdvertisementsViewController.m; sourceTree = "<group>"; };
+		E6C581D21AC1FC5C001E15C7 /* Favourites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Favourites.png; sourceTree = "<group>"; };
+		E6C581D41AC2000B001E15C7 /* logout1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout1.png; sourceTree = "<group>"; };
+		E6C581D61AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileAccountAddAdvertisementsViewController.h; sourceTree = "<group>"; };
+		E6C581D71AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileAccountAddAdvertisementsViewController.m; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,7 +216,9 @@
 		E622A90F1ABB1EB5009CC0B9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E6C581D21AC1FC5C001E15C7 /* Favourites.png */,
 				E6C581C41AC1B6EE001E15C7 /* settings.png */,
+				E6C581D41AC2000B001E15C7 /* logout1.png */,
 				E6C581C21AC1B651001E15C7 /* logout.png */,
 				E61B6C5E1ABF0F500021D93C /* login-button-small-pressed.png */,
 				E61B6C5F1ABF0F500021D93C /* login-button-small-pressed@2x.png */,
@@ -329,6 +338,8 @@
 				E6C581C71AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.m */,
 				E6C581C91AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.h */,
 				E6C581CA1AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.m */,
+				E6C581D61AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.h */,
+				E6C581D71AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -527,6 +538,8 @@
 				E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */,
 				E6C581BC1AC182A6001E15C7 /* CustomFavoriteTableViewCell.xib in Resources */,
 				E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */,
+				E6C581D51AC2000B001E15C7 /* logout1.png in Resources */,
+				E6C581D31AC1FC5C001E15C7 /* Favourites.png in Resources */,
 				E6AC59B01ABC2CAF00C8C81A /* pizza.jpg in Resources */,
 				E61B6C5A1ABEF2870021D93C /* favoritos.png in Resources */,
 				E61B6C641ABF0F500021D93C /* login-button-small.png in Resources */,
@@ -618,6 +631,7 @@
 				E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */,
 				E64D4ABA1AB8672C00ABC477 /* main.m in Sources */,
 				E6AB819F1AC08979006FAE07 /* Favorite.m in Sources */,
+				E6C581D81AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.m in Sources */,
 				E62BC4D61ABC88CC00B4CF00 /* SearchAdvertisementViewController.m in Sources */,
 				E6C28C0A1AC01A7600CB1D6D /* CurrentSessionManager.m in Sources */,
 				E6873D671AB9D418006336D4 /* Advertisement.m in Sources */,

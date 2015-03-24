@@ -68,30 +68,6 @@
 
 - (void) registerNewUser {
     NSLog(@"registering....");
-//    PFUser *newUser = [PFUser user];
-//    newUser.username = _usernameField.text;
-//    newUser.email = _emailField.text;
-//    newUser.password = _passwordField.text;
-//
-//    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (!error) {
-//            NSLog(@"Registration success!");
-//            _usernameField.text = nil;
-//            _passwordField.text = nil;
-//            _rePasswordField.text = nil;
-//            _emailField.text = nil;
-//            
-//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enhorabuena!" message:@"Usuario creado correctamente" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//            [alert show];
-//            
-//            
-//            //go to user account profile
-//            
-//        }
-//        else {
-//            NSLog(@"Hubo un error en la creacion del usuario");
-//        }
-//    }];
     [self.currentSessionManager registerWithUsername:self.usernameField.text password:self.passwordField.text email:self.emailField.text completionBlock:^(User *user, NSError *error) {
         
         if(!error){
