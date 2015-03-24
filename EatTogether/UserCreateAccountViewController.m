@@ -7,6 +7,8 @@
 //
 
 #import "UserCreateAccountViewController.h"
+#import "CurrentSessionManager.h"
+#import "UserProfileAccountViewController.h"
 
 @interface UserCreateAccountViewController ()
 
@@ -15,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *rePasswordField;
+@property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
 
 @end
 
@@ -24,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.currentSessionManager = [CurrentSessionManager sharedInstance];
     
     self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:self.tapGesture];
@@ -64,30 +68,48 @@
 
 - (void) registerNewUser {
     NSLog(@"registering....");
-    PFUser *newUser = [PFUser user];
-    newUser.username = _usernameField.text;
-    newUser.email = _emailField.text;
-    newUser.password = _passwordField.text;
+//    PFUser *newUser = [PFUser user];
+//    newUser.username = _usernameField.text;
+//    newUser.email = _emailField.text;
+//    newUser.password = _passwordField.text;
+//
+//    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (!error) {
+//            NSLog(@"Registration success!");
+//            _usernameField.text = nil;
+//            _passwordField.text = nil;
+//            _rePasswordField.text = nil;
+//            _emailField.text = nil;
+//            
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enhorabuena!" message:@"Usuario creado correctamente" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//            [alert show];
+//            
+//            
+//            //go to user account profile
+//            
+//        }
+//        else {
+//            NSLog(@"Hubo un error en la creacion del usuario");
+//        }
+//    }];
+    [self.currentSessionManager registerWithUsername:self.usernameField.text password:self.passwordField.text email:self.emailField.text completionBlock:^(User *user, NSError *error) {
+        
+        if(!error){
+            NSLog(@"usuario registrado ok");
+            
+            UserProfileAccountViewController *userProfileAccountViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardUserProfileAccountViewController];
+            
+            userProfileAccountViewController.user = user;
+            
+            [self.navigationController pushViewController:userProfileAccountViewController animated:YES];
+            
+        }else{
+            NSLog(@"problema usuario registrado");
+        }
 
-    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            NSLog(@"Registration success!");
-            _usernameField.text = nil;
-            _passwordField.text = nil;
-            _rePasswordField.text = nil;
-            _emailField.text = nil;
-            
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enhorabuena!" message:@"Usuario creado correctamente" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-            
-            
-            //go to user account profile
-            
-        }
-        else {
-            NSLog(@"Hubo un error en la creacion del usuario");
-        }
+        
     }];
+    
 }
 
 

@@ -217,6 +217,32 @@
             </objects>
             <point key="canvasLocation" x="1268" y="2464.5"/>
         </scene>
+        <!--User Profile Account View Controller-->
+        <scene sceneID="ukK-NT-1TS">
+            <objects>
+                <viewController storyboardIdentifier="userProfileAccountViewController" id="LAU-PS-YBo" customClass="UserProfileAccountViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fu1-du-Mm8"/>
+                        <viewControllerLayoutGuide type="bottom" id="QIP-8i-PYh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BG8-NY-L1n">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnX-Kl-lXb">
+                                <rect key="frame" x="119" y="212" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCV-7g-dBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="2464"/>
+        </scene>
         <!--User Create Account View Controller-->
         <scene sceneID="Wjp-yw-e95">
             <objects>

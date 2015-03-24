@@ -40,8 +40,9 @@
     self.repository = [[NetworkDataRepository alloc]init];
     self.favoritesArray = [[NSMutableArray alloc]init];
     
-    
     [self registerCustomCell];
+    
+    
     
 }
 
@@ -84,7 +85,6 @@
     
 }
 
-
 #pragma mark - TableView DataSource Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -107,7 +107,7 @@
         
     }];
     
-    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:favorite.favoriteUserPicture] placeholderImage:nil];
+//    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:favorite.favoriteUserPicture] placeholderImage:nil];
     
     cell.customLabelPrice.text = [NSString stringWithFormat:@"%@ €", favorite.favoriteDetailAdvertisementPrice];
     

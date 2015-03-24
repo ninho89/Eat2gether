@@ -38,6 +38,18 @@
     return  self;
 }
 
+
+-(void)registerWithUsername:(NSString *)username password:(NSString *)password email:(NSString*)email completionBlock:(void(^)(User *user, NSError *error))completionBlock{
+    
+    [self.loginController registerWithUsername:username password:password email:email completionBlock:^(User *user, NSError *error) {
+        _currentUser = user;
+        if (completionBlock) {
+            completionBlock(user, error);
+        }
+        
+    }];
+}
+
 -(void)loginInWithUsername:(NSString *)username password:(NSString *)password completionBlock:(void (^)(User *, NSError *))completionBlock{
     
     [self.loginController loginInWithUsername:username password:password completionBlock:^(User *user, NSError *error) {
@@ -48,24 +60,21 @@
     }];
 }
 
-//-(void)logoutWithCompletionBlock:(void (^)(NSError *))completionBlock{
-//    
-//    [self.loginController logoutWithCompletionBlock:^(NSError *error) {
-//        if (!error) {
-//            _currentUser = nil;
-//        }
-//        if(completionBlock){
-//            completionBlock(error);
-//        }
-//    }];
-//    
-//}
+-(void)logoutWithCompletionBlock:(void (^)(User *, NSError *))completionBlock{
+    
+    [self.loginController logoutWithCompletionBlock:^(User *user, NSError *error) {
+        if (!error) {
+            _currentUser = user;
+        }
+        if(completionBlock){
+            completionBlock(_currentUser, error);
+        }
+    }];
+}
 
 -(BOOL)isLoggedIn{
     return self.currentUser != nil;
 }
-
-
 
 
 @end

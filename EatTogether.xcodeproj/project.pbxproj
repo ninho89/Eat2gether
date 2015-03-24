@@ -56,6 +56,9 @@
 		E6C28C0D1AC01AE800CB1D6D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28C0C1AC01AE800CB1D6D /* User.m */; };
 		E6C581BB1AC182A6001E15C7 /* CustomFavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581B91AC182A6001E15C7 /* CustomFavoriteTableViewCell.m */; };
 		E6C581BC1AC182A6001E15C7 /* CustomFavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C581BA1AC182A6001E15C7 /* CustomFavoriteTableViewCell.xib */; };
+		E6C581BF1AC1AA6B001E15C7 /* UserProfileAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581BE1AC1AA6B001E15C7 /* UserProfileAccountViewController.m */; };
+		E6C581C31AC1B651001E15C7 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C581C21AC1B651001E15C7 /* logout.png */; };
+		E6C581C51AC1B6EE001E15C7 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C581C41AC1B6EE001E15C7 /* settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +155,10 @@
 		E6C581B81AC182A6001E15C7 /* CustomFavoriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFavoriteTableViewCell.h; sourceTree = "<group>"; };
 		E6C581B91AC182A6001E15C7 /* CustomFavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFavoriteTableViewCell.m; sourceTree = "<group>"; };
 		E6C581BA1AC182A6001E15C7 /* CustomFavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomFavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		E6C581BD1AC1AA6B001E15C7 /* UserProfileAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileAccountViewController.h; sourceTree = "<group>"; };
+		E6C581BE1AC1AA6B001E15C7 /* UserProfileAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileAccountViewController.m; sourceTree = "<group>"; };
+		E6C581C21AC1B651001E15C7 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		E6C581C41AC1B6EE001E15C7 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +203,8 @@
 		E622A90F1ABB1EB5009CC0B9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E6C581C41AC1B6EE001E15C7 /* settings.png */,
+				E6C581C21AC1B651001E15C7 /* logout.png */,
 				E61B6C5E1ABF0F500021D93C /* login-button-small-pressed.png */,
 				E61B6C5F1ABF0F500021D93C /* login-button-small-pressed@2x.png */,
 				E61B6C601ABF0F500021D93C /* login-button-small.png */,
@@ -308,6 +317,8 @@
 				E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */,
 				E6AB81A31AC08D9B006FAE07 /* FavoriteAdvertisementViewController.h */,
 				E6AB81A41AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m */,
+				E6C581BD1AC1AA6B001E15C7 /* UserProfileAccountViewController.h */,
+				E6C581BE1AC1AA6B001E15C7 /* UserProfileAccountViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -513,6 +524,8 @@
 				E622A9081ABADF18009CC0B9 /* favoriteOff.png in Resources */,
 				E61B6C581ABEF2870021D93C /* home.png in Resources */,
 				E61B6C651ABF0F500021D93C /* login-button-small@2x.png in Resources */,
+				E6C581C31AC1B651001E15C7 /* logout.png in Resources */,
+				E6C581C51AC1B6EE001E15C7 /* settings.png in Resources */,
 				E61B6C631ABF0F500021D93C /* login-button-small-pressed@2x.png in Resources */,
 				E61B6C571ABEF2870021D93C /* Search.png in Resources */,
 				E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */,
@@ -585,6 +598,7 @@
 				E64D4B081AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m in Sources */,
 				E61B6C681ABF109B0021D93C /* UserProfileViewController.m in Sources */,
 				E64D4AC31AB8672C00ABC477 /* MainViewController.m in Sources */,
+				E6C581BF1AC1AA6B001E15C7 /* UserProfileAccountViewController.m in Sources */,
 				E64D4AF71AB8813F00ABC477 /* CityMapper.m in Sources */,
 				E64D4AF31AB87A4700ABC477 /* City.m in Sources */,
 				E6873D6A1ABA0079006336D4 /* AdvertisementMapper.m in Sources */,

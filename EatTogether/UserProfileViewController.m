@@ -9,6 +9,7 @@
 #import "UserProfileViewController.h"
 #import "UserCreateAccountViewController.h"
 #import "CurrentSessionManager.h"
+#import "UserProfileAccountViewController.h"
 
 @interface UserProfileViewController ()
 
@@ -31,10 +32,15 @@
     
     self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:self.tapGesture];
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.usernameField.text = @"";
+    self.passwordField.text = @"";
+    
 }
 - (IBAction)createAccount:(id)sender {
     
@@ -44,25 +50,26 @@
     
 }
 
-//- (IBAction)startSession:(id)sender {
-////    UserCreateAccountViewController *userCreateAccountViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardUserCreateAccountViewController];
-////    
-////    [self.navigationController pushViewController:userCreateAccountViewController animated:YES];
-//    
-//    UserLogInController *userLoginController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserLoginViewController];
-//    
-//    [self.navigationController pushViewController:userLoginController animated:YES];
-//}
-
-
 -(void)dismissKeyboard {
     [self.usernameField resignFirstResponder];
     [self.passwordField resignFirstResponder];
 }
 
 - (IBAction)loginButton:(id)sender {
-
+    
     [self.currentSessionManager loginInWithUsername:self.usernameField.text password:self.passwordField.text completionBlock:^(User *user, NSError *error) {
+        
+        if(!error){
+            NSLog(@"Todo ok");
+            UserProfileAccountViewController *userProfileAccountViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardUserProfileAccountViewController];
+            
+            userProfileAccountViewController.user = user;
+            
+            [self.navigationController pushViewController:userProfileAccountViewController animated:YES];
+            
+        }else{
+            NSLog(@"Problem");
+        }
         
     }];
     

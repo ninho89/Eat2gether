@@ -19,6 +19,38 @@
 
 @implementation ParseLoginController
 
+-(void)registerWithUsername:(NSString *)username password:(NSString *)password email:(NSString*)email completionBlock:(void(^)(User *user, NSError *error))completionBlock{
+    
+    //query register user
+    PFUser *newUser = [PFUser user];
+    newUser.username = username;
+    newUser.email = email;
+    newUser.password = password;
+    
+    
+    
+    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        User *user1 = [[User alloc]init];
+        if (!error) {
+            NSLog(@"Registration success!");
+            
+            self.userMapper = [[UserMapper alloc]init];
+            user1 = [self.userMapper mapParseUser:newUser];
+            user1.username = username;
+            user1.password = password;
+            user1.email = email;
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enhorabuena!" message:@"Usuario creado correctamente" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+        else {
+            NSLog(@"Hubo un error en la creacion del usuario");
+        }
+        completionBlock(user1, error);
+    }];
+}
+
 -(void)loginInWithUsername:(NSString *)username password:(NSString *)password completionBlock:(void (^)(User *, NSError *))completionBlock{
     
     //query login parse    
@@ -43,15 +75,21 @@
             [alert show];
         }
         
-        completionBlock(user1,nil);
-        
+        completionBlock(user1,error);
     }];
-    
 }
 
-//-(void)logoutWithCompletionBlock:(void (^)(NSError *))completionBlock{
-//    
-//    
-//}
+-(void)logoutWithCompletionBlock:(void(^)(User *user, NSError *error))completionBlock{
+    
+    NSError *error;
+    
+    //query logout parse
+    [PFUser logOut];
+    User *user1 = [[User alloc]init];
+    user1 = nil;
+    
+    completionBlock(user1, error);
+}
+
 
 @end

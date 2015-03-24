@@ -44,7 +44,7 @@
                 [cities addObject:city];
             }
             
-            completionBlock(cities, nil);
+            completionBlock(cities, error);
         }
     }];
 }
@@ -70,8 +70,7 @@
                 Advertisement *advertisement = [self.advertisementMapper mapParseAdvertisement:pfAdvertisement];
                 [advertisements addObject:advertisement];
             }
-            
-            completionBlock(advertisements, nil);
+            completionBlock(advertisements, error);
         }
     }];
 }
@@ -90,7 +89,6 @@
     //Guarda el advertisementId
 //    PFObject *objAdvId = [PFObject objectWithoutDataWithClassName:@"Advertisement" objectId:advertisement.advertisementObjectId];
 
-    
     PFObject *myFav = [PFObject objectWithClassName:@"Favorite"];
     [myFav setObject:user1 forKey:@"objectIdU"];
     //[myFav setObject:objAdvId forKey:@"advertisementId"];
@@ -115,6 +113,7 @@
     
     //filtra por el username
     PFQuery *query = [PFQuery queryWithClassName:@"Favorite"];
+    query.cachePolicy  = kPFCachePolicyIgnoreCache;
     [query includeKey:@"objectIdU"];
     [query whereKey:@"objectIdU" equalTo:[PFUser objectWithoutDataWithObjectId:username]];
     [query includeKey:@"detailAdvertisementId"];
@@ -129,7 +128,7 @@
                 Favorite *favorite = [self.favoriteMapper mapParseFavorite:pfFavorites];
                 [favorites addObject:favorite];
             }
-            completionBlock(favorites, nil);
+            completionBlock(favorites, error);
         }
     }];
 
