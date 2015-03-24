@@ -229,19 +229,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnX-Kl-lXb">
-                                <rect key="frame" x="119" y="212" width="36" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="94K-38-xY1">
+                                <rect key="frame" x="250" y="40" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IGb-TW-4fa"/>
+                                    <constraint firstAttribute="width" constant="100" id="bGv-1E-PzY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InD-O2-rqT">
+                                <rect key="frame" x="200" y="282" width="200" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Solicitudes pendientes">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftU-Kw-67A">
+                                <rect key="frame" x="241" y="358" width="117" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Mis anuncios">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ftU-Kw-67A" firstAttribute="top" secondItem="InD-O2-rqT" secondAttribute="bottom" constant="40" id="4VE-v4-mik"/>
+                            <constraint firstAttribute="centerX" secondItem="ftU-Kw-67A" secondAttribute="centerX" id="ATP-NN-ljs"/>
+                            <constraint firstAttribute="centerY" secondItem="InD-O2-rqT" secondAttribute="centerY" id="Uj5-7S-omJ"/>
+                            <constraint firstAttribute="centerX" secondItem="InD-O2-rqT" secondAttribute="centerX" id="fBS-KM-gVC"/>
+                            <constraint firstItem="94K-38-xY1" firstAttribute="top" secondItem="fu1-du-Mm8" secondAttribute="bottom" constant="20" id="kHd-Nk-6aC"/>
+                            <constraint firstAttribute="centerX" secondItem="94K-38-xY1" secondAttribute="centerX" id="tPJ-KE-7or"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageUser" destination="94K-38-xY1" id="umT-hK-MyS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCV-7g-dBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926" y="2464"/>
+            <point key="canvasLocation" x="1934" y="2516"/>
         </scene>
         <!--User Create Account View Controller-->
         <scene sceneID="Wjp-yw-e95">

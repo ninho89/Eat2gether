@@ -8,10 +8,12 @@
 
 #import "UserProfileAccountViewController.h"
 #import "CurrentSessionManager.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface UserProfileAccountViewController ()
 
 @property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
+@property (weak, nonatomic) IBOutlet UIImageView *imageUser;
 
 @end
 
@@ -47,12 +49,18 @@
     UIBarButtonItem *barButtonLogout = [[UIBarButtonItem alloc] initWithCustomView:logout];
     self.navigationItem.rightBarButtonItem = barButtonLogout;
 
+    //[self.imageUser sd_setImageWithURL:[NSURL URLWithString:self.user.userPicture]];
 
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     //self.tabBarController.tabBar.hidden = YES;
+    self.imageUser.clipsToBounds = YES;
+    self.imageUser.layer.cornerRadius = self.imageUser.bounds.size.height / 2.0f;
+    
+    [self.imageUser sd_setImageWithURL:[NSURL URLWithString:self.user.userPicture]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
