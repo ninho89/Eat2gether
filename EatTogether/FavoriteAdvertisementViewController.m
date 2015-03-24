@@ -42,8 +42,6 @@
     
     [self registerCustomCell];
     
-    
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -58,8 +56,10 @@
     
     if([self.currentSessionManager isLoggedIn]){
         [self getAllFavorites];
-        
     }else{
+        
+        [self.favoritesArray removeAllObjects];
+        [self.tableView reloadData];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Tienes que loguearte para ver tus favoritos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
@@ -68,7 +68,7 @@
 #pragma mark - Register Cell
 
 -(void) registerCustomCell{
-    [self.tableView registerNib:[UINib nibWithNibName:@"CustomFavoriteTableViewCell" bundle:nil]forCellReuseIdentifier:kCellAdvertisement];
+    [self.tableView registerNib:[UINib nibWithNibName:@"CustomFavoriteTableViewCell" bundle:nil]forCellReuseIdentifier:kCellFavorite];
 }
 
 #pragma mark - Methods
@@ -82,7 +82,6 @@
             [alert show];
         }
     }];
-    
 }
 
 #pragma mark - TableView DataSource Methods
@@ -99,7 +98,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomFavoriteTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellAdvertisement forIndexPath:indexPath];
+    CustomFavoriteTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellFavorite forIndexPath:indexPath];
     
     Favorite *favorite = self.favoritesArray[indexPath.row];
     

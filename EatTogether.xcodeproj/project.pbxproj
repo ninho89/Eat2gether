@@ -59,6 +59,8 @@
 		E6C581BF1AC1AA6B001E15C7 /* UserProfileAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581BE1AC1AA6B001E15C7 /* UserProfileAccountViewController.m */; };
 		E6C581C31AC1B651001E15C7 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C581C21AC1B651001E15C7 /* logout.png */; };
 		E6C581C51AC1B6EE001E15C7 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C581C41AC1B6EE001E15C7 /* settings.png */; };
+		E6C581C81AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581C71AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.m */; };
+		E6C581CB1AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581CA1AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +161,10 @@
 		E6C581BE1AC1AA6B001E15C7 /* UserProfileAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileAccountViewController.m; sourceTree = "<group>"; };
 		E6C581C21AC1B651001E15C7 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		E6C581C41AC1B6EE001E15C7 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		E6C581C61AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileAccountRequestViewController.h; sourceTree = "<group>"; };
+		E6C581C71AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileAccountRequestViewController.m; sourceTree = "<group>"; };
+		E6C581C91AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileAccountAdvertisementsViewController.h; sourceTree = "<group>"; };
+		E6C581CA1AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileAccountAdvertisementsViewController.m; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -319,6 +325,10 @@
 				E6AB81A41AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m */,
 				E6C581BD1AC1AA6B001E15C7 /* UserProfileAccountViewController.h */,
 				E6C581BE1AC1AA6B001E15C7 /* UserProfileAccountViewController.m */,
+				E6C581C61AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.h */,
+				E6C581C71AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.m */,
+				E6C581C91AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.h */,
+				E6C581CA1AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -592,6 +602,7 @@
 				E6C28C0D1AC01AE800CB1D6D /* User.m in Sources */,
 				E6C28BFB1ABF31BA00CB1D6D /* UserCreateAccountViewController.m in Sources */,
 				E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */,
+				E6C581CB1AC1D4C1001E15C7 /* UserProfileAccountAdvertisementsViewController.m in Sources */,
 				E6AB81991AC02223006FAE07 /* ParseLoginController.m in Sources */,
 				E6AB819C1AC0516D006FAE07 /* UserMapper.m in Sources */,
 				E6C581BB1AC182A6001E15C7 /* CustomFavoriteTableViewCell.m in Sources */,
@@ -601,6 +612,7 @@
 				E6C581BF1AC1AA6B001E15C7 /* UserProfileAccountViewController.m in Sources */,
 				E64D4AF71AB8813F00ABC477 /* CityMapper.m in Sources */,
 				E64D4AF31AB87A4700ABC477 /* City.m in Sources */,
+				E6C581C81AC1D4B2001E15C7 /* UserProfileAccountRequestViewController.m in Sources */,
 				E6873D6A1ABA0079006336D4 /* AdvertisementMapper.m in Sources */,
 				E622A90C1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m in Sources */,
 				E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */,

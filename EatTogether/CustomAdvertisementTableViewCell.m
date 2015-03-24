@@ -7,11 +7,11 @@
 //
 
 #import "CustomAdvertisementTableViewCell.h"
-
+#import "CurrentSessionManager.h"
 
 @interface CustomAdvertisementTableViewCell()
 
-
+@property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
 
 @end
 
@@ -19,6 +19,8 @@
 
 - (void)awakeFromNib {
 //    // Initialization code
+    self.currentSessionManager = [CurrentSessionManager sharedInstance];
+    
     self.check = NO;
     self.customUserImage.clipsToBounds = YES;
     self.customUserImage.layer.cornerRadius = self.customUserImage.bounds.size.height / 2.0f;
@@ -31,12 +33,20 @@
 }
 
 -(IBAction)addToFavorites:(id)sender{
-    if(!self.check){
-        [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"favoriteOn"] forState:UIControlStateNormal];
-        self.check = YES;
-    }else{
-        [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"fav1"] forState:UIControlStateNormal];
-        self.check = NO;
+//    if(!self.check){
+//        [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"favoriteOn"] forState:UIControlStateNormal];
+//        self.check = YES;
+//    }else{
+//        [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"fav1"] forState:UIControlStateNormal];
+//        self.check = NO;
+//    }
+    
+    if([self.currentSessionManager isLoggedIn]){
+        if(!self.check){
+            [self.customFavoriteImage setBackgroundImage:[UIImage imageNamed:@"favoriteOn"] forState:UIControlStateNormal];
+            self.check = YES;
+        }
+    
     }
     
     if ([self.delegate respondsToSelector:@selector(advertisementCell:didSetFavorite:)])

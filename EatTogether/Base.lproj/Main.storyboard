@@ -242,6 +242,9 @@
                                 <state key="normal" title="Solicitudes pendientes">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="requestPending:" destination="LAU-PS-YBo" eventType="touchUpInside" id="cgA-hl-Mht"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftU-Kw-67A">
                                 <rect key="frame" x="241" y="358" width="117" height="36"/>
@@ -249,6 +252,9 @@
                                 <state key="normal" title="Mis anuncios">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="myAdvertisements:" destination="LAU-PS-YBo" eventType="touchUpInside" id="AVs-PC-Oxp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -268,6 +274,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCV-7g-dBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1934" y="2516"/>
+        </scene>
+        <!--User Profile Account Request View Controller-->
+        <scene sceneID="9Wk-q7-1JW">
+            <objects>
+                <viewController storyboardIdentifier="userProfileAccountAdvertisementsRequestViewController" id="1Bt-Yo-VKk" customClass="UserProfileAccountRequestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="irL-Y9-3Nm"/>
+                        <viewControllerLayoutGuide type="bottom" id="rdk-cY-3Bv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4pO-er-Xgs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xlr-DN-YyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2637" y="2735"/>
+        </scene>
+        <!--User Profile Account Advertisements View Controller-->
+        <scene sceneID="5rg-ZV-Yc4">
+            <objects>
+                <viewController storyboardIdentifier="userProfileAccountAdvertisementsViewController" id="Qhy-dW-oKp" customClass="UserProfileAccountAdvertisementsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U3B-ze-aEQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="qfb-jW-Hp0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZJP-eV-xs6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACD-I3-w3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2637" y="2023"/>
         </scene>
         <!--User Create Account View Controller-->
         <scene sceneID="Wjp-yw-e95">

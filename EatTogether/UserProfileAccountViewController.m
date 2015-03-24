@@ -9,6 +9,8 @@
 #import "UserProfileAccountViewController.h"
 #import "CurrentSessionManager.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "UserProfileAccountAdvertisementsViewController.h"
+#import "UserProfileAccountRequestViewController.h"
 
 @interface UserProfileAccountViewController ()
 
@@ -87,14 +89,16 @@
     
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)requestPending:(id)sender {
+    UserProfileAccountRequestViewController *userProfileAccountRequestViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserProfileAccountAdvertisementRequestViewController];
+    [self.navigationController pushViewController:userProfileAccountRequestViewController animated:YES];
 }
-*/
+
+- (IBAction)myAdvertisements:(id)sender {
+    UserProfileAccountAdvertisementsViewController *userProfileAccountAdvertisementsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserProfileAccountAdvertisementRequestViewController];
+    [self.navigationController pushViewController:userProfileAccountAdvertisementsViewController animated:YES];
+}
+
 
 @end

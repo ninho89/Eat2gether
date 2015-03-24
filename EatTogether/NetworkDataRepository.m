@@ -111,9 +111,9 @@
 
 -(void) getFavoritesAdvertisementWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
     
-    //filtra por el username
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Favorite"];
-    query.cachePolicy  = kPFCachePolicyIgnoreCache;
+    //filtra por el username
     [query includeKey:@"objectIdU"];
     [query whereKey:@"objectIdU" equalTo:[PFUser objectWithoutDataWithObjectId:username]];
     [query includeKey:@"detailAdvertisementId"];
@@ -127,10 +127,13 @@
                 self.favoriteMapper = [[FavoriteMapper alloc]init];
                 Favorite *favorite = [self.favoriteMapper mapParseFavorite:pfFavorites];
                 [favorites addObject:favorite];
+                
+                
             }
             completionBlock(favorites, error);
         }
     }];
+    
 
 
     

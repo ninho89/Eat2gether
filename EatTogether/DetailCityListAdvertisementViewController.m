@@ -139,7 +139,7 @@
 
 - (void)advertisementCell:(UITableViewCell *)cell didSetFavorite:(BOOL)favorite
 {
-    
+
   if([self.currentSessionManager isLoggedIn]){
             NSLog(@"Usuario logueado");
             

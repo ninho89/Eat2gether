@@ -66,6 +66,7 @@ NSString * const kUserPictureParse = @"userPicture";
 //Constants Custom Cell
 NSString *const kCellCity = @"CellIdCity";
 NSString *const kCellAdvertisement = @"CellIdAdvertisement";
+NSString *const kCellFavorite = @"CellIdFavorite";
 
 //Costants Storyboard ViewController
 NSString *const kStoryboardDetailCityListAdvertisementViewController = @"detailCityListAdvertisementViewController";
@@ -75,6 +76,8 @@ NSString *const kStoryboardUserProfileViewController = @"userProfileViewControll
 NSString *const kStoryboardUserCreateAccountViewController = @"userCreateAccountViewController";
 NSString *const kStoryboardFavoriteAdvertisementViewController = @"favoriteAdvertisementViewController";
 NSString *const kStoryboardUserProfileAccountViewController = @"userProfileAccountViewController";
+NSString *const kStoryboardUserProfileAccountAdvertisementsViewController = @"userProfileAccountAdvertisementsViewController";
+NSString *const kStoryboardUserProfileAccountAdvertisementRequestViewController = @"userProfileAccountAdvertisementsRequestViewController";
 
 
 

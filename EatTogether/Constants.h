@@ -66,6 +66,7 @@ extern NSString * const kUserPictureParse;
 // Constants Custom Cell
 extern NSString *const kCellCity;
 extern NSString *const kCellAdvertisement;
+extern NSString *const kCellFavorite;
 
 //Costants Storyboard ViewController
 extern NSString *const kStoryboardDetailCityListAdvertisementViewController;
@@ -75,6 +76,8 @@ extern NSString *const kStoryboardUserProfileViewController;
 extern NSString *const kStoryboardUserCreateAccountViewController;
 extern NSString *const kStoryboardFavoriteAdvertisementViewController;
 extern NSString *const kStoryboardUserProfileAccountViewController;
+extern NSString *const kStoryboardUserProfileAccountAdvertisementsViewController;
+extern NSString *const kStoryboardUserProfileAccountAdvertisementRequestViewController;
 
 
 @end
