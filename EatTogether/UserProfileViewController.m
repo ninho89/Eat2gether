@@ -8,9 +8,14 @@
 
 #import "UserProfileViewController.h"
 #import "UserCreateAccountViewController.h"
-#import "UserLogInController.h"
+#import "CurrentSessionManager.h"
 
 @interface UserProfileViewController ()
+
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+@property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
 
 
 @end
@@ -22,6 +27,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.currentSessionManager = [CurrentSessionManager sharedInstance];
+    
+    self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:self.tapGesture];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -35,15 +44,30 @@
     
 }
 
-- (IBAction)startSession:(id)sender {
-//    UserCreateAccountViewController *userCreateAccountViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardUserCreateAccountViewController];
+//- (IBAction)startSession:(id)sender {
+////    UserCreateAccountViewController *userCreateAccountViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardUserCreateAccountViewController];
+////    
+////    [self.navigationController pushViewController:userCreateAccountViewController animated:YES];
 //    
-//    [self.navigationController pushViewController:userCreateAccountViewController animated:YES];
-    
-    UserLogInController *userLoginController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserLoginViewController];
-    
-    [self.navigationController pushViewController:userLoginController animated:YES];
+//    UserLogInController *userLoginController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserLoginViewController];
+//    
+//    [self.navigationController pushViewController:userLoginController animated:YES];
+//}
+
+
+-(void)dismissKeyboard {
+    [self.usernameField resignFirstResponder];
+    [self.passwordField resignFirstResponder];
 }
+
+- (IBAction)loginButton:(id)sender {
+
+    [self.currentSessionManager loginInWithUsername:self.usernameField.text password:self.passwordField.text completionBlock:^(User *user, NSError *error) {
+        
+    }];
+    
+}
+
 
 
 

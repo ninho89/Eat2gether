@@ -51,7 +51,6 @@
 		E6AB81A51AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB81A41AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m */; };
 		E6AC59B01ABC2CAF00C8C81A /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */; };
 		E6C28BFB1ABF31BA00CB1D6D /* UserCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */; };
-		E6C28BFE1ABF830000CB1D6D /* UserLogInController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28BFD1ABF830000CB1D6D /* UserLogInController.m */; };
 		E6C28C011AC00C9100CB1D6D /* PMKBlockDebouncer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28C001AC00C9100CB1D6D /* PMKBlockDebouncer.m */; };
 		E6C28C0A1AC01A7600CB1D6D /* CurrentSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28C091AC01A7600CB1D6D /* CurrentSessionManager.m */; };
 		E6C28C0D1AC01AE800CB1D6D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28C0C1AC01AE800CB1D6D /* User.m */; };
@@ -143,8 +142,6 @@
 		E6AC59AF1ABC2CAF00C8C81A /* pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza.jpg; sourceTree = "<group>"; };
 		E6C28BF91ABF31BA00CB1D6D /* UserCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCreateAccountViewController.h; sourceTree = "<group>"; };
 		E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCreateAccountViewController.m; sourceTree = "<group>"; };
-		E6C28BFC1ABF830000CB1D6D /* UserLogInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLogInController.h; sourceTree = "<group>"; };
-		E6C28BFD1ABF830000CB1D6D /* UserLogInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLogInController.m; sourceTree = "<group>"; };
 		E6C28BFF1AC00C9100CB1D6D /* PMKBlockDebouncer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMKBlockDebouncer.h; sourceTree = "<group>"; };
 		E6C28C001AC00C9100CB1D6D /* PMKBlockDebouncer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMKBlockDebouncer.m; sourceTree = "<group>"; };
 		E6C28C081AC01A7600CB1D6D /* CurrentSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSessionManager.h; sourceTree = "<group>"; };
@@ -309,8 +306,6 @@
 				E61B6C671ABF109B0021D93C /* UserProfileViewController.m */,
 				E6C28BF91ABF31BA00CB1D6D /* UserCreateAccountViewController.h */,
 				E6C28BFA1ABF31BA00CB1D6D /* UserCreateAccountViewController.m */,
-				E6C28BFC1ABF830000CB1D6D /* UserLogInController.h */,
-				E6C28BFD1ABF830000CB1D6D /* UserLogInController.m */,
 				E6AB81A31AC08D9B006FAE07 /* FavoriteAdvertisementViewController.h */,
 				E6AB81A41AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m */,
 			);
@@ -583,7 +578,6 @@
 				E6AB81A51AC08D9B006FAE07 /* FavoriteAdvertisementViewController.m in Sources */,
 				E6C28C0D1AC01AE800CB1D6D /* User.m in Sources */,
 				E6C28BFB1ABF31BA00CB1D6D /* UserCreateAccountViewController.m in Sources */,
-				E6C28BFE1ABF830000CB1D6D /* UserLogInController.m in Sources */,
 				E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */,
 				E6AB81991AC02223006FAE07 /* ParseLoginController.m in Sources */,
 				E6AB819C1AC0516D006FAE07 /* UserMapper.m in Sources */,

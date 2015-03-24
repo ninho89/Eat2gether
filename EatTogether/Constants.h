@@ -73,7 +73,6 @@ extern NSString *const kStoryboardMapCityListAdvertisementViewController;
 extern NSString *const kStoryboardDetailAdvertisementViewController;
 extern NSString *const kStoryboardUserProfileViewController;
 extern NSString *const kStoryboardUserCreateAccountViewController;
-extern NSString *const kStoryboardUserLoginViewController;
 extern NSString *const kStoryboardFavoriteAdvertisementViewController;
 
 
