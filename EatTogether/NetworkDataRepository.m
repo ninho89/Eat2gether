@@ -14,6 +14,7 @@
 #import "Favorite.h"
 #import "FavoriteMapper.h"
 #import "User.h"
+#import "Reservation.h"
 
 
 @interface NetworkDataRepository ()
@@ -84,7 +85,7 @@
     user1.objectId = user.userObjectId;
     
     //guarda el detailAdvertisementId
-    PFObject *obj = [PFObject objectWithoutDataWithClassName:@"DetailAdvertisement" objectId:advertisement.advertisementDetailObjectId];
+    PFObject *detAdv = [PFObject objectWithoutDataWithClassName:@"DetailAdvertisement" objectId:advertisement.advertisementDetailObjectId];
 
     //Guarda el advertisementId
 //    PFObject *objAdvId = [PFObject objectWithoutDataWithClassName:@"Advertisement" objectId:advertisement.advertisementObjectId];
@@ -92,7 +93,7 @@
     PFObject *myFav = [PFObject objectWithClassName:@"Favorite"];
     [myFav setObject:user1 forKey:@"objectIdU"];
     //[myFav setObject:objAdvId forKey:@"advertisementId"];
-    [myFav setObject:obj forKey:@"detailAdvertisementId"];
+    [myFav setObject:detAdv forKey:@"detailAdvertisementId"];
     [myFav setObject:@(favorite) forKey:@"favoriteCheck"];
     
     
@@ -108,9 +109,34 @@
     
 }
 
+-(void) setReservation:(BOOL)statusReservation withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(NSArray *, NSError *))completionBlock{
+    
+    //query save reservation
+    PFUser *user1 = [PFUser user];
+    user1.objectId = user.userObjectId;
+    
+    //guarda el advertisement
+    PFObject *adv = [PFObject objectWithoutDataWithClassName:@"Advertisement" objectId:advertisement.advertisementObjectId];
+    
+    PFObject *myReservation = [PFObject objectWithClassName:@"Reservation"];
+    [myReservation setObject:user1 forKey:@"objectIdU"];
+    [myReservation setObject:adv forKey:@"advertisementId"];
+    [myReservation setObject:@(statusReservation) forKey:@"statusReservation"];
+
+    
+    [myReservation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            // La persona se ha grabado correctamente.
+            NSLog(@"Reserva guardada");
+        } else {
+            // Se ha producido un error al guardar la información de la Persona.
+            NSLog(@"Error al guardar la reserva");
+        }
+    }];
+    
+}
 
 -(void) getFavoritesAdvertisementWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
-    
     
     PFQuery *query = [PFQuery queryWithClassName:@"Favorite"];
     //filtra por el username
@@ -127,17 +153,35 @@
                 self.favoriteMapper = [[FavoriteMapper alloc]init];
                 Favorite *favorite = [self.favoriteMapper mapParseFavorite:pfFavorites];
                 [favorites addObject:favorite];
-                
-                
             }
             completionBlock(favorites, error);
         }
     }];
-    
-
-
-    
-
 }
+
+-(void) getReservationWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Reservation"];
+    [query includeKey:@"objectIdU"];
+    [query whereKey:@"objectIdU" equalTo:[PFUser objectWithoutDataWithObjectId:username]];
+    [query includeKey:@"advertisementId"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error){
+            NSMutableArray *reservations = [NSMutableArray array];
+            for (PFObject *pfReservations in objects)
+            {
+                
+            }
+            completionBlock(reservations, error);
+            
+        }
+    }];
+
+
+    
+}
+
+
+
 
 @end

@@ -64,6 +64,7 @@
 		E6C581D31AC1FC5C001E15C7 /* Favourites.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C581D21AC1FC5C001E15C7 /* Favourites.png */; };
 		E6C581D51AC2000B001E15C7 /* logout1.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C581D41AC2000B001E15C7 /* logout1.png */; };
 		E6C581D81AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581D71AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.m */; };
+		E6C581DB1AC21A96001E15C7 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581DA1AC21A96001E15C7 /* Reservation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +173,8 @@
 		E6C581D41AC2000B001E15C7 /* logout1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout1.png; sourceTree = "<group>"; };
 		E6C581D61AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileAccountAddAdvertisementsViewController.h; sourceTree = "<group>"; };
 		E6C581D71AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileAccountAddAdvertisementsViewController.m; sourceTree = "<group>"; };
+		E6C581D91AC21A96001E15C7 /* Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reservation.h; sourceTree = "<group>"; };
+		E6C581DA1AC21A96001E15C7 /* Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation.m; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -392,6 +395,8 @@
 				E6873D661AB9D418006336D4 /* Advertisement.m */,
 				E6AB819D1AC08979006FAE07 /* Favorite.h */,
 				E6AB819E1AC08979006FAE07 /* Favorite.m */,
+				E6C581D91AC21A96001E15C7 /* Reservation.h */,
+				E6C581DA1AC21A96001E15C7 /* Reservation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -630,6 +635,7 @@
 				E622A90C1ABAE42A009CC0B9 /* MapCityListAdvertisementViewController.m in Sources */,
 				E64D4B021AB893E000ABC477 /* CustomCityTableViewCell.m in Sources */,
 				E64D4ABA1AB8672C00ABC477 /* main.m in Sources */,
+				E6C581DB1AC21A96001E15C7 /* Reservation.m in Sources */,
 				E6AB819F1AC08979006FAE07 /* Favorite.m in Sources */,
 				E6C581D81AC20A2C001E15C7 /* UserProfileAccountAddAdvertisementsViewController.m in Sources */,
 				E62BC4D61ABC88CC00B4CF00 /* SearchAdvertisementViewController.m in Sources */,

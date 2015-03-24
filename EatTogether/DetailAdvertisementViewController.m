@@ -9,6 +9,8 @@
 #import "DetailAdvertisementViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <MapKit/MapKit.h>
+#import "CurrentSessionManager.h"
+#import "NetworkDataRepository.h"
 
 @interface DetailAdvertisementViewController () <MKMapViewDelegate, MKAnnotation>
 
@@ -24,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelAdvertisementPrice;
 @property (strong, nonatomic) MKMapView *mapView;
 @property (nonatomic, strong) MKPointAnnotation *myAnnotation;
+@property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
+@property (nonatomic, strong) id<DataRepository> repository;
 
 
 @end
@@ -37,6 +41,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.currentSessionManager = [CurrentSessionManager sharedInstance];
+    self.repository = [[NetworkDataRepository alloc]init];
+    
     [self setupLabels];
     [self setupMapView];
     [self getAdvertisementLocation];
@@ -105,8 +113,28 @@
     [alert show];
 }
 
-
-
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // 0 = Tapped yes
+    if (buttonIndex == 0)
+    {
+        //NSLog(@"ok");
+        if([self.currentSessionManager isLoggedIn]){
+             //add reservation
+            NSLog(@"se procede a la reserva");
+            User *user = self.currentSessionManager.currentUser;
+            [self.repository setReservation:@(1) withAdvertisement:self.advertisement user:user completionBlock:^(NSArray *reservation, NSError *error) {
+                
+            }];
+            
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Tienes que loguearte para hacer una reserva" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+    }else{
+        NSLog(@"cancel");
+    }
+}
 
 
 @end

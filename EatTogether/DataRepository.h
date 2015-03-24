@@ -13,13 +13,18 @@
 
 @protocol DataRepository <NSObject>
 
+//get cities
 -(void) getCitiesWithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
+//get cities with name
 -(void) getCitiesAdvertisementWithCity:(NSString *)city WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
-
-//peticion save favorite
+//save favorite
 -(void) setFavorite:(BOOL)favorite withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(NSArray *, NSError *))completionBlock;
-
+//get favorite with username
 -(void) getFavoritesAdvertisementWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
+//save reservation
+-(void) setReservation:(BOOL)statusReservation withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(NSArray *, NSError *))completionBlock;
+//get reservation with username
+-(void) getReservationWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
 
 @end
 
