@@ -15,6 +15,9 @@
     Advertisement *advertisement = [[Advertisement alloc]init];
     
     advertisement.advertisementId = [pfAdvertisement valueForKey:kAdvertisementIdParse];
+    advertisement.advertisementObjectId = [pfAdvertisement valueForKey:@"objectId"];
+    advertisement.advertisementDetailObjectId = [[pfAdvertisement valueForKey:@"detailAdvertisementId"]valueForKey:@"objectId"];
+    
     advertisement.advertisementDescription = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementDescriptionParse];
     advertisement.advertisementStarter = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementStarterParse];
     advertisement.advertisementMainDish = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementMainDishParse];

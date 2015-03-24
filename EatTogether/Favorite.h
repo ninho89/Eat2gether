@@ -18,7 +18,7 @@
 @property (nonatomic, strong) NSString *favoriteUserEmail;
 @property (nonatomic, strong) NSString *favoriteUserPicture;
 @property (nonatomic) BOOL favoriteChek;
-
+@property (nonatomic, strong) NSString *favoriteAdvertisementObjectId;
 @property (nonatomic, strong) NSString *favoriteDetailAdvertisementId;
 @property (nonatomic, strong) NSString *favoriteDetailAdvertisementObjectId;
 @property (nonatomic, strong) NSString *favoriteDetailAdvertisementDescription;

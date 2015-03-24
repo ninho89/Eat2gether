@@ -9,7 +9,7 @@
 #import "FavoriteAdvertisementViewController.h"
 #import "DataRepository.h"
 #import "NetworkDataRepository.h"
-#import "CustomAdvertisementTableViewCell.h"
+#import "CustomFavoriteTableViewCell.h"
 #import "Favorite.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "CurrentSessionManager.h"
@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) id<DataRepository> repository;
-@property (nonatomic, strong) NSArray *favoritesArray;
+@property (nonatomic, strong) NSMutableArray *favoritesArray;
 @property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
 
 @end
@@ -38,9 +38,10 @@
     self.currentSessionManager = [CurrentSessionManager sharedInstance];
     
     self.repository = [[NetworkDataRepository alloc]init];
-    self.favoritesArray = [[NSArray alloc]init];
+    self.favoritesArray = [[NSMutableArray alloc]init];
     
-    [self registerCustomCell];   
+    
+    [self registerCustomCell];
     
 }
 
@@ -66,15 +67,19 @@
 #pragma mark - Register Cell
 
 -(void) registerCustomCell{
-    [self.tableView registerNib:[UINib nibWithNibName:@"CustomAdvertisementTableViewCell" bundle:nil]forCellReuseIdentifier:kCellAdvertisement];
+    [self.tableView registerNib:[UINib nibWithNibName:@"CustomFavoriteTableViewCell" bundle:nil]forCellReuseIdentifier:kCellAdvertisement];
 }
 
 #pragma mark - Methods
 
 -(void) getAllFavorites{
     [self.repository getFavoritesAdvertisementWithUsername:self.currentSessionManager.currentUser.userObjectId WithCompletionBlock:^(NSArray *favorites, NSError *error) {
-        self.favoritesArray = favorites;
+        self.favoritesArray = [favorites mutableCopy];
         [self.tableView reloadData];
+        if(favorites.count == 0){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Vaya!" message:@"No tienes ningun favorito guardado" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
     }];
     
 }
@@ -94,7 +99,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomAdvertisementTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellAdvertisement forIndexPath:indexPath];
+    CustomFavoriteTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellAdvertisement forIndexPath:indexPath];
     
     Favorite *favorite = self.favoritesArray[indexPath.row];
     
@@ -121,10 +126,28 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    
-   
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        
+     
+        [self.favoritesArray removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        [tableView reloadData];
+        
+        //query to delete favorite
+    
+    }else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
 
 
 

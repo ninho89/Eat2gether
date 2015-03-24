@@ -34,6 +34,9 @@
             user1.username = [user valueForKey:@"username"];
             user1.password = [user valueForKey:@"password"];
             user1.email = [user valueForKey:@"email"];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Correcto" message:@"Te has loagueado correctamente" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
         }
         if (error) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ooops!" message:@"Sorry we had a problem logging you in" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];

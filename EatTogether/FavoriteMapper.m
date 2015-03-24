@@ -18,6 +18,8 @@
     favorite.favoriteId = [pfFavorite valueForKey:@"favoriteId"];
     favorite.favoriteObjectId = [pfFavorite valueForKey:@"objectId"];
     favorite.favoriteObjectUserId = [[pfFavorite valueForKey:@"objectIdU"]valueForKey:@"objectId"];
+    favorite.favoriteAdvertisementObjectId = [[[pfFavorite valueForKey:@"advertisementId"]valueForKey:@"detailAdvertisementId"]valueForKey:@"objectId"];
+    
     favorite.favoriteUserName = [[pfFavorite valueForKey:@"objectIdU"]valueForKey:@"username"];
     favorite.favoriteUserEmail = [[pfFavorite valueForKey:@"objectIdU"]valueForKey:@"email"];
     favorite.favoriteChek = [pfFavorite valueForKey:@"favoriteCheck"];

@@ -55,6 +55,8 @@
 		E6C28C011AC00C9100CB1D6D /* PMKBlockDebouncer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28C001AC00C9100CB1D6D /* PMKBlockDebouncer.m */; };
 		E6C28C0A1AC01A7600CB1D6D /* CurrentSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28C091AC01A7600CB1D6D /* CurrentSessionManager.m */; };
 		E6C28C0D1AC01AE800CB1D6D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C28C0C1AC01AE800CB1D6D /* User.m */; };
+		E6C581BB1AC182A6001E15C7 /* CustomFavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581B91AC182A6001E15C7 /* CustomFavoriteTableViewCell.m */; };
+		E6C581BC1AC182A6001E15C7 /* CustomFavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C581BA1AC182A6001E15C7 /* CustomFavoriteTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +152,9 @@
 		E6C28C0B1AC01AE800CB1D6D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E6C28C0C1AC01AE800CB1D6D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		E6C28C0E1AC01C7C00CB1D6D /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		E6C581B81AC182A6001E15C7 /* CustomFavoriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFavoriteTableViewCell.h; sourceTree = "<group>"; };
+		E6C581B91AC182A6001E15C7 /* CustomFavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFavoriteTableViewCell.m; sourceTree = "<group>"; };
+		E6C581BA1AC182A6001E15C7 /* CustomFavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomFavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		F763D2ACCB0ED47381D91443 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -321,6 +326,9 @@
 				E6873D6B1ABA085C006336D4 /* CustomAdvertisementTableViewCell.h */,
 				E6873D6C1ABA085C006336D4 /* CustomAdvertisementTableViewCell.m */,
 				E6873D6D1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib */,
+				E6C581B81AC182A6001E15C7 /* CustomFavoriteTableViewCell.h */,
+				E6C581B91AC182A6001E15C7 /* CustomFavoriteTableViewCell.m */,
+				E6C581BA1AC182A6001E15C7 /* CustomFavoriteTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -501,6 +509,7 @@
 				E622A9091ABADF18009CC0B9 /* favoriteOn.png in Resources */,
 				E64D4AC61AB8672C00ABC477 /* Main.storyboard in Resources */,
 				E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */,
+				E6C581BC1AC182A6001E15C7 /* CustomFavoriteTableViewCell.xib in Resources */,
 				E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */,
 				E6AC59B01ABC2CAF00C8C81A /* pizza.jpg in Resources */,
 				E61B6C5A1ABEF2870021D93C /* favoritos.png in Resources */,
@@ -578,6 +587,7 @@
 				E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */,
 				E6AB81991AC02223006FAE07 /* ParseLoginController.m in Sources */,
 				E6AB819C1AC0516D006FAE07 /* UserMapper.m in Sources */,
+				E6C581BB1AC182A6001E15C7 /* CustomFavoriteTableViewCell.m in Sources */,
 				E64D4B081AB9931C00ABC477 /* DetailCityListAdvertisementViewController.m in Sources */,
 				E61B6C681ABF109B0021D93C /* UserProfileViewController.m in Sources */,
 				E64D4AC31AB8672C00ABC477 /* MainViewController.m in Sources */,

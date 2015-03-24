@@ -11,6 +11,8 @@
 @interface Advertisement : NSObject
 
 @property (nonatomic, strong) NSNumber *advertisementId;
+@property (nonatomic, strong) NSString *advertisementObjectId;
+@property (nonatomic, strong) NSString *advertisementDetailObjectId;
 @property (nonatomic, strong) NSString *advertisementDescription;
 @property (nonatomic, strong) NSString *advertisementStarter;
 @property (nonatomic, strong) NSString *advertisementMainDish;

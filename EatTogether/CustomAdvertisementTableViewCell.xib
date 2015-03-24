@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -18,19 +18,19 @@
                         <color key="backgroundColor" red="0.68893124439999998" green="0.68893124439999998" blue="0.68893124439999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vaj-gU-7hv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="122.5"/>
+                        <rect key="frame" x="0.0" y="0.5" width="320" height="122.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="122.5" id="hb0-uA-pN8"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5w-f8-DSu">
-                        <rect key="frame" x="96" y="129" width="42" height="20.5"/>
+                        <rect key="frame" x="96" y="129.5" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdD-cl-hjt">
-                        <rect key="frame" x="14" y="129" width="42" height="20.5"/>
+                        <rect key="frame" x="14" y="129.5" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -82,7 +82,7 @@
                 <outlet property="customLabelStarter" destination="z5w-f8-DSu" id="dpT-ZA-7oL"/>
                 <outlet property="customUserImage" destination="pgp-cB-IN8" id="2y5-fZ-Bkx"/>
             </connections>
-            <point key="canvasLocation" x="295" y="250"/>
+            <point key="canvasLocation" x="308" y="140"/>
         </tableViewCell>
     </objects>
     <resources>

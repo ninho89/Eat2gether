@@ -13,6 +13,7 @@
 #import "AdvertisementMapper.h"
 #import "Favorite.h"
 #import "FavoriteMapper.h"
+#import "User.h"
 
 
 @interface NetworkDataRepository ()
@@ -80,22 +81,33 @@
 -(void) setFavorite:(BOOL)favorite withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(NSArray *, NSError *))completionBlock{
  
     //Query to save favorite
-//    PFQuery *query = [PFQuery queryWithClassName:@"Favorite"];
-//    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-////    [query includeKey:kAdvertisementIdParse];
-////    [query includeKey:@"objectIdU"];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        if(!error){
-//            NSMutableArray *favorites = [NSMutableArray array];
-//            for (PFObject *pfFavorites in objects)
-//            {
-//                self.favoriteMapper = [[FavoriteMapper alloc]init];
-//                Favorite *favorite = [self.favoriteMapper mapParseFavorite:pfFavorites];
-//                [favorites addObject:favorite];
-//            }
-//            completionBlock(favorites, nil);
-//        }
-//    }];
+    PFUser *user1 = [PFUser user];
+    user1.objectId = user.userObjectId;
+    
+    //guarda el detailAdvertisementId
+    PFObject *obj = [PFObject objectWithoutDataWithClassName:@"DetailAdvertisement" objectId:advertisement.advertisementDetailObjectId];
+
+    //Guarda el advertisementId
+//    PFObject *objAdvId = [PFObject objectWithoutDataWithClassName:@"Advertisement" objectId:advertisement.advertisementObjectId];
+
+    
+    PFObject *myFav = [PFObject objectWithClassName:@"Favorite"];
+    [myFav setObject:user1 forKey:@"objectIdU"];
+    //[myFav setObject:objAdvId forKey:@"advertisementId"];
+    [myFav setObject:obj forKey:@"detailAdvertisementId"];
+    [myFav setObject:@(favorite) forKey:@"favoriteCheck"];
+    
+    
+    [myFav saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            // La persona se ha grabado correctamente.
+            NSLog(@"Favorito guardado");
+        } else {
+            // Se ha producido un error al guardar la información de la Persona.
+            NSLog(@"Error al guardar el favorito");
+        }
+    }];
+    
 }
 
 
@@ -106,6 +118,7 @@
     [query includeKey:@"objectIdU"];
     [query whereKey:@"objectIdU" equalTo:[PFUser objectWithoutDataWithObjectId:username]];
     [query includeKey:@"detailAdvertisementId"];
+    [query includeKey:@"advertisementId"];
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
@@ -119,6 +132,8 @@
             completionBlock(favorites, nil);
         }
     }];
+
+
     
 
 }

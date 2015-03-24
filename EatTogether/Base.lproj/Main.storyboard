@@ -112,7 +112,7 @@
                                 <rect key="frame" x="30" y="261" width="540" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o66-wZ-MXZ">
-                                        <rect key="frame" x="225" y="15" width="90" height="30"/>
+                                        <rect key="frame" x="8" y="15" width="524" height="30"/>
                                         <state key="normal" title="Iniciar sesión">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,7 +124,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="o66-wZ-MXZ" firstAttribute="leading" secondItem="tJm-j2-c2W" secondAttribute="leadingMargin" id="OQ1-Nc-Dtr"/>
                                     <constraint firstAttribute="height" constant="60" id="OYH-tS-VvK"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="o66-wZ-MXZ" secondAttribute="trailing" id="Zho-Kq-2Ta"/>
                                     <constraint firstAttribute="centerY" secondItem="o66-wZ-MXZ" secondAttribute="centerY" id="pKw-za-Y4f"/>
                                     <constraint firstAttribute="centerX" secondItem="o66-wZ-MXZ" secondAttribute="centerX" id="srz-Gd-73e"/>
                                 </constraints>
@@ -133,7 +135,7 @@
                                 <rect key="frame" x="30" y="181" width="540" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zu-3R-Uzc">
-                                        <rect key="frame" x="213.5" y="15" width="113" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="540" height="60"/>
                                         <state key="normal" title="Crea una cuenta">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,8 +148,12 @@
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="1e2-l8-2IG"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Zu-3R-Uzc" secondAttribute="trailing" id="309-0I-gXt"/>
                                     <constraint firstAttribute="centerX" secondItem="4Zu-3R-Uzc" secondAttribute="centerX" id="7k0-ae-OZO"/>
+                                    <constraint firstItem="4Zu-3R-Uzc" firstAttribute="top" secondItem="Eg1-tp-Xpz" secondAttribute="top" id="KFH-yR-L6E"/>
                                     <constraint firstAttribute="centerY" secondItem="4Zu-3R-Uzc" secondAttribute="centerY" id="a8e-Hq-D2W"/>
+                                    <constraint firstItem="4Zu-3R-Uzc" firstAttribute="leading" secondItem="Eg1-tp-Xpz" secondAttribute="leading" id="cOv-Zq-gzr"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Zu-3R-Uzc" secondAttribute="bottom" id="eOV-l3-7dq"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -256,13 +262,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-Pw-7wd">
-                                <rect key="frame" x="257" y="70" width="85" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-Pw-7wd">
+                                <rect key="frame" x="46" y="70" width="508" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-qZ-ca5">
-                                <rect key="frame" x="257" y="122" width="84" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jyH-qZ-ca5">
+                                <rect key="frame" x="46" y="122" width="508" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -281,10 +287,12 @@
                         <constraints>
                             <constraint firstItem="6cp-Pw-7wd" firstAttribute="top" secondItem="suV-bW-Rgj" secondAttribute="bottom" constant="50" id="3fk-Cd-43t"/>
                             <constraint firstItem="jyH-qZ-ca5" firstAttribute="top" secondItem="6cp-Pw-7wd" secondAttribute="bottom" constant="22" id="TTw-XU-ffI"/>
-                            <constraint firstItem="jyH-qZ-ca5" firstAttribute="leading" secondItem="6cp-Pw-7wd" secondAttribute="leading" id="XYE-t6-Quy"/>
                             <constraint firstItem="jNa-aR-gCo" firstAttribute="top" secondItem="jyH-qZ-ca5" secondAttribute="bottom" constant="54" id="Zhh-AX-oDY"/>
+                            <constraint firstItem="6cp-Pw-7wd" firstAttribute="width" secondItem="jyH-qZ-ca5" secondAttribute="width" id="qqC-Nd-r1d"/>
                             <constraint firstAttribute="centerX" secondItem="jNa-aR-gCo" secondAttribute="centerX" id="sPH-7v-s15"/>
-                            <constraint firstAttribute="centerX" secondItem="6cp-Pw-7wd" secondAttribute="centerX" id="sdZ-En-Woi"/>
+                            <constraint firstItem="6cp-Pw-7wd" firstAttribute="leading" secondItem="jyH-qZ-ca5" secondAttribute="leading" id="t6d-3Z-YAP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6cp-Pw-7wd" secondAttribute="trailing" constant="30" id="uf1-aM-0Tg"/>
+                            <constraint firstItem="6cp-Pw-7wd" firstAttribute="leading" secondItem="D2g-V9-uVC" secondAttribute="leadingMargin" constant="30" id="zUl-QK-wbv"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="0vC-Jc-wWB" appends="YES" id="M0x-Sb-wpl"/>
