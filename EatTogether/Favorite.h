@@ -15,26 +15,23 @@
 @property (nonatomic, strong) NSString *favoriteObjectId;
 @property (nonatomic, strong) NSString *favoriteObjectUserId;
 @property (nonatomic, strong) NSString *favoriteUserName;
-@property (nonatomic, strong) NSString *favoriteAdvertisementId;
+@property (nonatomic, strong) NSString *favoriteUserEmail;
+@property (nonatomic, strong) NSString *favoriteUserPicture;
 @property (nonatomic) BOOL favoriteChek;
 
-/*
-@property (nonatomic, strong) NSString *favoriteAdvertisementDescription;
-@property (nonatomic, strong) NSString *favoriteAdvertisementStarter;
-@property (nonatomic, strong) NSString *favoriteAdvertisementMainDish;
-@property (nonatomic, strong) NSString *favoriteAdvertisementDessert;
-@property (nonatomic, strong) NSNumber *favoriteAdvertisementNumGuests;
-@property (nonatomic, strong) NSNumber *favoriteAdvertisementPrice;
-@property (nonatomic, strong) NSDate *favoriteAdvertisementData;
-@property (nonatomic, strong) NSString *favoriteAdvertisementPictureUrl;
-@property (nonatomic, strong) NSString *favoriteAdvertisementCityName;
-@property (nonatomic, strong) NSString *favoriteAdvertisementUserName;
-@property (nonatomic, strong) NSString *favoriteAdvertisementLocationLatitude;
-@property (nonatomic, strong) NSString *favoriteAdvertisementLocationLongitude;
-@property (nonatomic, strong) NSString *favoriteAdvertisementCityLatitude;
-@property (nonatomic, strong) NSString *favoriteAdvertisementCityLongitude;
-@property (nonatomic, strong) NSString *favoriteAdvertisementUserPictureUrl;
-*/
+@property (nonatomic, strong) NSString *favoriteDetailAdvertisementId;
+@property (nonatomic, strong) NSString *favoriteDetailAdvertisementObjectId;
+@property (nonatomic, strong) NSString *favoriteDetailAdvertisementDescription;
+@property (nonatomic, strong) NSString *favoriteDetailAdvertisementStarter;
+@property (nonatomic, strong) NSString *favoriteDetailAdvertisementMainDish;
+@property (nonatomic, strong) NSString *favoriteDetailAdvertisementDessert;
+@property (nonatomic, strong) NSNumber *favoriteDetailAdvertisementNumGuests;
+@property (nonatomic, strong) NSNumber *favoriteDetailAdvertisementPrice;
+@property (nonatomic, strong) NSDate *favoriteDetailAdvertisementData;
+@property (nonatomic, strong) NSString *favoriteDetailAdvertisementPictureUrl;
+@property (nonatomic, strong) NSArray *favoriteDetailAdvertisementIdioms;
+@property (nonatomic, strong) NSArray *favoriteDetailAdvertisementTopics;
+
 
 
 

@@ -42,14 +42,6 @@
                 City *city = [self.cityMapper mapParseCity:pfCity];
                 [cities addObject:city];
             }
-
-            /*
-            for (PFObject *arr in objects) {
-                NSLog(@"Ciudad: %@", [arr valueForKey:kCityNameParse]);
-                NSLog(@"Pais: %@", [arr valueForKey:kCityCountryParse]);
-                NSLog(@"Longitud: %@", [[arr valueForKey:kLocationIdParse] valueForKey:kLocationLongitude]);
-                NSLog(@"Latitude: %@", [[arr valueForKey:kLocationIdParse] valueForKey:kLocationLatitude]);
-            }*/
             
             completionBlock(cities, nil);
         }
@@ -77,16 +69,6 @@
                 Advertisement *advertisement = [self.advertisementMapper mapParseAdvertisement:pfAdvertisement];
                 [advertisements addObject:advertisement];
             }
-            /*
-             for (PFObject *pfAdvertisement in objects)
-             {
-             NSLog(@"Advertisement id: %@", [pfAdvertisement valueForKey:kAdvertisementIdParse]);
-             NSLog(@"User name: %@", [[pfAdvertisement valueForKey:kAdvertisementUserIdParse]valueForKey:kUserNameParse]);
-             NSLog(@"Detail advertisement starter: %@", [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementStarterParse]);
-             NSLog(@"Detail advertisement price: %@", [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementPriceParse]);
-             NSLog(@"Detail advertisement city: %@", [[pfAdvertisement valueForKey:kAdvertisementCityIdParse]valueForKey:kCityNameParse]);
-             
-             }*/
             
             completionBlock(advertisements, nil);
         }
@@ -119,15 +101,12 @@
 
 -(void) getFavoritesAdvertisementWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
     
+    //filtra por el username
     PFQuery *query = [PFQuery queryWithClassName:@"Favorite"];
-    
-//    [query includeKey:kAdvertisementCityIdParse];
-//    [query whereKey:kAdvertisementCityIdParse equalTo:[PFObject objectWithoutDataWithClassName:kCityTableParse objectId:cityObjectId]];
-
-    
     [query includeKey:@"objectIdU"];
-    //filtra por username
     [query whereKey:@"objectIdU" equalTo:[PFUser objectWithoutDataWithObjectId:username]];
+    [query includeKey:@"detailAdvertisementId"];
+
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
             NSMutableArray *favorites = [NSMutableArray array];
@@ -141,6 +120,7 @@
         }
     }];
     
+
 }
 
 @end
