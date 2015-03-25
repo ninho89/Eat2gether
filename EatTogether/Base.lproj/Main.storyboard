@@ -237,17 +237,17 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InD-O2-rqT">
-                                <rect key="frame" x="200" y="282" width="200" height="36"/>
+                                <rect key="frame" x="209" y="282" width="181" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Solicitudes pendientes">
+                                <state key="normal" title="Solicitudes enviadas">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="requestPending:" destination="LAU-PS-YBo" eventType="touchUpInside" id="cgA-hl-Mht"/>
+                                    <action selector="requestPending:" destination="LAU-PS-YBo" eventType="touchUpInside" id="WdI-gu-sgS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftU-Kw-67A">
-                                <rect key="frame" x="241" y="358" width="117" height="36"/>
+                                <rect key="frame" x="241" y="374" width="117" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Mis anuncios">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -256,14 +256,26 @@
                                     <action selector="myAdvertisements:" destination="LAU-PS-YBo" eventType="touchUpInside" id="AVs-PC-Oxp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAx-rs-60V">
+                                <rect key="frame" x="208.5" y="328" width="182" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Solicitudes recibidas">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="requesReceived:" destination="LAU-PS-YBo" eventType="touchUpInside" id="kKI-B8-diq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ftU-Kw-67A" firstAttribute="top" secondItem="InD-O2-rqT" secondAttribute="bottom" constant="40" id="4VE-v4-mik"/>
                             <constraint firstAttribute="centerX" secondItem="ftU-Kw-67A" secondAttribute="centerX" id="ATP-NN-ljs"/>
+                            <constraint firstItem="iAx-rs-60V" firstAttribute="top" secondItem="InD-O2-rqT" secondAttribute="bottom" constant="10" id="F13-uD-AxV"/>
                             <constraint firstAttribute="centerY" secondItem="InD-O2-rqT" secondAttribute="centerY" id="Uj5-7S-omJ"/>
+                            <constraint firstAttribute="centerX" secondItem="iAx-rs-60V" secondAttribute="centerX" id="bbE-CZ-d6M"/>
                             <constraint firstAttribute="centerX" secondItem="InD-O2-rqT" secondAttribute="centerX" id="fBS-KM-gVC"/>
                             <constraint firstItem="94K-38-xY1" firstAttribute="top" secondItem="fu1-du-Mm8" secondAttribute="bottom" constant="20" id="kHd-Nk-6aC"/>
+                            <constraint firstItem="ftU-Kw-67A" firstAttribute="top" secondItem="iAx-rs-60V" secondAttribute="bottom" constant="10" id="kOM-Vd-zV7"/>
                             <constraint firstAttribute="centerX" secondItem="94K-38-xY1" secondAttribute="centerX" id="tPJ-KE-7or"/>
                         </constraints>
                     </view>
@@ -311,6 +323,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlr-DN-YyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2637" y="2735"/>
+        </scene>
+        <!--User Profile Account Request Recieve View Controller-->
+        <scene sceneID="e2h-78-ju1">
+            <objects>
+                <viewController storyboardIdentifier="userProfileAccountAdvertisementRequestRecieveViewController" id="C9o-Of-h71" customClass="UserProfileAccountRequestRecieveViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sFW-4N-rjW"/>
+                        <viewControllerLayoutGuide type="bottom" id="sSV-QU-LOt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wpJ-Am-9cE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RhD-hs-q19" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2637" y="3413"/>
         </scene>
         <!--User Profile Account Advertisements View Controller-->
         <scene sceneID="5rg-ZV-Yc4">

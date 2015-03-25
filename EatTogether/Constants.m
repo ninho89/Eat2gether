@@ -79,7 +79,7 @@ NSString *const kStoryboardUserProfileAccountViewController = @"userProfileAccou
 NSString *const kStoryboardUserProfileAccountAdvertisementsViewController = @"userProfileAccountAdvertisementsViewController";
 NSString *const kStoryboardUserProfileAccountAdvertisementRequestViewController = @"userProfileAccountAdvertisementsRequestViewController";
 NSString *const kStoryboardUserProfileAccountAddAdvertisementsViewController = @"userProfileAccountAddAdvertisementsViewController";
-
+NSString *const kStoryboardUserProfileAccountAdvertisementRequestRecieveViewController = @"userProfileAccountAdvertisementRequestRecieveViewController";
 
 
 

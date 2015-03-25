@@ -11,6 +11,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "UserProfileAccountAdvertisementsViewController.h"
 #import "UserProfileAccountRequestViewController.h"
+#import "UserProfileAccountRequestRecieveViewController.h"
 
 @interface UserProfileAccountViewController ()
 
@@ -27,7 +28,8 @@
     //[self.navigationItem setHidesBackButton:YES animated:YES];
     
     self.currentSessionManager = [CurrentSessionManager sharedInstance];
-    
+    NSLog(@"User: %@", self.currentSessionManager.currentUser.username);
+    NSLog(@"UserObjectId: %@", self.currentSessionManager.currentUser.userObjectId);
     self.navigationItem.title = @"Perfil";
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{
@@ -93,6 +95,12 @@
 - (IBAction)requestPending:(id)sender {
     UserProfileAccountRequestViewController *userProfileAccountRequestViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserProfileAccountAdvertisementRequestViewController];
     [self.navigationController pushViewController:userProfileAccountRequestViewController animated:YES];
+}
+
+- (IBAction)requesReceived:(id)sender {
+    UserProfileAccountRequestRecieveViewController *userProfileAccountRequestRecieveViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserProfileAccountAdvertisementRequestRecieveViewController];
+    [self.navigationController pushViewController:userProfileAccountRequestRecieveViewController animated:YES];
+    
 }
 
 - (IBAction)myAdvertisements:(id)sender {

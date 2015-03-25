@@ -66,7 +66,7 @@
                 <outlet property="customLabelStarter" destination="et8-bM-Y8c" id="W6a-oz-vYf"/>
                 <outlet property="customUserImage" destination="bRK-KJ-gHv" id="3i9-IY-4iG"/>
             </connections>
-            <point key="canvasLocation" x="233" y="324"/>
+            <point key="canvasLocation" x="142" y="289"/>
         </tableViewCell>
     </objects>
 </document>

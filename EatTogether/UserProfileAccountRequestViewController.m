@@ -12,13 +12,15 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "CurrentSessionManager.h"
 #import "User.h"
+#import "CustomRequestSendTableViewCell.h"
+
 
 @interface UserProfileAccountRequestViewController ()
 
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) id<DataRepository> repository;
-@property (nonatomic, strong) NSMutableArray *reservationsArray;
+@property (nonatomic, strong) NSMutableArray *advertisementsArray;
 @property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
 
 @end
@@ -32,7 +34,7 @@
     self.currentSessionManager = [CurrentSessionManager sharedInstance];
     
     self.repository = [[NetworkDataRepository alloc]init];
-    self.reservationsArray = [[NSMutableArray alloc]init];
+    self.advertisementsArray = [[NSMutableArray alloc]init];
     
     [self registerCustomCell];
     [self getReservationPending];
@@ -42,7 +44,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    self.navigationItem.title = @"Solicitudes";
+    self.navigationItem.title = @"Enviadas";
 }
 
 
@@ -52,12 +54,12 @@
 }
 
 -(void) registerCustomCell{
-    
+    [self.tableView registerNib:[UINib nibWithNibName:@"CustomRequestSendTableViewCell" bundle:nil]forCellReuseIdentifier:kCellFavorite];
 }
 
 -(void) getReservationPending{
     [self.repository getReservationWithUsername:self.currentSessionManager.currentUser.userObjectId WithCompletionBlock:^(NSArray *reservations, NSError *error) {
-        self.reservationsArray = [reservations mutableCopy];
+        self.advertisementsArray = [reservations mutableCopy];
         [self.tableView reloadData];
     }];
 }
@@ -71,33 +73,33 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.reservationsArray.count;
+    return self.advertisementsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString* cellIdentifier = @"Cell";
+    CustomRequestSendTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellFavorite forIndexPath:indexPath];
     
-    Advertisement *advertisement = self.reservationsArray[indexPath.row];
+    Advertisement *advertisement = self.advertisementsArray[indexPath.row];
     
+    [cell.customPicureAdvertisement sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+    }];
     
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    [cell.customPictureUser  sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementUserPictureUrl] placeholderImage:nil];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
+    cell.customPriceLabel.text = [NSString stringWithFormat:@"%@€", advertisement.advertisementPrice];
     
-    cell.textLabel.text = @"";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd-MM-yyyy"];
+    
+    cell.customDataLabel.text = [formatter stringFromDate:advertisement.advertisementData];
+    cell.customStarterLabel.text = advertisement.advertisementStarter;
     
     return cell;
+
 }
 
-/*
- - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
- 
- return <#row height#>;
- }
- */
 
 /*
  // Override to support conditional editing of the table view.
@@ -154,11 +156,9 @@
      */
 }
 
-/*
- - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
- 
- return <#CGFloat#>;
- }
- */
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 220;
+}
 
 @end
