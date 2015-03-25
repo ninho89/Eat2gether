@@ -38,8 +38,10 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+
     self.usernameField.text = @"";
     self.passwordField.text = @"";
+    self.tabBarController.tabBar.hidden = NO;
     
 }
 - (IBAction)createAccount:(id)sender {

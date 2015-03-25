@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *rePasswordField;
 @property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -34,6 +35,11 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = YES;
+}
+
 -(void)dismissKeyboard {
     [self.usernameField resignFirstResponder];
     [self.emailField resignFirstResponder];
@@ -42,6 +48,7 @@
 }
 
 - (IBAction)createUser:(id)sender {
+    [self dismissKeyboard];
     [self checkFieldsComplete];
 }
 

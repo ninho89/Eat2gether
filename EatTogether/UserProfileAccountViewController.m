@@ -64,7 +64,6 @@
     self.imageUser.layer.cornerRadius = self.imageUser.bounds.size.height / 2.0f;
     
     [self.imageUser sd_setImageWithURL:[NSURL URLWithString:self.user.userPicture]];
-    
 }
 
 - (void)didReceiveMemoryWarning {
