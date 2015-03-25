@@ -7,6 +7,7 @@
 //
 
 #import "UserProfileAccountAdvertisementsViewController.h"
+#import "UserProfileAccountAddAdvertisementsViewController.h"
 
 @interface UserProfileAccountAdvertisementsViewController ()
 
@@ -25,7 +26,7 @@
     self.navigationItem.title = @"Mis anuncios";
     UIBarButtonItem *barButtonAdd = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAdvertisement)];
     self.navigationItem.rightBarButtonItem = barButtonAdd;
-    
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,6 +35,12 @@
 }
 
 -(void) addAdvertisement{
+    
+    
+    UserProfileAccountAddAdvertisementsViewController *userProfileAccountAddAdvertisementsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:kStoryboardUserProfileAccountAddAdvertisementsViewController];
+    
+    [self.navigationController pushViewController:userProfileAccountAddAdvertisementsViewController animated:YES];
+    
     
 }
 
