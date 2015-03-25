@@ -21,7 +21,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) id<DataRepository> repository;
-@property (nonatomic, strong) NSMutableArray *favoritesArray;
+//@property (nonatomic, strong) NSMutableArray *favoritesArray;
+@property (nonatomic, strong) NSMutableArray *advertisementsArray;
 @property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
 
 @end
@@ -38,15 +39,15 @@
     self.currentSessionManager = [CurrentSessionManager sharedInstance];
     
     self.repository = [[NetworkDataRepository alloc]init];
-    self.favoritesArray = [[NSMutableArray alloc]init];
-    
+    //self.favoritesArray = [[NSMutableArray alloc]init];
+    self.advertisementsArray = [[NSMutableArray alloc]init];
     [self registerCustomCell];
-    
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    self.tabBarController.tabBar.hidden = NO;
     self.navigationItem.title = @"Favoritos";
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{
@@ -55,11 +56,27 @@
                               }];
     
     if([self.currentSessionManager isLoggedIn]){
-        [self getAllFavorites];
-    }else{
+        [self.advertisementsArray removeAllObjects];
+        //[self getAllFavorites];
+        [self.repository getFavoritesAdvertisementWithUsername:self.currentSessionManager.currentUser.userObjectId WithCompletionBlock:^(NSArray *favorites, NSError *error) {
+            //self.favoritesArray = [favorites mutableCopy];
+            self.advertisementsArray = [favorites mutableCopy];
+            
+            [self.tableView reloadData];
+            
+            if(favorites.count == 0){
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Vaya!" message:@"No tienes ningun favorito guardado" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+            
+            
+        }];
         
-        [self.favoritesArray removeAllObjects];
+    }else{
+        //[self.favoritesArray removeAllObjects];
+        [self.advertisementsArray removeAllObjects];
         [self.tableView reloadData];
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Tienes que loguearte para ver tus favoritos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
@@ -75,12 +92,17 @@
 
 -(void) getAllFavorites{
     [self.repository getFavoritesAdvertisementWithUsername:self.currentSessionManager.currentUser.userObjectId WithCompletionBlock:^(NSArray *favorites, NSError *error) {
-        self.favoritesArray = [favorites mutableCopy];
+        //self.favoritesArray = [favorites mutableCopy];
+        self.advertisementsArray = [favorites mutableCopy];
+        
         [self.tableView reloadData];
+        
         if(favorites.count == 0){
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Vaya!" message:@"No tienes ningun favorito guardado" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
         }
+        
+        
     }];
 }
 
@@ -93,24 +115,38 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.favoritesArray.count;
+    //return self.favoritesArray.count;
+    return self.advertisementsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    
     CustomFavoriteTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellFavorite forIndexPath:indexPath];
     
-    Favorite *favorite = self.favoritesArray[indexPath.row];
+    //Favorite *favorite = self.favoritesArray[indexPath.row];
     
-    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:favorite.favoriteDetailAdvertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:favorite.favoriteDetailAdvertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        
+//    }];
+//    
+////    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:favorite.favoriteUserPicture] placeholderImage:nil];
+//    
+//    cell.customLabelPrice.text = [NSString stringWithFormat:@"%@ €", favorite.favoriteDetailAdvertisementPrice];
+//    
+//    cell.customLabelStarter.text = favorite.favoriteDetailAdvertisementStarter;
+//
+    Advertisement *advertisement = self.advertisementsArray[indexPath.row];
+    
+    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
     }];
     
-//    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:favorite.favoriteUserPicture] placeholderImage:nil];
+    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementUserPictureUrl] placeholderImage:nil];
     
-    cell.customLabelPrice.text = [NSString stringWithFormat:@"%@ €", favorite.favoriteDetailAdvertisementPrice];
+    cell.customLabelPrice.text = [NSString stringWithFormat:@"%@€", advertisement.advertisementPrice];
     
-    cell.customLabelStarter.text = favorite.favoriteDetailAdvertisementStarter;
+    cell.customLabelStarter.text = advertisement.advertisementStarter;
     
     return cell;
 }
@@ -125,6 +161,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
+    DetailAdvertisementViewController *detailAdvertisementController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardDetailAdvertisementViewController];
+    detailAdvertisementController.advertisement = self.advertisementsArray[indexPath.row];
+    [self.navigationController pushViewController:detailAdvertisementController animated:YES];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -137,7 +176,8 @@
         // Delete the row from the data source
         
      
-        [self.favoritesArray removeObjectAtIndex:indexPath.row];
+        //[self.favoritesArray removeObjectAtIndex:indexPath.row];
+        [self.advertisementsArray removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
         [tableView reloadData];
         
@@ -147,6 +187,8 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
+
+
 
 
 

@@ -22,6 +22,7 @@
 @property (nonatomic, strong) CityMapper *cityMapper;
 @property (nonatomic, strong) AdvertisementMapper *advertisementMapper;
 @property (nonatomic, strong) FavoriteMapper *favoriteMapper;
+@property (nonatomic, strong) NSMutableArray *advertisements;
 
 @end
 
@@ -85,15 +86,15 @@
     user1.objectId = user.userObjectId;
     
     //guarda el detailAdvertisementId
-    PFObject *detAdv = [PFObject objectWithoutDataWithClassName:@"DetailAdvertisement" objectId:advertisement.advertisementDetailObjectId];
+//    PFObject *detAdv = [PFObject objectWithoutDataWithClassName:@"DetailAdvertisement" objectId:advertisement.advertisementDetailObjectId];
 
     //Guarda el advertisementId
-//    PFObject *objAdvId = [PFObject objectWithoutDataWithClassName:@"Advertisement" objectId:advertisement.advertisementObjectId];
+    PFObject *objAdvId = [PFObject objectWithoutDataWithClassName:@"Advertisement" objectId:advertisement.advertisementObjectId];
 
     PFObject *myFav = [PFObject objectWithClassName:@"Favorite"];
     [myFav setObject:user1 forKey:@"objectIdU"];
-    //[myFav setObject:objAdvId forKey:@"advertisementId"];
-    [myFav setObject:detAdv forKey:@"detailAdvertisementId"];
+    [myFav setObject:objAdvId forKey:@"advertisementId"];
+    //[myFav setObject:detAdv forKey:@"detailAdvertisementId"];
     [myFav setObject:@(favorite) forKey:@"favoriteCheck"];
     
     
@@ -138,6 +139,8 @@
 
 -(void) getFavoritesAdvertisementWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
     
+    self.advertisements = [[NSMutableArray alloc]init];
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Favorite"];
     //filtra por el username
     [query includeKey:@"objectIdU"];
@@ -147,38 +150,40 @@
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
-            NSMutableArray *favorites = [NSMutableArray array];
+            //NSMutableArray *favorites = [NSMutableArray array];
             for (PFObject *pfFavorites in objects)
             {
-                self.favoriteMapper = [[FavoriteMapper alloc]init];
-                Favorite *favorite = [self.favoriteMapper mapParseFavorite:pfFavorites];
-                [favorites addObject:favorite];
+//                self.favoriteMapper = [[FavoriteMapper alloc]init];
+//                Favorite *favorite = [self.favoriteMapper mapParseFavorite:pfFavorites];
+//                [favorites addObject:favorite];
+                NSString *obj = [[[pfFavorites valueForKey:@"advertisementId"]valueForKey:@"detailAdvertisementId"]valueForKey:@"objectId"];
+                
+                PFQuery *query2 = [PFQuery queryWithClassName:@"Advertisement"];
+                [query2 includeKey:@"detailAdvertisementId"];
+                [query2 whereKey:@"detailAdvertisementId" equalTo:[PFObject objectWithoutDataWithClassName:@"DetailAdvertisement" objectId:obj]];
+                [query2 includeKey:kAdvertisementCityIdParse];
+                [query2 includeKey:kAdvertisementLocationIdParse];
+                [query2 includeKey:kAdvertisementUserUsername];
+                
+                [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects2, NSError *error) {
+                    for (PFObject *pfAdvertisement in objects2)
+                    {
+                        self.advertisementMapper = [[AdvertisementMapper alloc]init];
+                        Advertisement *advertisement = [self.advertisementMapper mapParseAdvertisement:pfAdvertisement];
+                        [self.advertisements addObject:advertisement];
+                    }
+                    completionBlock(self.advertisements, error);
+                }];
             }
-            completionBlock(favorites, error);
+            //completionBlock(self.advertisements, error);
+            
         }
     }];
 }
 
--(void) getReservationWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
-    
 
-    
-//    PFQuery *query = [PFQuery queryWithClassName:@"Reservation"];
-//    [query includeKey:@"objectIdU"];
-//    [query whereKey:@"objectIdU" equalTo:[PFUser objectWithoutDataWithObjectId:username]];
-//    [query includeKey:@"advertisementId"];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        if(!error){
-//            NSMutableArray *reservations = [NSMutableArray array];
-//            for (PFObject *pfReservations in objects)
-//            {
-//                
-//            }
-//            completionBlock(reservations, error);
-//            
-//        }
-//    }];
-    
+-(void) getReservationWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
+
     PFQuery *query = [PFQuery queryWithClassName:@"Reservation"];
     [query includeKey:@"objectIdU"];
     [query whereKey:@"objectIdU" equalTo:[PFUser objectWithoutDataWithObjectId:username]];
@@ -206,17 +211,9 @@
                     [advertisements addObject:advertisement];
                 }
                 completionBlock(advertisements, error);
-
             }];
-            
         }
     }];
-    
-    
-
-
-
-    
 }
 
 
