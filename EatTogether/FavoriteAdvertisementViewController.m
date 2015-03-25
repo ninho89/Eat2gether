@@ -101,8 +101,6 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Vaya!" message:@"No tienes ningun favorito guardado" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
         }
-        
-        
     }];
 }
 
@@ -123,19 +121,7 @@
     
     
     CustomFavoriteTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellFavorite forIndexPath:indexPath];
-    
-    //Favorite *favorite = self.favoritesArray[indexPath.row];
-    
-//    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:favorite.favoriteDetailAdvertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-//        
-//    }];
-//    
-////    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:favorite.favoriteUserPicture] placeholderImage:nil];
-//    
-//    cell.customLabelPrice.text = [NSString stringWithFormat:@"%@ €", favorite.favoriteDetailAdvertisementPrice];
-//    
-//    cell.customLabelStarter.text = favorite.favoriteDetailAdvertisementStarter;
-//
+
     Advertisement *advertisement = self.advertisementsArray[indexPath.row];
     
     [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {

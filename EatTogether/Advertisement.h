@@ -22,12 +22,15 @@
 @property (nonatomic, strong) NSDate *advertisementData;
 @property (nonatomic, strong) NSString *advertisementPictureUrl;
 @property (nonatomic, strong) NSString *advertisementCityName;
+@property (nonatomic, strong) NSString *advertisementUserNameObjectId;
 @property (nonatomic, strong) NSString *advertisementUserName;
+@property (nonatomic, strong) NSString *advertisementUserPictureUrl;
+@property (nonatomic, strong) NSString *advertisementUserEmail;
 @property (nonatomic, strong) NSString *advertisementLocationLatitude;
 @property (nonatomic, strong) NSString *advertisementLocationLongitude;
 @property (nonatomic, strong) NSString *advertisementCityLatitude;
 @property (nonatomic, strong) NSString *advertisementCityLongitude;
-@property (nonatomic, strong) NSString *advertisementUserPictureUrl;
+
 
 @property (nonatomic, strong) NSArray *advertisementIdioms;
 @property (nonatomic, strong) NSArray *advertisementTopics;

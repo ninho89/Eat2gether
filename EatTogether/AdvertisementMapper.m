@@ -25,9 +25,9 @@
     advertisement.advertisementNumGuests = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementNumGuestsParse];
     advertisement.advertisementPrice = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse] valueForKey:kDetailAdvertisementPriceParse];
     advertisement.advertisementData = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementDateParse];
-    
+    advertisement.advertisementUserNameObjectId = [[pfAdvertisement valueForKey:@"username"]valueForKey:@"objectId"];
     advertisement.advertisementUserName = [[pfAdvertisement valueForKey:kAdvertisementUserUsername]valueForKey:kUserNameParse];
-    
+    advertisement.advertisementUserEmail = [[pfAdvertisement valueForKey:@"username"]valueForKey:@"email"];
     advertisement.advertisementCityName = [[pfAdvertisement valueForKey:kAdvertisementCityIdParse] valueForKey:kCityNameParse];
     advertisement.advertisementLocationLongitude = [[pfAdvertisement valueForKey:kAdvertisementLocationIdParse] valueForKey:kLocationLongitudeParse];
     advertisement.advertisementLocationLatitude = [[pfAdvertisement valueForKey:kAdvertisementLocationIdParse] valueForKey:kLocationLatitudeParse];

@@ -28,8 +28,8 @@
     //[self.navigationItem setHidesBackButton:YES animated:YES];
     
     self.currentSessionManager = [CurrentSessionManager sharedInstance];
-    NSLog(@"User: %@", self.currentSessionManager.currentUser.username);
-    NSLog(@"UserObjectId: %@", self.currentSessionManager.currentUser.userObjectId);
+    NSLog(@"Profile UseNamer: %@", self.currentSessionManager.currentUser.username);
+    NSLog(@"Profile UserObjectId: %@", self.currentSessionManager.currentUser.userObjectId);
     self.navigationItem.title = @"Perfil";
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{

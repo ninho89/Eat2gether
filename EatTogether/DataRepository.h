@@ -26,5 +26,7 @@
 //get reservation with username
 -(void) getReservationWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
 
+-(void) getReservationWithUsername1:(NSString *)usernameAdv WithCompletionBlock:(void (^)(NSArray *, NSArray*, NSError *))completionBlock;
+
 @end
 
