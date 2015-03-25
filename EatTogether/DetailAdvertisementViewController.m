@@ -108,7 +108,7 @@
 #pragma mark - Buttons Methods
 
 - (IBAction)reservaButton:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Reserva" message:@"Solicitud enviada" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Cancel", nil];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Reserva" message:@"¿Hacer la reserva?" delegate:self cancelButtonTitle:@"Si" otherButtonTitles:@"No", nil];
     
     [alert show];
 }

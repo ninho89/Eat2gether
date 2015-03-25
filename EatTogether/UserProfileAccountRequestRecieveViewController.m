@@ -46,11 +46,14 @@
     [super viewWillAppear:animated];
     
     self.navigationItem.title = @"Recibidas";
+    [self getReservationRecieving];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    
 }
 
 -(void) registerCustomCell{
@@ -62,7 +65,6 @@
         self.advertisementsArray = [requestRec mutableCopy];
         self.usersArray = [userArray mutableCopy];
         [self.tableView reloadData];
-
     }];
 }
 
@@ -96,9 +98,6 @@
     
     cell.customDateLabel.text = [formatter stringFromDate:advertisement.advertisementData];
     cell.customPriceLabel.text = [NSString stringWithFormat:@"%@ €", advertisement.advertisementPrice];
-
-    
-
     
     return cell;
 
