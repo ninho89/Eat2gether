@@ -78,6 +78,9 @@
     
     static NSString* cellIdentifier = @"Cell";
     
+    Advertisement *advertisement = self.reservationsArray[indexPath.row];
+    
+    
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
