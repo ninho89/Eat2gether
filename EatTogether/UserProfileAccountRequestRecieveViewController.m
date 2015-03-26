@@ -44,9 +44,8 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    [self.advertisementsArray removeAllObjects];
     self.navigationItem.title = @"Recibidas";
-    [self getReservationRecieving];
 }
 
 - (void)didReceiveMemoryWarning {

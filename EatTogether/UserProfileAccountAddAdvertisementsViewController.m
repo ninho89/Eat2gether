@@ -67,10 +67,10 @@
 
 -(void)dismissKeyboard {
     self.datePicker.hidden = YES;
+    [self.descriptionTextField resignFirstResponder];
     [self.dessertTextField resignFirstResponder];
     [self.starterTextField resignFirstResponder];
     [self.mainDishTextField resignFirstResponder];
-    [self.dessertTextField resignFirstResponder];
     [self.priceTextField resignFirstResponder];
 }
 - (IBAction)changeValueStepper:(id)sender {

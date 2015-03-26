@@ -23,10 +23,11 @@
 -(void) getFavoritesAdvertisementWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
 //save reservation
 -(void) setReservation:(BOOL)statusReservation withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(NSArray *, NSError *))completionBlock;
-//get reservation with username
+//get reservations with username
 -(void) getReservationWithUsername:(NSString *)username WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
-
+//get reservations
 -(void) getReservationWithUsername1:(NSString *)usernameAdv WithCompletionBlock:(void (^)(NSArray *, NSArray*, NSError *))completionBlock;
-
+//get advertisements with user object id
+-(void) getAdvertisementWithUserObjectId:(NSString *)userObjectId WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock;
 @end
 

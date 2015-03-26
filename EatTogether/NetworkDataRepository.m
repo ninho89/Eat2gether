@@ -261,12 +261,37 @@
                     }
                     completionBlock(self.advertisements2, self.userArray, error);
                 }];
-                
+                //completionBlock(self.advertisements2, error);
             }
-            //completionBlock(self.advertisements2, error);
+            
         }
     }];
     
+}
+
+-(void) getAdvertisementWithUserObjectId:(NSString *)userObjectId WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
+    
+    PFQuery *query = [PFQuery queryWithClassName:kAdvertisementTableParse];
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    [query includeKey:kAdvertisementCityIdParse];
+    [query whereKey:@"username" equalTo:[PFUser objectWithoutDataWithObjectId:userObjectId]];
+    [query includeKey:kAdvertisementDetailAdvertisementIdParse];
+    [query includeKey:kAdvertisementLocationIdParse];
+    [query includeKey:kAdvertisementUserUsername];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error){
+            
+            NSMutableArray *advertisements = [NSMutableArray array];
+            for (PFObject *pfAdvertisement in objects)
+            {
+                self.advertisementMapper = [[AdvertisementMapper alloc]init];
+                Advertisement *advertisement = [self.advertisementMapper mapParseAdvertisement:pfAdvertisement];
+                [advertisements addObject:advertisement];
+            }
+            completionBlock(advertisements, error);
+        }
+    }];
+
 }
 
 

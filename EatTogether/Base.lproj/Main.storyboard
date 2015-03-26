@@ -377,8 +377,27 @@
                     <view key="view" contentMode="scaleToFill" id="ZJP-eV-xs6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SCi-0N-tx0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qhy-dW-oKp" id="kaG-9H-Exg"/>
+                                    <outlet property="delegate" destination="Qhy-dW-oKp" id="Gyt-IF-is0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qfb-jW-Hp0" firstAttribute="top" secondItem="SCi-0N-tx0" secondAttribute="bottom" id="FXC-6V-0aP"/>
+                            <constraint firstItem="SCi-0N-tx0" firstAttribute="top" secondItem="ZJP-eV-xs6" secondAttribute="top" id="PdC-Er-MFm"/>
+                            <constraint firstAttribute="trailing" secondItem="SCi-0N-tx0" secondAttribute="trailing" id="cqP-ZB-X7h"/>
+                            <constraint firstItem="SCi-0N-tx0" firstAttribute="leading" secondItem="ZJP-eV-xs6" secondAttribute="leading" id="rmo-1L-7Yf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="SCi-0N-tx0" id="Vkk-dX-Y3r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACD-I3-w3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -492,7 +511,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QiS-vS-yba">
-                                                <rect key="frame" x="0.0" y="438" width="600" height="162"/>
+                                                <rect key="frame" x="0.0" y="408" width="600" height="162"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="449004422.56262398">
                                                     <!--2015-03-25 19:27:02 +0000-->
                                                 </date>
@@ -549,6 +568,7 @@
                                             <constraint firstItem="LsJ-DR-QH7" firstAttribute="baseline" secondItem="kWE-CD-m5B" secondAttribute="baseline" id="eqN-Tk-0RM"/>
                                             <constraint firstAttribute="trailing" secondItem="aoQ-jB-LBh" secondAttribute="trailing" constant="20" id="fdm-5i-a7E"/>
                                             <constraint firstItem="jqW-El-ErE" firstAttribute="top" secondItem="mGp-h0-YIp" secondAttribute="bottom" constant="14" id="fg2-F1-fyY"/>
+                                            <constraint firstAttribute="bottom" secondItem="QiS-vS-yba" secondAttribute="bottom" constant="30" id="l2N-zf-4Vz"/>
                                             <constraint firstItem="LsJ-DR-QH7" firstAttribute="leading" secondItem="2JO-8R-Ikg" secondAttribute="leading" id="m45-fV-MrD"/>
                                             <constraint firstAttribute="trailing" secondItem="2JO-8R-Ikg" secondAttribute="trailing" constant="20" id="mN5-2v-g89"/>
                                             <constraint firstAttribute="bottom" secondItem="QiS-vS-yba" secondAttribute="bottom" id="odW-Kg-rpy"/>
@@ -560,6 +580,11 @@
                                             <constraint firstItem="K8b-3I-DPP" firstAttribute="top" secondItem="JRz-bq-Gk7" secondAttribute="top" constant="10" id="uVa-xF-EJW"/>
                                             <constraint firstItem="uTJ-lO-M7X" firstAttribute="leading" secondItem="JRz-bq-Gk7" secondAttribute="leading" constant="20" id="yuT-JO-Wlz"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="odW-Kg-rpy"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Xtc-Kj-1Xz" appends="YES" id="XJx-cd-NRE"/>
                                         </connections>
