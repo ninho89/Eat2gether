@@ -236,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="94K-38-xY1">
-                                <rect key="frame" x="250" y="40" width="100" height="100"/>
+                                <rect key="frame" x="250" y="70" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="IGb-TW-4fa"/>
                                     <constraint firstAttribute="width" constant="100" id="bGv-1E-PzY"/>
@@ -283,7 +283,7 @@
                             <constraint firstAttribute="centerY" secondItem="InD-O2-rqT" secondAttribute="centerY" id="Uj5-7S-omJ"/>
                             <constraint firstAttribute="centerX" secondItem="iAx-rs-60V" secondAttribute="centerX" id="bbE-CZ-d6M"/>
                             <constraint firstAttribute="centerX" secondItem="InD-O2-rqT" secondAttribute="centerX" id="fBS-KM-gVC"/>
-                            <constraint firstItem="94K-38-xY1" firstAttribute="top" secondItem="fu1-du-Mm8" secondAttribute="bottom" constant="20" id="kHd-Nk-6aC"/>
+                            <constraint firstItem="94K-38-xY1" firstAttribute="top" secondItem="fu1-du-Mm8" secondAttribute="bottom" constant="50" id="kHd-Nk-6aC"/>
                             <constraint firstItem="ftU-Kw-67A" firstAttribute="top" secondItem="iAx-rs-60V" secondAttribute="bottom" constant="10" id="kOM-Vd-zV7"/>
                             <constraint firstAttribute="centerX" secondItem="94K-38-xY1" secondAttribute="centerX" id="tPJ-KE-7or"/>
                         </constraints>

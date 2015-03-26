@@ -21,9 +21,8 @@
 
 -(void)registerWithUsername:(NSString *)username password:(NSString *)password email:(NSString*)email completionBlock:(void(^)(User *user, NSError *error))completionBlock{
     
-    
-    NSData *userImage = UIImagePNGRepresentation([UIImage imageNamed:@"imageUserDefault"]);
-    PFFile *imageUserDefault = [PFFile fileWithName:@"imageUserDefault.png" data:userImage];
+    NSData *userImage = UIImagePNGRepresentation([UIImage imageNamed:@"userDef2.jpg"]);
+    PFFile *imageUserDefault = [PFFile fileWithName:@"userDef2.jpg" data:userImage];
     
     //query register user
     PFUser *newUser = [PFUser user];

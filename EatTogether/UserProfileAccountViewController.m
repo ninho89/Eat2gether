@@ -41,7 +41,7 @@
     UIButton *setting = [UIButton buttonWithType:UIButtonTypeCustom];
     [setting setFrame:CGRectMake(0.0f, 0.0f, 30.0f, 30.0f)];
     [setting addTarget:self action:@selector(showUserSettings) forControlEvents:UIControlEventTouchUpInside];
-    [setting setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
+    [setting setImage:[UIImage imageNamed:@"settings1"] forState:UIControlStateNormal];
     UIBarButtonItem *barButtonSetting = [[UIBarButtonItem alloc] initWithCustomView:setting];
     self.navigationItem.leftBarButtonItem = barButtonSetting;
     
@@ -49,7 +49,7 @@
     UIButton *logout = [UIButton buttonWithType:UIButtonTypeCustom];
     [logout setFrame:CGRectMake(0.0f, 0.0f, 30.0f, 25.0f)];
     [logout addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
-    [logout setImage:[UIImage imageNamed:@"logout1"] forState:UIControlStateNormal];
+    [logout setImage:[UIImage imageNamed:@"logout2"] forState:UIControlStateNormal];
     UIBarButtonItem *barButtonLogout = [[UIBarButtonItem alloc] initWithCustomView:logout];
     self.navigationItem.rightBarButtonItem = barButtonLogout;
 
