@@ -54,12 +54,15 @@
     self.tabBarController.tabBar.hidden = NO;
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
     barButton.title = @"Back";
+    self.navigationController.navigationBar.tintColor = [UIColor flatPumpkinColor];
+    
     self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
+    
     
     self.navigationItem.title = self.city.cityName;
     [self.navigationController.navigationBar
     setTitleTextAttributes:@{
-                              NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1],
+                              NSForegroundColorAttributeName :[UIColor flatPumpkinColor]/*colorWithRed:0 green:0.478 blue:1 alpha:1]*/,
                               NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size:24.0]
                               }];
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F834CA668C9B9A3896752E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 966A24F04FF967045BC072B7 /* libPods.a */; };
+		E616AE1E1AC4127C00E0FFA3 /* appIconXib.png in Resources */ = {isa = PBXBuildFile; fileRef = E616AE1D1AC4127C00E0FFA3 /* appIconXib.png */; };
 		E61B6C571ABEF2870021D93C /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = E61B6C531ABEF2870021D93C /* Search.png */; };
 		E61B6C581ABEF2870021D93C /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = E61B6C541ABEF2870021D93C /* home.png */; };
 		E61B6C591ABEF2870021D93C /* perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = E61B6C551ABEF2870021D93C /* perfil.png */; };
@@ -25,6 +26,8 @@
 		E626A7931ABAD47C0038D4BA /* pinMap.png in Resources */ = {isa = PBXBuildFile; fileRef = E626A7921ABAD47C0038D4BA /* pinMap.png */; };
 		E62BC4601ABC641A00B4CF00 /* fav1.png in Resources */ = {isa = PBXBuildFile; fileRef = E62BC45F1ABC641A00B4CF00 /* fav1.png */; };
 		E62BC4D61ABC88CC00B4CF00 /* SearchAdvertisementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E62BC4D51ABC88CC00B4CF00 /* SearchAdvertisementViewController.m */; };
+		E63A85B91AC419580067613E /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = E63A85B81AC419580067613E /* camera.png */; };
+		E63A85BB1AC41D210067613E /* imageUserDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = E63A85BA1AC41D210067613E /* imageUserDefault.png */; };
 		E64D4ABA1AB8672C00ABC477 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AB91AB8672C00ABC477 /* main.m */; };
 		E64D4ABD1AB8672C00ABC477 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4ABC1AB8672C00ABC477 /* AppDelegate.m */; };
 		E64D4AC01AB8672C00ABC477 /* EatTogether.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E64D4ABE1AB8672C00ABC477 /* EatTogether.xcdatamodeld */; };
@@ -85,6 +88,7 @@
 /* Begin PBXFileReference section */
 		965B1BBF40BB4295FAC2FED9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		966A24F04FF967045BC072B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E616AE1D1AC4127C00E0FFA3 /* appIconXib.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIconXib.png; sourceTree = "<group>"; };
 		E61B6C531ABEF2870021D93C /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
 		E61B6C541ABEF2870021D93C /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		E61B6C551ABEF2870021D93C /* perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perfil.png; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 		E62BC45F1ABC641A00B4CF00 /* fav1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav1.png; sourceTree = "<group>"; };
 		E62BC4D41ABC88CC00B4CF00 /* SearchAdvertisementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAdvertisementViewController.h; sourceTree = "<group>"; };
 		E62BC4D51ABC88CC00B4CF00 /* SearchAdvertisementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAdvertisementViewController.m; sourceTree = "<group>"; };
+		E63A85B81AC419580067613E /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		E63A85BA1AC41D210067613E /* imageUserDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageUserDefault.png; sourceTree = "<group>"; };
 		E64D4AB41AB8672C00ABC477 /* Eat2gether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eat2gether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D4AB81AB8672C00ABC477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64D4AB91AB8672C00ABC477 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -232,7 +238,10 @@
 		E622A90F1ABB1EB5009CC0B9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E63A85BA1AC41D210067613E /* imageUserDefault.png */,
+				E63A85B81AC419580067613E /* camera.png */,
 				E6C581D21AC1FC5C001E15C7 /* Favourites.png */,
+				E616AE1D1AC4127C00E0FFA3 /* appIconXib.png */,
 				E6C581C41AC1B6EE001E15C7 /* settings.png */,
 				E6C581D41AC2000B001E15C7 /* logout1.png */,
 				E6C581C21AC1B651001E15C7 /* logout.png */,
@@ -563,6 +572,7 @@
 				E64D4AC61AB8672C00ABC477 /* Main.storyboard in Resources */,
 				E6C581E01AC2BAC0001E15C7 /* CustomRequestSendTableViewCell.xib in Resources */,
 				E64D4B031AB893E000ABC477 /* CustomCityTableViewCell.xib in Resources */,
+				E616AE1E1AC4127C00E0FFA3 /* appIconXib.png in Resources */,
 				E6C581BC1AC182A6001E15C7 /* CustomFavoriteTableViewCell.xib in Resources */,
 				E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */,
 				E6C581D51AC2000B001E15C7 /* logout1.png in Resources */,
@@ -578,6 +588,8 @@
 				E6C581C31AC1B651001E15C7 /* logout.png in Resources */,
 				E6C581C51AC1B6EE001E15C7 /* settings.png in Resources */,
 				E61B6C631ABF0F500021D93C /* login-button-small-pressed@2x.png in Resources */,
+				E63A85BB1AC41D210067613E /* imageUserDefault.png in Resources */,
+				E63A85B91AC419580067613E /* camera.png in Resources */,
 				E61B6C571ABEF2870021D93C /* Search.png in Resources */,
 				E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */,
 				E64D4AC81AB8672C00ABC477 /* Images.xcassets in Resources */,

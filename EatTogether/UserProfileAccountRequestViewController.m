@@ -46,6 +46,7 @@
     
     self.navigationItem.title = @"Enviadas";
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.navigationBar.tintColor = [UIColor flatPumpkinColor];
 }
 
 

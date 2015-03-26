@@ -51,9 +51,10 @@
     self.navigationItem.title = @"Favoritos";
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{
-                              NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1],
+                              NSForegroundColorAttributeName :[UIColor flatPumpkinColor]/*colorWithRed:0 green:0.478 blue:1 alpha:1]*/,
                               NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size:24.0]
                               }];
+    self.navigationController.navigationBar.tintColor = [UIColor flatPumpkinColor];
     
     if([self.currentSessionManager isLoggedIn]){
         [self.advertisementsArray removeAllObjects];

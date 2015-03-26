@@ -5,14 +5,17 @@ PODS:
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
+  - UIColor+FlatColors (0.0.2)
 
 DEPENDENCIES:
   - Parse
   - SDWebImage (~> 3.7)
+  - UIColor+FlatColors (~> 0.0)
 
 SPEC CHECKSUMS:
   Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
   Parse: c2610f7a12ad0defc974803b819c4efe7746e6db
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  UIColor+FlatColors: 15506ef6472e26a751033f2f2469283800bcb906
 
 COCOAPODS: 0.35.0

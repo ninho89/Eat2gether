@@ -21,14 +21,17 @@
 
 -(void)registerWithUsername:(NSString *)username password:(NSString *)password email:(NSString*)email completionBlock:(void(^)(User *user, NSError *error))completionBlock{
     
+    
+    NSData *userImage = UIImagePNGRepresentation([UIImage imageNamed:@"imageUserDefault"]);
+    PFFile *imageUserDefault = [PFFile fileWithName:@"imageUserDefault.png" data:userImage];
+    
     //query register user
     PFUser *newUser = [PFUser user];
     newUser.username = username;
     newUser.email = email;
     newUser.password = password;
-    
-    
-    
+    [newUser setObject:imageUserDefault forKey:@"userPicture"];
+
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         
         User *user1 = [[User alloc]init];

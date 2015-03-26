@@ -43,6 +43,8 @@
     UIBarButtonItem *barButtonAdd = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAdvertisement)];
     self.navigationItem.rightBarButtonItem = barButtonAdd;
     self.tabBarController.tabBar.hidden = YES;
+    
+    self.navigationController.navigationBar.tintColor = [UIColor flatPumpkinColor];
 }
 
 - (void)didReceiveMemoryWarning {

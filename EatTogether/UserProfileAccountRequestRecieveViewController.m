@@ -47,6 +47,7 @@
     [self.advertisementsArray removeAllObjects];
     self.navigationItem.title = @"Recibidas";
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.navigationBar.tintColor = [UIColor flatPumpkinColor];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -42,18 +42,20 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    self.navigationItem.title=@"EatTogether";
+    self.navigationItem.title=@"Eat2gether";
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{
-                              NSForegroundColorAttributeName :[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1],
+                              NSForegroundColorAttributeName : [UIColor flatPumpkinColor]/*[UIColor colorWithRed:0 green:0.478 blue:1 alpha:1]*/,
                               NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size:24.0]
                               }];
-    self.tabBarController.tabBar.tintColor = [UIColor redColor];
+    //self.tabBarController.tabBar.tintColor = [UIColor redColor];
+    self.tabBarController.tabBar.tintColor = [UIColor flatPumpkinColor];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.navigationItem.title = @"EatTogether";
+    self.navigationItem.title = @"Eat2gether";
 }
 
 #pragma mark - Memory Warning

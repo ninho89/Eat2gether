@@ -49,6 +49,7 @@
     [self setupMapView];
     [self getAdvertisementLocation];
 
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
