@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="321" height="159.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXn-aP-Fpp">
-                        <rect key="frame" x="126" y="64" width="68.5" height="32.5"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                        <rect key="frame" x="122.5" y="62.5" width="76" height="36"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
