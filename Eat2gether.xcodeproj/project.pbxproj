@@ -106,7 +106,7 @@
 		E62BC45F1ABC641A00B4CF00 /* fav1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav1.png; sourceTree = "<group>"; };
 		E62BC4D41ABC88CC00B4CF00 /* SearchAdvertisementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAdvertisementViewController.h; sourceTree = "<group>"; };
 		E62BC4D51ABC88CC00B4CF00 /* SearchAdvertisementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAdvertisementViewController.m; sourceTree = "<group>"; };
-		E64D4AB41AB8672C00ABC477 /* EatTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E64D4AB41AB8672C00ABC477 /* Eat2gether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eat2gether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D4AB81AB8672C00ABC477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64D4AB91AB8672C00ABC477 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E64D4ABB1AB8672C00ABC477 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,13 +117,13 @@
 		E64D4AC51AB8672C00ABC477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E64D4AC71AB8672C00ABC477 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E64D4ACA1AB8672C00ABC477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E64D4AD01AB8672C00ABC477 /* EatTogetherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatTogetherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E64D4AD01AB8672C00ABC477 /* Eat2getherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Eat2getherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D4AD51AB8672C00ABC477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64D4AD61AB8672C00ABC477 /* EatTogetherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EatTogetherTests.m; sourceTree = "<group>"; };
 		E64D4AE41AB86A9100ABC477 /* AppUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUtilities.h; sourceTree = "<group>"; };
 		E64D4AE51AB86AFB00ABC477 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E64D4AE61AB86AFB00ABC477 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		E64D4AEA1AB86DFD00ABC477 /* EatTogether-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EatTogether-Prefix.pch"; sourceTree = "<group>"; };
+		E64D4AEA1AB86DFD00ABC477 /* Eat2gether-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Eat2gether-Prefix.pch"; sourceTree = "<group>"; };
 		E64D4AEC1AB874F400ABC477 /* DataRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRepository.h; sourceTree = "<group>"; };
 		E64D4AEE1AB8764600ABC477 /* NetworkDataRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDataRepository.h; sourceTree = "<group>"; };
 		E64D4AEF1AB8764600ABC477 /* NetworkDataRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkDataRepository.m; sourceTree = "<group>"; };
@@ -267,8 +267,8 @@
 		E64D4AB51AB8672C00ABC477 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E64D4AB41AB8672C00ABC477 /* EatTogether.app */,
-				E64D4AD01AB8672C00ABC477 /* EatTogetherTests.xctest */,
+				E64D4AB41AB8672C00ABC477 /* Eat2gether.app */,
+				E64D4AD01AB8672C00ABC477 /* Eat2getherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -390,7 +390,7 @@
 				E64D4AE41AB86A9100ABC477 /* AppUtilities.h */,
 				E64D4AE51AB86AFB00ABC477 /* Constants.h */,
 				E64D4AE61AB86AFB00ABC477 /* Constants.m */,
-				E64D4AEA1AB86DFD00ABC477 /* EatTogether-Prefix.pch */,
+				E64D4AEA1AB86DFD00ABC477 /* Eat2gether-Prefix.pch */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -478,9 +478,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E64D4AB31AB8672C00ABC477 /* EatTogether */ = {
+		E64D4AB31AB8672C00ABC477 /* Eat2gether */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E64D4ADA1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "EatTogether" */;
+			buildConfigurationList = E64D4ADA1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "Eat2gether" */;
 			buildPhases = (
 				DF4A33D953C102F1DA1FBAF3 /* Check Pods Manifest.lock */,
 				E64D4AB01AB8672C00ABC477 /* Sources */,
@@ -492,14 +492,14 @@
 			);
 			dependencies = (
 			);
-			name = EatTogether;
+			name = Eat2gether;
 			productName = EatTogether;
-			productReference = E64D4AB41AB8672C00ABC477 /* EatTogether.app */;
+			productReference = E64D4AB41AB8672C00ABC477 /* Eat2gether.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E64D4ACF1AB8672C00ABC477 /* EatTogetherTests */ = {
+		E64D4ACF1AB8672C00ABC477 /* Eat2getherTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E64D4ADD1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "EatTogetherTests" */;
+			buildConfigurationList = E64D4ADD1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "Eat2getherTests" */;
 			buildPhases = (
 				E64D4ACC1AB8672C00ABC477 /* Sources */,
 				E64D4ACD1AB8672C00ABC477 /* Frameworks */,
@@ -510,9 +510,9 @@
 			dependencies = (
 				E64D4AD21AB8672C00ABC477 /* PBXTargetDependency */,
 			);
-			name = EatTogetherTests;
+			name = Eat2getherTests;
 			productName = EatTogetherTests;
-			productReference = E64D4AD01AB8672C00ABC477 /* EatTogetherTests.xctest */;
+			productReference = E64D4AD01AB8672C00ABC477 /* Eat2getherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -533,7 +533,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E64D4AAF1AB8672C00ABC477 /* Build configuration list for PBXProject "EatTogether" */;
+			buildConfigurationList = E64D4AAF1AB8672C00ABC477 /* Build configuration list for PBXProject "Eat2gether" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -546,8 +546,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E64D4AB31AB8672C00ABC477 /* EatTogether */,
-				E64D4ACF1AB8672C00ABC477 /* EatTogetherTests */,
+				E64D4AB31AB8672C00ABC477 /* Eat2gether */,
+				E64D4ACF1AB8672C00ABC477 /* Eat2getherTests */,
 			);
 		};
 /* End PBXProject section */
@@ -683,7 +683,7 @@
 /* Begin PBXTargetDependency section */
 		E64D4AD21AB8672C00ABC477 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E64D4AB31AB8672C00ABC477 /* EatTogether */;
+			target = E64D4AB31AB8672C00ABC477 /* Eat2gether */;
 			targetProxy = E64D4AD11AB8672C00ABC477 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -794,10 +794,10 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EatTogether/EatTogether-Prefix.pch";
+				GCC_PREFIX_HEADER = "EatTogether/Eat2gether-Prefix.pch";
 				INFOPLIST_FILE = EatTogether/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eat2gether;
 			};
 			name = Debug;
 		};
@@ -811,10 +811,10 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EatTogether/EatTogether-Prefix.pch";
+				GCC_PREFIX_HEADER = "EatTogether/Eat2gether-Prefix.pch";
 				INFOPLIST_FILE = EatTogether/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eat2gether;
 			};
 			name = Release;
 		};
@@ -832,7 +832,7 @@
 				);
 				INFOPLIST_FILE = EatTogetherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eat2getherTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatTogether.app/EatTogether";
 			};
 			name = Debug;
@@ -847,7 +847,7 @@
 				);
 				INFOPLIST_FILE = EatTogetherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eat2getherTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatTogether.app/EatTogether";
 			};
 			name = Release;
@@ -855,7 +855,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E64D4AAF1AB8672C00ABC477 /* Build configuration list for PBXProject "EatTogether" */ = {
+		E64D4AAF1AB8672C00ABC477 /* Build configuration list for PBXProject "Eat2gether" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E64D4AD81AB8672C00ABC477 /* Debug */,
@@ -864,7 +864,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E64D4ADA1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "EatTogether" */ = {
+		E64D4ADA1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "Eat2gether" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E64D4ADB1AB8672C00ABC477 /* Debug */,
@@ -873,7 +873,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E64D4ADD1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "EatTogetherTests" */ = {
+		E64D4ADD1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "Eat2getherTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E64D4ADE1AB8672C00ABC477 /* Debug */,
