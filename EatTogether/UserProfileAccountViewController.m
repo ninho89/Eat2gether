@@ -62,7 +62,7 @@
     //self.tabBarController.tabBar.hidden = YES;
     self.imageUser.clipsToBounds = YES;
     self.imageUser.layer.cornerRadius = self.imageUser.bounds.size.height / 2.0f;
-    
+    self.tabBarController.tabBar.hidden = NO;
     [self.imageUser sd_setImageWithURL:[NSURL URLWithString:self.user.userPicture]];
 }
 

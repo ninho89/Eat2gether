@@ -133,6 +133,8 @@
         if (!error) {
             // La persona se ha grabado correctamente.
             NSLog(@"Reserva guardada");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Solicitud" message:@"Solicitud enviada" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
         } else {
             // Se ha producido un error al guardar la información de la Persona.
             NSLog(@"Error al guardar la reserva");

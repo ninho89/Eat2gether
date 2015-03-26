@@ -45,6 +45,7 @@
     [super viewWillAppear:animated];
     
     self.navigationItem.title = @"Enviadas";
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 

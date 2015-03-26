@@ -42,7 +42,7 @@
     self.navigationItem.title = @"Mis anuncios";
     UIBarButtonItem *barButtonAdd = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAdvertisement)];
     self.navigationItem.rightBarButtonItem = barButtonAdd;
-    self.tabBarController.tabBar.hidden = NO;
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {

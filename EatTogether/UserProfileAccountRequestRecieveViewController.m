@@ -46,6 +46,7 @@
     [super viewWillAppear:animated];
     [self.advertisementsArray removeAllObjects];
     self.navigationItem.title = @"Recibidas";
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
