@@ -55,6 +55,7 @@
     [myInfoButton addTarget:self action:@selector(infoButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:myInfoButton];
     
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 #pragma mark - Memory Warning

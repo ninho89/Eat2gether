@@ -13,7 +13,7 @@
 #import "UserProfileAccountRequestViewController.h"
 #import "UserProfileAccountRequestRecieveViewController.h"
 
-@interface UserProfileAccountViewController ()
+@interface UserProfileAccountViewController () <UITabBarControllerDelegate>
 
 @property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
 @property (weak, nonatomic) IBOutlet UIImageView *imageUser;
@@ -26,6 +26,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //[self.navigationItem setHidesBackButton:YES animated:YES];
+    
+    
     
     self.currentSessionManager = [CurrentSessionManager sharedInstance];
     NSLog(@"Profile UseNamer: %@", self.currentSessionManager.currentUser.username);
@@ -72,6 +74,7 @@
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
 }
+
 
 -(void) logout{
     [self.currentSessionManager logoutWithCompletionBlock:^(User *user, NSError *error) {
