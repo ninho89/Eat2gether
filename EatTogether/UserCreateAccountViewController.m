@@ -11,7 +11,7 @@
 #import "UserProfileAccountViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
-@interface UserCreateAccountViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface UserCreateAccountViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
@@ -31,6 +31,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.usernameField.delegate = self;
+    self.emailField.delegate = self;
+    self.passwordField.delegate = self;
+    self.rePasswordField.delegate = self;
+    
     self.currentSessionManager = [CurrentSessionManager sharedInstance];
     
     self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
@@ -49,6 +54,11 @@
     [self.emailField resignFirstResponder];
     [self.passwordField resignFirstResponder];
     [self.rePasswordField resignFirstResponder];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self dismissKeyboard];
+    return YES;
 }
 
 - (IBAction)createUser:(id)sender {

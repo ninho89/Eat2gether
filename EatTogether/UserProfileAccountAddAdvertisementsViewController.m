@@ -9,7 +9,7 @@
 #import "UserProfileAccountAddAdvertisementsViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
-@interface UserProfileAccountAddAdvertisementsViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface UserProfileAccountAddAdvertisementsViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UITextField *starterTextField;
@@ -32,6 +32,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.descriptionTextField.delegate = self;
+    self.starterTextField.delegate = self;
+    self.mainDishTextField.delegate = self;
+    self.descriptionTextField.delegate = self;
+    self.priceTextField.delegate = self;
     
     self.tapGesture.enabled = NO;
     self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
@@ -56,7 +61,10 @@
     [self.datePicker addTarget:self action:@selector(datePickerChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
-
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self dismissKeyboard];
+    return YES;
+}
 
 - (void)datePickerChanged:(UIDatePicker *)datePicker
 {

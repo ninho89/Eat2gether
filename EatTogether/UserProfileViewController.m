@@ -11,7 +11,7 @@
 #import "CurrentSessionManager.h"
 #import "UserProfileAccountViewController.h"
 
-@interface UserProfileViewController ()
+@interface UserProfileViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
@@ -28,6 +28,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.usernameField.delegate = self;
+    self.passwordField.delegate = self;
+    
     self.currentSessionManager = [CurrentSessionManager sharedInstance];
     
     self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
@@ -42,8 +45,13 @@
     self.usernameField.text = @"";
     self.passwordField.text = @"";
     self.tabBarController.tabBar.hidden = NO;
-    
 }
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self dismissKeyboard];
+    return YES;
+}
+
 - (IBAction)createAccount:(id)sender {
     
     UserCreateAccountViewController *userCreateAccountViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:kStoryboardUserCreateAccountViewController];
