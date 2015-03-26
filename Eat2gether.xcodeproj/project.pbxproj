@@ -37,7 +37,6 @@
 		E64D4AC61AB8672C00ABC477 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64D4AC41AB8672C00ABC477 /* Main.storyboard */; };
 		E64D4AC81AB8672C00ABC477 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64D4AC71AB8672C00ABC477 /* Images.xcassets */; };
 		E64D4ACB1AB8672C00ABC477 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64D4AC91AB8672C00ABC477 /* LaunchScreen.xib */; };
-		E64D4AD71AB8672C00ABC477 /* EatTogetherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AD61AB8672C00ABC477 /* EatTogetherTests.m */; };
 		E64D4AE71AB86AFB00ABC477 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AE61AB86AFB00ABC477 /* Constants.m */; };
 		E64D4AF01AB8764600ABC477 /* NetworkDataRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AEF1AB8764600ABC477 /* NetworkDataRepository.m */; };
 		E64D4AF31AB87A4700ABC477 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D4AF21AB87A4700ABC477 /* City.m */; };
@@ -76,16 +75,6 @@
 		E6C581E71AC2E6C6001E15C7 /* CustomRequestRecieveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C581E51AC2E6C6001E15C7 /* CustomRequestRecieveTableViewCell.m */; };
 		E6C581E81AC2E6C6001E15C7 /* CustomRequestRecieveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C581E61AC2E6C6001E15C7 /* CustomRequestRecieveTableViewCell.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E64D4AD11AB8672C00ABC477 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E64D4AAC1AB8672C00ABC477 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E64D4AB31AB8672C00ABC477;
-			remoteInfo = EatTogether;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		965B1BBF40BB4295FAC2FED9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +116,6 @@
 		E64D4AC51AB8672C00ABC477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E64D4AC71AB8672C00ABC477 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E64D4ACA1AB8672C00ABC477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E64D4AD01AB8672C00ABC477 /* Eat2getherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Eat2getherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64D4AD51AB8672C00ABC477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64D4AD61AB8672C00ABC477 /* EatTogetherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EatTogetherTests.m; sourceTree = "<group>"; };
 		E64D4AE41AB86A9100ABC477 /* AppUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUtilities.h; sourceTree = "<group>"; };
@@ -211,13 +199,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E64D4ACD1AB8672C00ABC477 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -283,7 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				E64D4AB41AB8672C00ABC477 /* Eat2gether.app */,
-				E64D4AD01AB8672C00ABC477 /* Eat2getherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -512,24 +492,6 @@
 			productReference = E64D4AB41AB8672C00ABC477 /* Eat2gether.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E64D4ACF1AB8672C00ABC477 /* Eat2getherTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E64D4ADD1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "Eat2getherTests" */;
-			buildPhases = (
-				E64D4ACC1AB8672C00ABC477 /* Sources */,
-				E64D4ACD1AB8672C00ABC477 /* Frameworks */,
-				E64D4ACE1AB8672C00ABC477 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E64D4AD21AB8672C00ABC477 /* PBXTargetDependency */,
-			);
-			name = Eat2getherTests;
-			productName = EatTogetherTests;
-			productReference = E64D4AD01AB8672C00ABC477 /* Eat2getherTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -541,10 +503,6 @@
 				TargetAttributes = {
 					E64D4AB31AB8672C00ABC477 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					E64D4ACF1AB8672C00ABC477 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = E64D4AB31AB8672C00ABC477;
 					};
 				};
 			};
@@ -562,7 +520,6 @@
 			projectRoot = "";
 			targets = (
 				E64D4AB31AB8672C00ABC477 /* Eat2gether */,
-				E64D4ACF1AB8672C00ABC477 /* Eat2getherTests */,
 			);
 		};
 /* End PBXProject section */
@@ -602,13 +559,6 @@
 				E6873D6F1ABA085C006336D4 /* CustomAdvertisementTableViewCell.xib in Resources */,
 				E64D4AC81AB8672C00ABC477 /* Images.xcassets in Resources */,
 				E61B6C621ABF0F500021D93C /* login-button-small-pressed.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E64D4ACE1AB8672C00ABC477 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,23 +640,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E64D4ACC1AB8672C00ABC477 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E64D4AD71AB8672C00ABC477 /* EatTogetherTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E64D4AD21AB8672C00ABC477 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E64D4AB31AB8672C00ABC477 /* Eat2gether */;
-			targetProxy = E64D4AD11AB8672C00ABC477 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E64D4AC41AB8672C00ABC477 /* Main.storyboard */ = {
@@ -838,40 +772,6 @@
 			};
 			name = Release;
 		};
-		E64D4ADE1AB8672C00ABC477 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EatTogetherTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Eat2getherTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatTogether.app/EatTogether";
-			};
-			name = Debug;
-		};
-		E64D4ADF1AB8672C00ABC477 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EatTogetherTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = Eat2getherTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatTogether.app/EatTogether";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -889,15 +789,6 @@
 			buildConfigurations = (
 				E64D4ADB1AB8672C00ABC477 /* Debug */,
 				E64D4ADC1AB8672C00ABC477 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E64D4ADD1AB8672C00ABC477 /* Build configuration list for PBXNativeTarget "Eat2getherTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E64D4ADE1AB8672C00ABC477 /* Debug */,
-				E64D4ADF1AB8672C00ABC477 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
