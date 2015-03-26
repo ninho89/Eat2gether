@@ -7,8 +7,9 @@
 //
 
 #import "UserProfileAccountAddAdvertisementsViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface UserProfileAccountAddAdvertisementsViewController ()
+@interface UserProfileAccountAddAdvertisementsViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UITextField *starterTextField;
@@ -21,7 +22,7 @@
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
 
 @property (weak, nonatomic) IBOutlet UILabel *selectedDate;
-
+@property (nonatomic) BOOL newMedia;
 
 
 @end
@@ -89,6 +90,18 @@
 }
 
 - (IBAction)takePhoto:(id)sender {
+    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+        imagePicker.delegate = self;
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
+        imagePicker.allowsEditing = NO;
+        self.newMedia = YES;
+        [self presentViewController:imagePicker animated:YES completion:nil];
+        
+    }
+    
 }
 
 /*

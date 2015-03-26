@@ -9,8 +9,9 @@
 #import "UserCreateAccountViewController.h"
 #import "CurrentSessionManager.h"
 #import "UserProfileAccountViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface UserCreateAccountViewController ()
+@interface UserCreateAccountViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
@@ -19,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *rePasswordField;
 @property (nonatomic, strong) CurrentSessionManager *currentSessionManager;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (nonatomic) BOOL newMedia;
 
 @end
 
@@ -73,6 +76,27 @@
         [self registerNewUser];
     }
 }
+- (IBAction)takePhoto:(id)sender {
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+        imagePicker.delegate = self;
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
+        imagePicker.allowsEditing = NO;
+        self.newMedia = YES;
+        [self presentViewController:imagePicker animated:YES completion:nil];
+
+    }
+}
+
+#pragma mark - Camera delegates
+//
+//-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+//    NSString *mediaType = info[UIImagePickerControllerMediaType];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    
+//    }
+//}
 
 - (void) registerNewUser {
     NSLog(@"registering....");
