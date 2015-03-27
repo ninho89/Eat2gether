@@ -22,7 +22,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99y-vn-Rxb">
-                        <rect key="frame" x="20" y="50" width="85.5" height="20.5"/>
+                        <rect key="frame" x="20" y="50" width="172" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -57,6 +57,7 @@
                     <constraint firstItem="rKY-dY-pcd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="due-QE-9Mp"/>
                     <constraint firstItem="f1Q-Od-c8Z" firstAttribute="leading" secondItem="UZr-W1-NBh" secondAttribute="leading" id="oW5-oA-ImS"/>
                     <constraint firstItem="rKY-dY-pcd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="oco-p2-Pqw"/>
+                    <constraint firstItem="Rb5-yr-T2Y" firstAttribute="leading" secondItem="99y-vn-Rxb" secondAttribute="trailing" constant="10" id="uKu-LI-sF6"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
