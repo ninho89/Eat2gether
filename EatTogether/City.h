@@ -11,11 +11,12 @@
 @interface City : NSObject
 
 @property (nonatomic, strong) NSString *cityObjectId;
-@property (nonatomic, strong) NSNumber *cityId;
 @property (nonatomic, strong) NSString *cityName;
+@property (nonatomic, strong) NSString *cityState;
 @property (nonatomic, strong) NSString *cityCountry;
-@property (nonatomic, strong) NSString *cityPictureUrl;
+@property (nonatomic, strong) NSString *cityLocationId;
 @property (nonatomic, strong) NSString *cityLatitude;
 @property (nonatomic, strong) NSString *cityLongitude;
+@property (nonatomic, strong) NSString *cityPictureUrl;
 
 @end
