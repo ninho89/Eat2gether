@@ -87,13 +87,13 @@
     
     Advertisement *advertisement = self.advertisementsArray[indexPath.row];
     
-    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.detailAdvertisement.detailPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
     }];
     
-    cell.customLabelPrice.text = [NSString stringWithFormat:@"%@€", advertisement.advertisementPrice];
+    cell.customLabelPrice.text = [NSString stringWithFormat:@"%@€", advertisement.detailAdvertisement.detailPrice];
     
-    cell.customLabelStarter.text = advertisement.advertisementStarter;
+    cell.customLabelStarter.text = advertisement.detailAdvertisement.detailStarter;
     
     return cell;
 }

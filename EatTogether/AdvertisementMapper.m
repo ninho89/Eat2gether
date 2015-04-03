@@ -15,23 +15,21 @@
     Advertisement *advertisement = [[Advertisement alloc]init];
     
     advertisement.advertisementObjectId = [pfAdvertisement valueForKey:@"objectId"];
-    advertisement.advertisementDetailObjectId = [[pfAdvertisement valueForKey:@"detailAdvertisementId"]valueForKey:@"objectId"];
     
-    advertisement.advertisementDescription = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementDescriptionParse];
-    advertisement.advertisementStarter = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementStarterParse];
-    advertisement.advertisementMainDish = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementMainDishParse];
-    advertisement.advertisementDessert = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementDessertParse];
-    advertisement.advertisementNumGuests = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementNumGuestsParse];
-    advertisement.advertisementPrice = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse] valueForKey:kDetailAdvertisementPriceParse];
-    advertisement.advertisementData = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementDateParse];
-    
-    
-    PFFile *imageFilePicturUrl = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse] valueForKey:kDetailAdvertisementPictureParse];
-    advertisement.advertisementPictureUrl = imageFilePicturUrl.url;
-    
-    
-    advertisement.advertisementIdioms = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementIdiomsParse];
-    advertisement.advertisementTopics = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementTopicsParse];
+    DetailAdvertisement *detailAdvertisement = [[DetailAdvertisement alloc]init];
+    detailAdvertisement.detailObjectId = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.objectId"];
+    detailAdvertisement.detailDescription = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.detailAdvertisementDescription"];
+    detailAdvertisement.detailStarter = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.detailAdvertisementStarter"];
+    detailAdvertisement.detailMainDish = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.detailAdvertisementMainDish"];
+    detailAdvertisement.detailDessert = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.detailAdvertisementDessert"];
+    detailAdvertisement.detailNumGuests = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.detailAdvertisementNumGuests"];
+    detailAdvertisement.detailPrice = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.detailAdvertisementPrice"];
+    detailAdvertisement.detailDate = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.detailAdvertisementDate"];
+    detailAdvertisement.detailIdioms = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.detailAdvertisementIdioms"];
+    detailAdvertisement.detailTopics = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.detailAdvertisementTopics"];
+    PFFile *imageFilePicturUrl1 = [pfAdvertisement valueForKeyPath:@"detailAdvertisementId.detailAdvertisementPicture"];
+    detailAdvertisement.detailPictureUrl = imageFilePicturUrl1.url;
+    advertisement.detailAdvertisement = detailAdvertisement;
     
     User *user = [[User alloc]init];
     user.userObjectId = [pfAdvertisement valueForKeyPath:@"username.objectId"];
@@ -54,9 +52,6 @@
     advertisement.advertisementLocationLongitude = [pfAdvertisement valueForKey:@"locationLongitude"];
 
     return advertisement;
-    
 }
-
-
 
 @end

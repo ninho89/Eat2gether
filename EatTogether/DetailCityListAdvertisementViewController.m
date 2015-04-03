@@ -125,27 +125,24 @@
     Advertisement *advertisement = self.advertisementsArray[indexPath.row];
 
     
-    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.detailAdvertisement.detailPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
     }];
 
     [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:advertisement.user.userPicture] placeholderImage:nil];
     
-    cell.customLabelPrice.text = [NSString stringWithFormat:@"%@€", advertisement.advertisementPrice];
+    cell.customLabelPrice.text = [NSString stringWithFormat:@"%@€", advertisement.detailAdvertisement.detailPrice];
 
-    cell.customLabelStarter.text = advertisement.advertisementStarter;
+    cell.customLabelStarter.text = advertisement.detailAdvertisement.detailStarter;
     
     cell.delegate = self;
-    
-
     
     return cell;
 }
 
 
-- (void)advertisementCell:(UITableViewCell *)cell didSetFavorite:(BOOL)favorite
-{
-
+- (void)advertisementCell:(UITableViewCell *)cell didSetFavorite:(BOOL)favorite{
+    
   if([self.currentSessionManager isLoggedIn]){
             NSLog(@"Usuario logueado");
             if(favorite){

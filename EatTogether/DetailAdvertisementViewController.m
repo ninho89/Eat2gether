@@ -67,24 +67,24 @@
 #pragma mark - Utils Methods
 
 -(void) setupLabels{
-    self.labelAdvertisementDescription.text = [NSString stringWithFormat:@"%@",self.advertisement.advertisementDescription];
-    self.labelAdvertisementStarter.text = self.advertisement.advertisementStarter;
-    self.labelAdvertisementMainDish.text = [NSString stringWithFormat:@"%@",self.advertisement.advertisementMainDish];
-    self.labelAdvertisementDessert.text = [NSString stringWithFormat:@"%@",self.advertisement.advertisementDessert ];
-    self.labelAdvertisementNumGuests.text = [NSString stringWithFormat:@"%@", self.advertisement.advertisementNumGuests];
+    self.labelAdvertisementDescription.text = [NSString stringWithFormat:@"%@",self.advertisement.detailAdvertisement.detailDescription];
+    self.labelAdvertisementStarter.text = self.advertisement.detailAdvertisement.detailStarter;
+    self.labelAdvertisementMainDish.text = [NSString stringWithFormat:@"%@",self.advertisement.detailAdvertisement.detailMainDish];
+    self.labelAdvertisementDessert.text = [NSString stringWithFormat:@"%@",self.advertisement.detailAdvertisement.detailDessert];
+    self.labelAdvertisementNumGuests.text = [NSString stringWithFormat:@"%@", self.advertisement.detailAdvertisement.detailNumGuests];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd-MM-yyyy"];
     
-    self.labelAdvertisementDate.text = [formatter stringFromDate:self.advertisement.advertisementData];
+    self.labelAdvertisementDate.text = [formatter stringFromDate:self.advertisement.detailAdvertisement.detailDate];
 
-    self.labelAdvertisementPrice.text = [NSString stringWithFormat:@"%@ €", self.advertisement.advertisementPrice];
+    self.labelAdvertisementPrice.text = [NSString stringWithFormat:@"%@ €", self.advertisement.detailAdvertisement.detailPrice];
     
     self.imageUsername.clipsToBounds = YES;
     self.imageUsername.layer.cornerRadius = self.imageUsername.bounds.size.height / 2.0f;
     
     
-    [self.imageAdvertisement sd_setImageWithURL:[NSURL URLWithString:self.advertisement.advertisementPictureUrl]];
+    [self.imageAdvertisement sd_setImageWithURL:[NSURL URLWithString:self.advertisement.detailAdvertisement.detailPictureUrl]];
 //    [self.imageUsername sd_setImageWithURL:[NSURL URLWithString:self.advertisement.advertisementUserPictureUrl]];
 }
 
