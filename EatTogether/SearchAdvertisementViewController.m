@@ -150,7 +150,7 @@
     
     [self.totalCities removeAllObjects];
     
-    for(NSString *curString in [self.citiesArray valueForKey:kCityNameParse]) {
+    for(NSString *curString in [self.citiesArray valueForKey:@"cityName"]) {
         NSRange substringRange = [curString rangeOfString:substring];
         if (substringRange.location == 0) {
             [self.totalCities addObject:curString];

@@ -37,7 +37,6 @@
     //Consulta todas las ciudades con sus cordenadas
     PFQuery *query = [PFQuery queryWithClassName:kCityTableParse];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    [query includeKey:kCityLocationIdParse]; //se usa para coger la relacion para saber sus coordenadas
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
@@ -59,11 +58,11 @@
     
     PFQuery *query = [PFQuery queryWithClassName:kAdvertisementTableParse];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    [query includeKey:kAdvertisementCityIdParse];
-    [query whereKey:kAdvertisementCityIdParse equalTo:[PFObject objectWithoutDataWithClassName:kCityTableParse objectId:cityObjectId]];
-    [query includeKey:kAdvertisementDetailAdvertisementIdParse];
-    [query includeKey:kAdvertisementLocationIdParse];
-    [query includeKey:kAdvertisementUserUsername];
+    [query includeKey:@"cityId"];
+    [query whereKey:@"cityId" equalTo:[PFObject objectWithoutDataWithClassName:kCityTableParse objectId:cityObjectId]];
+    [query includeKey:@"detailAdvertisementId"];
+    [query includeKey:@"locationId"];
+    [query includeKey:@"username"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
             
@@ -73,6 +72,7 @@
                 self.advertisementMapper = [[AdvertisementMapper alloc]init];
                 Advertisement *advertisement = [self.advertisementMapper mapParseAdvertisement:pfAdvertisement];
                 [advertisements addObject:advertisement];
+                
             }
             completionBlock(advertisements, error);
         }
@@ -93,9 +93,7 @@
     PFObject *myFav = [PFObject objectWithClassName:@"Favorite"];
     [myFav setObject:user1 forKey:@"objectIdU"];
     [myFav setObject:objAdvId forKey:@"advertisementId"];
-    //[myFav setObject:detAdv forKey:@"detailAdvertisementId"];
     [myFav setObject:@(favorite) forKey:@"favoriteCheck"];
-    
     
     [myFav saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
@@ -106,7 +104,6 @@
             NSLog(@"Error al guardar el favorito");
         }
     }];
-    
 }
 
 -(void) setReservation:(BOOL)statusReservation withAdvertisement:(Advertisement *)advertisement user:(User *)user completionBlock:(void (^)(NSArray *, NSError *))completionBlock{
@@ -115,20 +112,15 @@
     PFUser *user1 = [PFUser user];
     user1.objectId = user.userObjectId;
 
-    
-//    PFUser *userAdv = [PFUser user];
-//    userAdv.objectId = advertisement.advertisementUserNameObjectId;
-//    
     //guarda el advertisement
     PFObject *adv = [PFObject objectWithoutDataWithClassName:@"Advertisement" objectId:advertisement.advertisementObjectId];
     
     PFObject *myReservation = [PFObject objectWithClassName:@"Reservation"];
     [myReservation setObject:user1 forKey:@"objectIdU"];
     [myReservation setObject:adv forKey:@"advertisementId"];
-    [myReservation setObject:advertisement.advertisementUserNameObjectId forKey:@"objectIdUAdv"];
+    [myReservation setObject:advertisement.user.userObjectId forKey:@"objectIdUAdv"];
     [myReservation setObject:@(statusReservation) forKey:@"statusReservation"];
 
-    
     [myReservation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             // La persona se ha grabado correctamente.
@@ -156,7 +148,6 @@
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
-            //NSMutableArray *favorites = [NSMutableArray array];
             for (PFObject *pfFavorites in objects)
             {
                 NSString *obj = [[[pfFavorites valueForKey:@"advertisementId"]valueForKey:@"detailAdvertisementId"]valueForKey:@"objectId"];
@@ -164,9 +155,9 @@
                 PFQuery *query2 = [PFQuery queryWithClassName:@"Advertisement"];
                 [query2 includeKey:@"detailAdvertisementId"];
                 [query2 whereKey:@"detailAdvertisementId" equalTo:[PFObject objectWithoutDataWithClassName:@"DetailAdvertisement" objectId:obj]];
-                [query2 includeKey:kAdvertisementCityIdParse];
-                [query2 includeKey:kAdvertisementLocationIdParse];
-                [query2 includeKey:kAdvertisementUserUsername];
+                [query2 includeKey:@"cityId"];
+                [query2 includeKey:@"locationId"];
+                [query2 includeKey:@"username"];
                 
                 [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects2, NSError *error) {
                     for (PFObject *pfAdvertisement in objects2)
@@ -194,7 +185,6 @@
     [query includeKey:@"detailAdvertisementId"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
-            //NSMutableArray *favorites = [NSMutableArray array];
             for (PFObject *pfReservations in objects)
             {
                 NSString *obj = [[[pfReservations valueForKey:@"advertisementId"]valueForKey:@"detailAdvertisementId"]valueForKey:@"objectId"];
@@ -202,9 +192,9 @@
                 PFQuery *query2 = [PFQuery queryWithClassName:@"Advertisement"];
                 [query2 includeKey:@"detailAdvertisementId"];
                 [query2 whereKey:@"detailAdvertisementId" equalTo:[PFObject objectWithoutDataWithClassName:@"DetailAdvertisement" objectId:obj]];
-                [query2 includeKey:kAdvertisementCityIdParse];
-                [query2 includeKey:kAdvertisementLocationIdParse];
-                [query2 includeKey:kAdvertisementUserUsername];
+                [query2 includeKey:@"cityId"];
+                [query2 includeKey:@"locationId"];
+                [query2 includeKey:@"username"];
                 
                 [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects2, NSError *error) {
                     for (PFObject *pfAdvertisement in objects2)
@@ -218,9 +208,6 @@
             }
         }
     }];
-  
-   
-
 }
 
 -(void) getReservationWithUsername1:(NSString *)usernameAdv WithCompletionBlock:(void (^)(NSArray *, NSArray *, NSError *))completionBlock{
@@ -250,9 +237,8 @@
                 PFQuery *query2 = [PFQuery queryWithClassName:@"Advertisement"];
                 [query2 includeKey:@"detailAdvertisementId"];
                 [query2 whereKey:@"detailAdvertisementId" equalTo:[PFObject objectWithoutDataWithClassName:@"DetailAdvertisement" objectId:obj]];
-                [query2 includeKey:kAdvertisementCityIdParse];
-                [query2 includeKey:kAdvertisementLocationIdParse];
-                [query2 includeKey:kAdvertisementUserUsername];
+                [query2 includeKey:@"cityId"];
+                [query2 includeKey:@"username"];
                 
                 [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects2, NSError *error) {
                     for (PFObject *pfAdvertisement in objects2)
@@ -263,26 +249,22 @@
                     }
                     completionBlock(self.advertisements2, self.userArray, error);
                 }];
-                //completionBlock(self.advertisements2, error);
             }
-            
         }
     }];
-    
 }
 
 -(void) getAdvertisementWithUserObjectId:(NSString *)userObjectId WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
     
     PFQuery *query = [PFQuery queryWithClassName:kAdvertisementTableParse];
     query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    [query includeKey:kAdvertisementCityIdParse];
+    [query includeKey:@"cityId"];
     [query whereKey:@"username" equalTo:[PFUser objectWithoutDataWithObjectId:userObjectId]];
-    [query includeKey:kAdvertisementDetailAdvertisementIdParse];
-    [query includeKey:kAdvertisementLocationIdParse];
-    [query includeKey:kAdvertisementUserUsername];
+    [query includeKey:@"detailAdvertisementId"];
+    [query includeKey:@"locationId"];
+    [query includeKey:@"username"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
-            
             NSMutableArray *advertisements = [NSMutableArray array];
             for (PFObject *pfAdvertisement in objects)
             {
@@ -293,10 +275,7 @@
             completionBlock(advertisements, error);
         }
     }];
-
 }
-
-
 
 
 @end

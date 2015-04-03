@@ -84,19 +84,19 @@
     
     Advertisement *advertisement = self.advertisementsArray[indexPath.row];
     
-    [cell.customPicureAdvertisement sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [cell.customPicureAdvertisement sd_setImageWithURL:[NSURL URLWithString:advertisement.detailAdvertisement.detailPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
     }];
     
-    [cell.customPictureUser  sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementUserPictureUrl] placeholderImage:nil];
+//    [cell.customPictureUser  sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementUserPictureUrl] placeholderImage:nil];
     
-    cell.customPriceLabel.text = [NSString stringWithFormat:@"%@€", advertisement.advertisementPrice];
+    cell.customPriceLabel.text = [NSString stringWithFormat:@"%@€", advertisement.detailAdvertisement.detailPrice];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd-MM-yyyy"];
     
-    cell.customDataLabel.text = [formatter stringFromDate:advertisement.advertisementData];
-    cell.customStarterLabel.text = advertisement.advertisementStarter;
+    cell.customDataLabel.text = [formatter stringFromDate:advertisement.detailAdvertisement.detailDate];
+    cell.customStarterLabel.text = advertisement.detailAdvertisement.detailStarter;
     
     return cell;
 

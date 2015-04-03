@@ -92,16 +92,15 @@
     }];
     
     cell.customUsernameLabel.text = user.username;
-    cell.customDescriptionLabel.text = advertisement.advertisementDescription;
+    cell.customDescriptionLabel.text = advertisement.detailAdvertisement.detailDescription;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd-MM-yyyy"];
     
-    cell.customDateLabel.text = [formatter stringFromDate:advertisement.advertisementData];
-    cell.customPriceLabel.text = [NSString stringWithFormat:@"%@ €", advertisement.advertisementPrice];
+    cell.customDateLabel.text = [formatter stringFromDate:advertisement.detailAdvertisement.detailDate];
+    cell.customPriceLabel.text = [NSString stringWithFormat:@"%@ €", advertisement.detailAdvertisement.detailPrice];
     
     return cell;
-
     
 }
 
