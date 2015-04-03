@@ -129,7 +129,7 @@
         
     }];
     
-    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementUserPictureUrl] placeholderImage:nil];
+//    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementUserPictureUrl] placeholderImage:nil];
     
     cell.customLabelPrice.text = [NSString stringWithFormat:@"%@€", advertisement.advertisementPrice];
     

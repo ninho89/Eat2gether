@@ -121,20 +121,23 @@
     
     
     CustomAdvertisementTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellAdvertisement forIndexPath:indexPath];
-//    
+   
     Advertisement *advertisement = self.advertisementsArray[indexPath.row];
+
     
     [cell.customDetailImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementPictureUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
     }];
 
-    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:advertisement.advertisementUserPictureUrl] placeholderImage:nil];
+    [cell.customUserImage sd_setImageWithURL:[NSURL URLWithString:advertisement.user.userPicture] placeholderImage:nil];
     
     cell.customLabelPrice.text = [NSString stringWithFormat:@"%@€", advertisement.advertisementPrice];
 
     cell.customLabelStarter.text = advertisement.advertisementStarter;
     
     cell.delegate = self;
+    
+
     
     return cell;
 }

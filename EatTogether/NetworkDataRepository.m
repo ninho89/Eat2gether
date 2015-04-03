@@ -73,11 +73,36 @@
                 self.advertisementMapper = [[AdvertisementMapper alloc]init];
                 Advertisement *advertisement = [self.advertisementMapper mapParseAdvertisement:pfAdvertisement];
                 [advertisements addObject:advertisement];
+                
             }
             completionBlock(advertisements, error);
         }
     }];
 }
+
+//-(void) getCitiesAdvertisementWithCity:(NSString *)cityObjectId WithCompletionBlock:(void (^)(NSArray *, NSError *))completionBlock{
+//    
+//    PFQuery *query = [PFQuery queryWithClassName:kAdvertisementTableParse];
+//    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+//    [query includeKey:kAdvertisementCityIdParse];
+//    [query whereKey:kAdvertisementCityIdParse equalTo:[PFObject objectWithoutDataWithClassName:kCityTableParse objectId:cityObjectId]];
+//    [query includeKey:kAdvertisementDetailAdvertisementIdParse];
+//    [query includeKey:kAdvertisementLocationIdParse];
+//    [query includeKey:kAdvertisementUserUsername];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if(!error){
+//            
+//            NSMutableArray *advertisements = [NSMutableArray array];
+//            for (PFObject *pfAdvertisement in objects)
+//            {
+//                self.advertisementMapper = [[AdvertisementMapper alloc]init];
+//                Advertisement *advertisement = [self.advertisementMapper mapParseAdvertisement:pfAdvertisement];
+//                [advertisements addObject:advertisement];
+//            }
+//            completionBlock(advertisements, error);
+//        }
+//    }];
+//}
 
 #pragma mark - Save User's Favorite
 

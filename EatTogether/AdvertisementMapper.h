@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Advertisement.h"
+#import "User.h"
 
 @interface AdvertisementMapper : NSObject
 

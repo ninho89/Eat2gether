@@ -85,7 +85,7 @@
     
     
     [self.imageAdvertisement sd_setImageWithURL:[NSURL URLWithString:self.advertisement.advertisementPictureUrl]];
-    [self.imageUsername sd_setImageWithURL:[NSURL URLWithString:self.advertisement.advertisementUserPictureUrl]];
+//    [self.imageUsername sd_setImageWithURL:[NSURL URLWithString:self.advertisement.advertisementUserPictureUrl]];
 }
 
 -(void) setupMapView{
