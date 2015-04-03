@@ -24,23 +24,14 @@
     advertisement.advertisementNumGuests = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementNumGuestsParse];
     advertisement.advertisementPrice = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse] valueForKey:kDetailAdvertisementPriceParse];
     advertisement.advertisementData = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementDateParse];
-//    advertisement.advertisementUserNameObjectId = [[pfAdvertisement valueForKey:@"username"]valueForKey:@"objectId"];
-//    advertisement.advertisementUserName = [[pfAdvertisement valueForKey:kAdvertisementUserUsername]valueForKey:kUserNameParse];
-//    advertisement.advertisementUserEmail = [[pfAdvertisement valueForKey:@"username"]valueForKey:@"email"];
-    advertisement.advertisementCityName = [[pfAdvertisement valueForKey:kAdvertisementCityIdParse] valueForKey:kCityNameParse];
-    advertisement.advertisementLocationLongitude = [[pfAdvertisement valueForKey:kAdvertisementLocationIdParse] valueForKey:kLocationLongitudeParse];
-    advertisement.advertisementLocationLatitude = [[pfAdvertisement valueForKey:kAdvertisementLocationIdParse] valueForKey:kLocationLatitudeParse];
     
     
     PFFile *imageFilePicturUrl = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse] valueForKey:kDetailAdvertisementPictureParse];
     advertisement.advertisementPictureUrl = imageFilePicturUrl.url;
     
-//    PFFile *imageFileUserPicturUrl = [[pfAdvertisement valueForKey:kAdvertisementUserUsername]valueForKey:kUserPictureParse];
-//    advertisement.advertisementUserPictureUrl = imageFileUserPicturUrl.url;
     
     advertisement.advertisementIdioms = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementIdiomsParse];
     advertisement.advertisementTopics = [[pfAdvertisement valueForKey:kAdvertisementDetailAdvertisementIdParse]valueForKey:kDetailAdvertisementTopicsParse];
-    
     
     User *user = [[User alloc]init];
     user.userObjectId = [pfAdvertisement valueForKeyPath:@"username.objectId"];
@@ -48,9 +39,20 @@
     user.email = [pfAdvertisement valueForKeyPath:@"username.email"];
     PFFile *imageFileUserPicturUrl1 = [pfAdvertisement valueForKeyPath:@"username.userPicture"];
     user.userPicture = imageFileUserPicturUrl1.url;
-    
     advertisement.user = user;
     
+    City *city = [[City alloc]init];
+    city.cityObjectId = [pfAdvertisement valueForKeyPath:@"cityId.objectId"];
+    city.cityName = [pfAdvertisement valueForKeyPath:@"cityId.cityName"];
+    city.cityState = [pfAdvertisement valueForKeyPath:@"cityId.cityState"];
+    city.cityCountry = [pfAdvertisement valueForKeyPath:@"cityId.cityCountry"];
+    city.cityLatitude = [pfAdvertisement valueForKeyPath:@"cityId.cityLatitude"];
+    city.cityLongitude = [pfAdvertisement valueForKeyPath:@"cityId.cityLongitude"];
+    advertisement.city = city;
+    
+    advertisement.advertisementLocationLatitude = [pfAdvertisement valueForKey:@"locationLatitude"];
+    advertisement.advertisementLocationLongitude = [pfAdvertisement valueForKey:@"locationLongitude"];
+
     return advertisement;
     
 }

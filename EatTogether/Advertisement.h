@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
+#import "City.h"
 
 @interface Advertisement : NSObject
 
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) NSString *advertisementUserNameObjectId;
 
 @property (nonatomic, strong) User *user;
+@property (nonatomic, strong) City *city;
 
 @property (nonatomic, strong) NSString *advertisementLocationLatitude;
 @property (nonatomic, strong) NSString *advertisementLocationLongitude;
