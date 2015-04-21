@@ -30,11 +30,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    [self setupRefreshController];
     self.repository = [[NetworkDataRepository alloc]init];
     self.citiesArray = [[NSArray alloc]init];
     [self.activityIndicator startAnimating];
-    [self getAllCities];
+    [self getAllCities:nil];
     [self registerCustomCell];
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -73,11 +73,27 @@
 
 #pragma mark - Methods
 
--(void) getAllCities{
+-(void) setupRefreshController{
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
+    [refreshControl addTarget:self
+                       action:@selector(refresh:)
+             forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+    self.tableView.alwaysBounceVertical = YES;
+}
+
+-(void) refresh:(id)sender{
+    [self getAllCities:sender];
+}
+
+-(void) getAllCities:(id)sender{
     [self.repository getCitiesWithCompletionBlock:^(NSArray *cities, NSError *error) {
         self.citiesArray = cities;
         [self.tableView reloadData];
         [self.activityIndicator stopAnimating];
+        if(sender){
+            [(UIRefreshControl *)sender endRefreshing];
+        }
     }];
 }
 
